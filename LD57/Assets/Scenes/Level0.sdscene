@@ -1,0 +1,84 @@
+!SceneAsset
+Id: 9b01b6e8-3ddc-4350-9af6-de8d44fc5746
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Parent: 7ab23059-c8d7-4549-92f9-f1981cd984db:Scenes/MainScene
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 83ca07d1-e26d-472b-bbc1-d2e3373f1049
+        - ref!! 0c99741d-6c86-41f6-998d-d6298df98a5e
+        - ref!! ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
+        - ref!! 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
+    Parts:
+        -   Entity:
+                Id: 0c99741d-6c86-41f6-998d-d6298df98a5e
+                Name: Skybox
+                Components:
+                    4fb2f8b1a14ce6562c8f05c71badb13a: !TransformComponent
+                        Id: f7715412-a984-4702-b24b-2d62cf556555
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    fb4eae7f497a902717e9c2e2f269ef1b: !BackgroundComponent
+                        Id: 24895751-1d64-4fea-a53a-7825815ad5ef
+                        Texture: b91be6c5-7799-4f9d-b169-d4c2b48c4906:Skybox texture
+                    0fb76faa47d3e5711811251b8b8c40ca: !LightComponent
+                        Id: 84d5d7cd-9190-46eb-9d35-7ea54ba7de37
+                        Type: !LightSkybox
+                            Skybox: 046f2651-e709-48ba-b3ee-1f1214a2cc6d:Skybox
+        -   Entity:
+                Id: 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
+                Name: Sphere
+                Components:
+                    35dee7a9c98182ed520a64e4e2065ba7: !TransformComponent
+                        Id: 1404bd1b-074a-4035-9a88-0f72c3f902e9
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f0055ce876147c97bf2600d66a371d6f: !ModelComponent
+                        Id: 5db2f11b-ecdb-4d2d-9c51-09b5960a8b81
+                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
+                        Materials: {}
+        -   Entity:
+                Id: 83ca07d1-e26d-472b-bbc1-d2e3373f1049
+                Name: Directional light
+                Components:
+                    52caa51beb75e0baae39bded907c7b31: !TransformComponent
+                        Id: 6ec35ee5-0715-43e7-9f81-e16e6f6cfac3
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    81184eee08dae92da4004f4fe9982ea7: !LightComponent
+                        Id: 13dd1e34-7791-4d5b-beac-7e9380ba070f
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
+                Name: Ground
+                Components:
+                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
+                        Id: 6eeaa6ec-9b58-4a6a-840e-2374e659bd51
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
+                        Id: e0f0c2c8-3046-45a2-9b75-9ccff44777d3
+                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Materials: {}

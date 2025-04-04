@@ -1,0 +1,44 @@
+﻿using qASIC.Communication;
+using System;
+
+namespace qASIC.Console.Comms
+{
+    public class CC_ConsoleLog : ConsoleCommsComponent
+    {
+        public event Action<GameConsole, qLog> OnRead;
+
+        public override void ReadForConsole(CommsComponentArgs args, GameConsole console)
+        {
+            if (args.packetType != PacketType.Client)
+                return;
+
+            var log = args.packet.ReadNetworkSerializable<qLog>();
+
+            if (args.packet.HasBytesFor(sizeof(int)))
+            {
+                var index = args.packet.ReadInt();
+                if (console.Logs.IndexInRange(index))
+                {
+                    log = console.Logs.Logs[index].GetDataFromOther(log);
+                    OnRead?.Invoke(console, log);
+                    return;
+                }
+            }
+
+            console.Logs.Logs.Add(log);
+            OnRead?.Invoke(console, log);
+        }
+
+        public qPacket BuildPacket(GameConsole console, qLog log, bool updatingLog)
+        {
+            var packet = CreateEmptyPacketForConsole(console)
+                .Write(log);
+
+            var index = console.Logs.Logs.IndexOf(log);
+            if (updatingLog && index != -1)
+                packet.Write(index);
+
+            return packet;
+        }
+    }
+}

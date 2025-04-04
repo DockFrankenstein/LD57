@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Stride.BepuPhysics" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Engine" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Video" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Physics" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Navigation" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Particles" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.UI" Version="4.2.0.2381" />
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2381" IncludeAssets="build;buildTransitive" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\qASIC.Console\qASIC.Console.csproj" />
+    <ProjectReference Include="..\qASIC.Core\qASIC.Core.csproj" />
+    <ProjectReference Include="..\qASIC.Options\qASIC.Options.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="qASIC" />
+    <Using Include="qASIC.Options" />
+    <Using Include="Stride.Core" />
+    <Using Include="Stride.Core.Mathematics" />
+    <Using Include="Stride.Engine" />
+    <Using Include="Stride.Input" />
+  </ItemGroup>
+</Project>

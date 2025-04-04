@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+
+namespace qASIC
+{
+    public interface ICommandList : IEnumerable<ICommand>
+    {
+        ICommandList AddCommand(ICommand command);
+        ICommandList AddCommandRange(IEnumerable<ICommand> commands);
+        ICommandList RemoveCommand(ICommand command);
+
+        event Action<IEnumerable<ICommand>> OnCommandsAdded;
+        event Action<IEnumerable<ICommand>> OnCommandsRemoved;
+
+        public bool TryGetCommand(string commandName, out ICommand command);
+
+        public IEnumerable<string> GetSortedCommandNames();
+    }
+}

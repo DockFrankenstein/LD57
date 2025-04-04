@@ -1,0 +1,117 @@
+!SceneAsset
+Id: 7ab23059-c8d7-4549-92f9-f1981cd984db
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds:
+    - d8a0e5f4-2109-408f-aaf6-a67412fe7eb2
+    - 9b01b6e8-3ddc-4350-9af6-de8d44fc5746
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 9e321c52-fc79-4ae5-bac8-a5b96d9569ba
+        - ref!! 80efa75c-057a-4847-93c4-aff19da8fe36
+        - ref!! e1a1fd5f-3452-4561-9fea-fcfe1261189f
+        - ref!! 48b8e6d7-fdb4-4103-9eac-0da9b2ed015d
+        - ref!! d7785c3c-d2c1-44d8-8233-ed81098df600
+    Parts:
+        -   Entity:
+                Id: 48b8e6d7-fdb4-4103-9eac-0da9b2ed015d
+                Name: Ui Manager
+                Components:
+                    9b4bb4395e6daec42ab365a47a1e0896: !TransformComponent
+                        Id: 3a483874-35d6-4409-af55-7aa3f72dd070
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f2eb77523434a46b049818594411fc8c: !LD57.UiSystem.UiManager,LD57
+                        Id: c2404bb5-7328-4b24-855c-952d4e8d13f5
+                        Priority: -7
+        -   Entity:
+                Id: 80efa75c-057a-4847-93c4-aff19da8fe36
+                Name: qASIC
+                Components:
+                    71d6cfdf90cdfd245c883c44c296679d: !TransformComponent
+                        Id: 321b065c-94a0-4674-8758-f6db4f14da03
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    12eb184bcb63e49f4a215d2a1cb9d498: !LD57.qUtils.qInit,LD57
+                        Id: af770317-5cc1-4b5e-a154-b34623d31be4
+                        Priority: -10
+                        projectName: LD57
+                        version: 1.0.0d0
+                        useConsole: true
+                    2b025c490735607f69ad9c2642514145: !LD57.qUtils.qConsoleInit,LD57
+                        Id: 8ded0c9f-5feb-45fe-b513-527204b825c0
+                        Priority: -9
+                    75049689002a81dd70292133f13920c1: !LD57.qUtils.qOptionsInit,LD57
+                        Id: c5732c80-d2cf-4d03-af34-539c7196ab2e
+                        Priority: -8
+        -   Entity:
+                Id: 9e321c52-fc79-4ae5-bac8-a5b96d9569ba
+                Name: Camera
+                Components:
+                    febb4927d0e4655917da916b1c375fb7: !TransformComponent
+                        Id: 1fdb8519-2b05-453c-be8b-c68b06ac3f57
+                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
+                        Rotation: {X: 0.0, Y: 0.82903755, Z: 0.0, W: 0.5591929}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d62278aef5f6be48394050b5a13f62b7: !CameraComponent
+                        Id: 6aeb2115-c269-4a8b-bdef-1dc1f925306b
+                        Name: null
+                        Projection: Perspective
+                        Slot: 5e417fe7-34c4-4808-bcac-1c2c93cdb256
+                    f004cd0be463a8caac0b5478832bbff8: !LD57.BasicCameraController,LD57
+                        Id: 9a280925-4c0b-4297-a7fa-932e588350a7
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}
+        -   Entity:
+                Id: d7785c3c-d2c1-44d8-8233-ed81098df600
+                Name: Console
+                Components:
+                    aba4588828d4694cc9e9d73e552a231c: !TransformComponent
+                        Id: 77d5fcc1-5af9-4dbe-9d91-b506ed2023b7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1553b6e2123d132e7b437165a9399512: !LD57.Debug.ConsoleUi,LD57
+                        Id: 73c983ca-b0c5-4b2a-8103-dec426cc6917
+                        Canvas: ref!! 65990681-445d-4fd4-bba9-73be22bac6e3
+                    44ed61eb3db75f944bbf0bb6fe6f0556: !LD57.UiSystem.UiCanvas,LD57
+                        Id: 65990681-445d-4fd4-bba9-73be22bac6e3
+                        EnabledByDefault: true
+                        UiName: console
+        -   Entity:
+                Id: e1a1fd5f-3452-4561-9fea-fcfe1261189f
+                Name: Level Manager
+                Components:
+                    5cec4ea0f436cd85001f40f071d39555: !TransformComponent
+                        Id: f3c97d26-a568-4555-ae89-6be20839e7a3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1559d4341ecbc4575446491077b3315f: !LD57.LevelManagement.LevelManager,LD57
+                        Id: d5146b95-1cae-4572-8516-7354bef34b34
+                        Priority: -6
+                        defaultLevelTag: mm
+                        levels:
+                            f2b372c3ac44cf5d53dea6cade8551cb:
+                                tag: mm
+                                scenes:
+                                    dfa9ba4d17668144413b26d31608874c: d8a0e5f4-2109-408f-aaf6-a67412fe7eb2:Scenes/MainMenu
+                                utilityScenes: {}
+                            8fcc166da8169f2c81df6642059507a1:
+                                tag: l0
+                                scenes:
+                                    229a306cab6eceb761844456d4956e65: 9b01b6e8-3ddc-4350-9af6-de8d44fc5746:Scenes/Level0
+                                utilityScenes: {}

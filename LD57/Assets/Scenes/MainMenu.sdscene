@@ -1,0 +1,10 @@
+!SceneAsset
+Id: d8a0e5f4-2109-408f-aaf6-a67412fe7eb2
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Parent: 7ab23059-c8d7-4549-92f9-f1981cd984db:Scenes/MainScene
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts: []
+    Parts: []
