@@ -5,7 +5,7 @@ namespace LD57.LevelManagement
 {
     [LogColor(138, 12, 242)]
     [LogPrefix("Level Manager")]
-    public class LevelManager : SyncScript
+    public class LevelManager : StartupScript
     {
         public string defaultLevelTag;
         public List<LevelData> levels = new List<LevelData>();
@@ -21,15 +21,6 @@ namespace LD57.LevelManagement
             Services.AddService(this);
 
             LoadLevel(defaultLevelTag);
-        }
-
-        public override void Update()
-        {
-            if (Input.IsKeyPressed(Keys.D1))
-                LoadLevel("mm");
-
-            if (Input.IsKeyPressed(Keys.D2))
-                LoadLevel("l0");
         }
 
         public void LoadLevel(string tag)

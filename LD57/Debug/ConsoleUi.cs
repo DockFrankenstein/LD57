@@ -122,9 +122,14 @@ namespace LD57.Debug
                 {
                     VerticalAlignment = VerticalAlignment.Stretch,
                     Background = new SolidBrush(new Color(20,20,20,255)),
+                    ShowHorizontalScrollBar = false,
                 };
 
-                logs = new Label();
+                logs = new Label()
+                {
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                    Wrap = true,
+                };
 
                 var input = new Grid()
                 {

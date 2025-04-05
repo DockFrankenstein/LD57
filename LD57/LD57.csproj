@@ -16,6 +16,8 @@
     <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.2381" IncludeAssets="build;buildTransitive" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ink-compiler\ink_compiler.csproj" />
+    <ProjectReference Include="..\ink-engine-runtime\ink-engine-runtime.csproj" />
     <ProjectReference Include="..\qASIC.Console\qASIC.Console.csproj" />
     <ProjectReference Include="..\qASIC.Core\qASIC.Core.csproj" />
     <ProjectReference Include="..\qASIC.Options\qASIC.Options.csproj" />
@@ -29,6 +31,9 @@
     <Using Include="Stride.Input" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="Data\ink\test.ink">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Data\ui_priority.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
