@@ -43,7 +43,7 @@ namespace LD57.UiSystem
             var i = Renderer.Canvases.Count;
             var newPrio = CanvasPriority.IndexOf(canvas.UiName);
 
-            for (; i > 0; i++)
+            for (; i > 0; i--)
             {
                 var prio = CanvasPriority.IndexOf(Renderer.Canvases[i-1].UiName);
                 if (newPrio >= prio)

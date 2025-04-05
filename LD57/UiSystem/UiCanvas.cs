@@ -1,14 +1,17 @@
-﻿using Myra.Graphics2D.UI;
+﻿using LD57.Input;
+using Myra.Graphics2D.UI;
 
 namespace LD57.UiSystem
 {
-    public class UiCanvas : StartupScript, IUiCanvas
+    public class UiCanvas : StartupScript, IUiCanvas, IInputFocusable
     {
         [DataMemberIgnore] public Desktop Desktop { get; private set; }
 
         public bool EnabledByDefault { get; set; }
 
         public string UiName { get; set; }
+        public bool TakeInputFocus { get; set; }
+
         [DataMemberIgnore] public bool UiEnabled { get; set; }
 
         private Widget _root;
@@ -24,6 +27,14 @@ namespace LD57.UiSystem
             }
         }
 
+        public string InputFocusableName => UiName;
+
+        [DataMemberIgnore] public bool WantsInputFocus =>
+            TakeInputFocus && UiEnabled;
+
+        [DataMemberIgnore]
+        public bool HasInputFocus { get; set; }
+
         public override void Start()
         {
             Desktop = new Desktop()
@@ -32,6 +43,7 @@ namespace LD57.UiSystem
             };
 
             Services.GetService<UiManager>().RegisterCanvas(this);
+            this.RegisterInInputFocus();
 
             if (EnabledByDefault)
                 UiEnabled = true;
@@ -40,6 +52,7 @@ namespace LD57.UiSystem
         public override void Cancel()
         {
             Services.GetService<UiManager>().UnregisterCanvas(this);
+            this.UnregisterInInputFocus();
         }
 
         public void DrawUi()
