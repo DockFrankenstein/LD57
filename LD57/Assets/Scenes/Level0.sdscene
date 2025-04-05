@@ -11,7 +11,52 @@ Hierarchy:
         - ref!! 0c99741d-6c86-41f6-998d-d6298df98a5e
         - ref!! ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
         - ref!! 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
+        - ref!! e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
+        - ref!! 00ecfaa5-320b-4026-96a5-e835f38fe4a1
     Parts:
+        -   Entity:
+                Id: 00ecfaa5-320b-4026-96a5-e835f38fe4a1
+                Name: Interact
+                Components:
+                    6a615779b9e973644325f39e1bec1781: !TransformComponent
+                        Id: a50c8680-b17d-4fe4-aa93-5694f4b247ce
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    595d14350e3d98df00975193f8e1b8c5: !LD57.Player.PlayerInteract,LD57
+                        Id: c95f6b1c-a35a-438a-812e-6b582e1d1f65
+                        input: ref!! 0f715832-b57a-49c0-8060-3059153dc20e
+                    5e89b6195756c1281f69203a2b5dfc72: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: d132964e-1682-4ada-9c2e-3547d08351d2
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7187942f0823118d2d55f9d51973dccc: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 2.0
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer1
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    4d78c1351a9f9b838dd70ffeba059df0: !LD57.FollowObject,LD57
+                        Id: cea1ae74-6a20-42a7-956f-f49380fd6881
+                        Target: ref!! 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
+                        FollowPosition: true
+                        FollowRotation: true
+                        WhenUpdate: false
+                        WhenSimulationUpdate: false
+                        WhenAfterSimulationUpdate: true
         -   Entity:
                 Id: 0c99741d-6c86-41f6-998d-d6298df98a5e
                 Name: Skybox
@@ -57,9 +102,10 @@ Hierarchy:
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
                         MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer1
                         CollisionGroup: {}
                         ContactEventHandler: null
-                        Kinematic: true
+                        Kinematic: false
                         Gravity: false
                         InterpolationMode: Interpolated
                         ContinuousDetectionMode: Discrete
@@ -68,6 +114,8 @@ Hierarchy:
                     0c3397f45102991fc6fae1ba1c0d3164: !LD57.Player.PlayerMove,LD57
                         Id: 683debb5-4649-458c-87ae-411f85919c08
                         Speed: 6.0
+                    accddf2efd5c87071f830aec70dbe50e: !LD57.Player.PlayerInput,LD57
+                        Id: 0f715832-b57a-49c0-8060-3059153dc20e
         -   Entity:
                 Id: 83ca07d1-e26d-472b-bbc1-d2e3373f1049
                 Name: Directional light
@@ -107,6 +155,46 @@ Hierarchy:
                         Id: 430d8c17-48da-4064-80ff-b50d90f4ec50
                         TargetName: player
                         TargetActive: true
+        -   Entity:
+                Id: e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
+                Name: Cube
+                Components:
+                    dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
+                        Id: ae487c05-2d13-47b2-854e-15c026746274
+                        Position: {X: 3.5, Y: 0.5, Z: -2.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    505179e15f47cff2a7235205966781e7: !ModelComponent
+                        Id: 32dff5c4-1de0-48f4-8e63-c209b7d248a3
+                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Materials: {}
+                    21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 7388bf53-ef18-4ee4-bd3f-0fbb437b41b2
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    28b23fad950834a79eb8b5b8eda9ce5e: !LD57.Puzzle.Switch,LD57
+                        Id: c5b71bad-bba0-4523-8278-0684ed486b16
+                        State: false
+                        CanEnable: true
+                        CanDisable: true
         -   Entity:
                 Id: ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
                 Name: Ground

@@ -79,7 +79,6 @@ Hierarchy:
                         Children: {}
                     f004cd0be463a8caac0b5478832bbff8: !LD57.BasicCameraController,LD57
                         Id: 9a280925-4c0b-4297-a7fa-932e588350a7
-                        Active: false
                         Gamepad: false
                         KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
                         TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
@@ -87,6 +86,7 @@ Hierarchy:
                         KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
                         MouseRotationSpeed: {X: 1.0, Y: 1.0}
                         TouchRotationSpeed: {X: 1.0, Y: 0.7}
+                        Active: false
                     408e097335670dab8246e016042fbeee: !LD57.Camera.CameraTarget,LD57
                         Id: 174a5b69-f61d-4d58-a56c-91150dbbe034
                         TargetName: dcam

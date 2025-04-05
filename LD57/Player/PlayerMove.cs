@@ -5,14 +5,15 @@ using Stride.BepuPhysics.Components;
 
 namespace LD57.Player
 {
-    public class PlayerMove : SyncScript, ISimulationUpdate, IInputFocusable
+    public class PlayerMove : SyncScript, ISimulationUpdate
     {
         public override void Start()
         {
             body = Entity.Get<BodyComponent>();
+            input = Entity.Get<PlayerInput>();
+
             rot = body.Orientation;
             this.RegisterInQ();
-            this.RegisterInInputFocus();
         }
 
         public override void Update()
@@ -23,27 +24,23 @@ namespace LD57.Player
         public override void Cancel()
         {
             this.UnregisterInQ();
-            this.UnregisterInInputFocus();
         }
 
         [Command("plspeed", Description = "Player speed.")]
         public float Speed { get; set; } = 6f;
-
-        public string InputFocusableName => "player";
-        public bool WantsInputFocus => true;
-        [DataMemberIgnore]
-        public bool HasInputFocus { get; set; }
 
         Vector2 inputVector;
 
         BodyComponent body;
         Quaternion rot;
 
+        PlayerInput input;
+
         Vector2 GetInputVector()
         {
             var vec = Vector2.Zero;
 
-            if (!HasInputFocus)
+            if (!input.HasInputFocus)
                 return vec;
 
             if (Input.IsKeyDown(Keys.W)) vec.Y += 1f;

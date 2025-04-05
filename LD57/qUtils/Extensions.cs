@@ -1,6 +1,6 @@
 ﻿namespace LD57
 {
-    public static class Extensions
+    public static partial class Extensions
     {
         public static void RegisterInQ(this ScriptComponent component) =>
             component.Services.GetService<qInstance>().RegisteredObjects.Register(component);
