@@ -1,3 +1,7 @@
-﻿console
+﻿# Debug garbage
+console
 debug_camera
+
+# Gameplay
+dialogue
 player

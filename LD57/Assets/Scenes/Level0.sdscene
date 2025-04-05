@@ -12,6 +12,7 @@ Hierarchy:
         - ref!! ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
         - ref!! 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
         - ref!! e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
+        - ref!! 900a3066-8ec6-4e42-92a1-34fb30b1da9b
         - ref!! d9d43300-3071-4ca1-809d-d8d02ca5ee64
         - ref!! 00ecfaa5-320b-4026-96a5-e835f38fe4a1
         - ref!! d0a4675a-9580-4e42-a685-498288e50bec
@@ -338,6 +339,45 @@ Hierarchy:
                                 rotation: {X: 90.0, Y: 0.0, Z: 0.0}
                                 scale: {X: 0.7, Y: 0.7, Z: 0.7}
                                 collision: ref!! c9fb5ac3-57aa-446e-bf9d-5327e558511c
+        -   Folder: null
+            Entity:
+                Id: 900a3066-8ec6-4e42-92a1-34fb30b1da9b
+                Name: NPC
+                Components:
+                    dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
+                        Id: 747db72f-7f6a-4b35-92bf-52029bda7308
+                        Position: {X: -3.75, Y: 0.5, Z: -4.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    505179e15f47cff2a7235205966781e7: !ModelComponent
+                        Id: 5b247db5-2530-4a9d-b6a7-f55e8be1b23f
+                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Materials: {}
+                    21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 590ab808-d180-44ab-b8f8-e0019fbb4564
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    d9212809287a504bff5cbe570303a6cb: !LD57.Dialogues.NPC,LD57
+                        Id: d2bf348a-86ab-4079-88c3-817661112085
+                        DialogueName: intro
         -   Entity:
                 Id: 9018189f-2c73-43b7-bfec-333081519736
                 Name: Cam Target

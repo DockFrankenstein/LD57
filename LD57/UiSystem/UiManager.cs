@@ -33,7 +33,7 @@ namespace LD57.UiSystem
         void UpdateRenderer()
         {
             Renderer.Canvases.Clear();
-            Renderer.Canvases.AddRange(Canvases);
+            Renderer.Canvases.AddRange(Canvases.Reverse());
         }
 
         public override void Cancel()

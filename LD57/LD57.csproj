@@ -34,6 +34,9 @@
     <None Update="Data\cam_priority.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Data\ink\intro.ink">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Data\ink\test.ink">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

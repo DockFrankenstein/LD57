@@ -1,7 +1,13 @@
-﻿Once upon a time...
+﻿VAR speaker = "NPC"
 
- * There were two choices.
- * There were four lines of content.
+This is a test
 
-- They lived happily ever after.
+ * Choice 1
+ * Choice 2
+
+- ~ speaker = "PLAYER"
+  The choice is useless.
+
+  ~ speaker = "NPC"
+  That is correct
     -> END

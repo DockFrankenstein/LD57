@@ -119,6 +119,12 @@ Hierarchy:
                     3a80c5884f75594dcaa33adb9decce6d: !LD57.Dialogues.DialogueManager,LD57
                         Id: 8d66cd12-843a-4cf1-bec1-8916df4aea21
                         Priority: -7
+                        canvas: ref!! b1917ae0-5561-484f-8f2a-10a5b401d214
+                    917c68fdfa6af0ed8c564afde868bc2c: !LD57.UiSystem.UiCanvas,LD57
+                        Id: b1917ae0-5561-484f-8f2a-10a5b401d214
+                        EnabledByDefault: false
+                        UiName: dialogue
+                        TakeInputFocus: true
         -   Entity:
                 Id: a22d1567-627b-4496-8200-fc75f9b586ae
                 Name: Camera

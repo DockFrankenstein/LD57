@@ -1,6 +1,7 @@
-﻿# Gameplay
+﻿# Debug
+console
 
 # Menus
+dialogue
 
-# Debug
-console
+# Gameplay

@@ -1,4 +1,7 @@
 ﻿using Ink;
+using LD57.UiSystem;
+using Myra.Graphics2D.Brushes;
+using Myra.Graphics2D.UI;
 using qASIC.Console;
 using qASIC.Text;
 
@@ -8,11 +11,45 @@ namespace LD57.Dialogues
     {
         static qColor LogColor = new qColor(166, 110, 173);
 
+        public UiCanvas canvas;
+
+        DialogueWidget ui;
+
         public override async Task Execute()
         {
             this.RegisterInQ();
             await CompileInk();
             await LoadInk();
+
+            Services.AddService(this);
+
+            ui = new DialogueWidget();
+            canvas.Root = ui;
+
+            while (Entity?.Scene != null)
+            {
+                if (ActiveStory != null && Input.IsKeyPressed(Keys.E) && canvas.HasInputFocus)
+                {
+                    if (ActiveStory.currentChoices.Count == 0 && !ActiveStory.canContinue)
+                    {
+                        EndDialogue();
+                        continue;
+                    }
+
+                    if (ActiveStory.currentChoices.Count > 0)
+                    {
+                        ActiveStory.ChooseChoiceIndex(0);
+                        ContinueDialogue();
+                    }
+
+                    if (ActiveStory.canContinue)
+                    {
+                        ContinueDialogue();
+                    }
+                }
+
+                await Script.NextFrame();
+            }
         }
 
         public override void Cancel()
@@ -36,8 +73,11 @@ namespace LD57.Dialogues
             {
                 var targetFileName = $"{Path.GetFileNameWithoutExtension(item)}.json";
                 var targetFilePath = Path.Combine(compiledPath, targetFileName);
+
+#if !DEBUG
                 if (File.Exists(targetFilePath)) continue;
-                
+#endif
+
                 try
                 {
                     var txt = await File.ReadAllTextAsync(item);
@@ -56,6 +96,9 @@ namespace LD57.Dialogues
         }
 
         public Dictionary<string, Ink.Runtime.Story> LoadedStories { get; private set; } = new Dictionary<string, Ink.Runtime.Story>();
+
+        [DataMemberIgnore] public string ActiveStoryName { get; set; } = "";
+        [DataMemberIgnore] public Ink.Runtime.Story ActiveStory { get; set; } = null;
 
         [Command("inkstories", Description = "Shows a list of all loaded ink stories.")]
         private void Cmd_Stories(GameCommandContext context)
@@ -100,12 +143,115 @@ namespace LD57.Dialogues
             qDebug.Log($"[Dialogue Manager] Loaded {LoadedStories.Count} ink stories.", LogColor);
         }
 
+        [Command("playink", Description = "Plays an ink story by name.")]
         public void StartDialogue(string name)
         {
             if (!LoadedStories.ContainsKey(name))
             {
                 qDebug.LogError($"Couldn't load ink story of name '{name}' - story doesn't exist!");
                 return;
+            }
+
+            ActiveStoryName = name;
+            ActiveStory = LoadedStories[name];
+
+            ContinueDialogue();
+            canvas.UiEnabled = true;
+
+            qDebug.Log($"[Dialogue Manager] Started story '{name}'.", LogColor);
+        }
+
+        [Command("endink", Description = "Finishes an ink story.")]
+        public void EndDialogue()
+        {
+            if (ActiveStory == null) return;
+            ActiveStory.ResetState();
+            ActiveStory = null;
+            ActiveStoryName = "";
+
+            canvas.UiEnabled = false;
+
+            qDebug.Log("[Dialogue Manager] Finished a story.", LogColor);
+        }
+
+        public void ContinueDialogue()
+        {
+            if (ActiveStory == null) return;
+            if (!ActiveStory.canContinue) return;
+
+            ui.txt.Text = ActiveStory.Continue().TrimEnd();
+            
+            var speaker = ActiveStory.variablesState["speaker"] as string;
+            if (!string.IsNullOrWhiteSpace(speaker))
+                ui.speaker.Text = speaker;
+        }
+
+        public class DialogueWidget : Grid
+        {
+            public Label speaker;
+            public Label txt;
+
+            public DialogueWidget()
+            {
+                Padding = new Myra.Graphics2D.Thickness(50,50);
+
+                var window = new Grid()
+                {
+                    Background = new SolidBrush(new Color(150,150,150)),
+                    VerticalAlignment = VerticalAlignment.Stretch,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    Padding = new Myra.Graphics2D.Thickness(4,4),
+                    RowSpacing = 4,
+                    Width = 600,
+                };
+
+                var speakerBox = new Grid()
+                {
+                    Background = new SolidBrush(new Color(30, 30, 30)),
+                    VerticalAlignment = VerticalAlignment.Stretch,
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                };
+
+                speaker = new Label()
+                {
+                    VerticalAlignment = VerticalAlignment.Center,
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                    TextAlign = FontStashSharp.RichText.TextHorizontalAlignment.Center,
+                };
+
+                var txtBox = new Grid()
+                {
+                    Background = new SolidBrush(new Color(30, 30, 30)),
+                    VerticalAlignment = VerticalAlignment.Stretch,
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                };
+
+                txt = new Label()
+                {
+                    VerticalAlignment = VerticalAlignment.Center,
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                    TextAlign = FontStashSharp.RichText.TextHorizontalAlignment.Center,
+                    Wrap = true,
+                };
+
+                RowsProportions.Add(new Proportion(ProportionType.Fill));
+                RowsProportions.Add(new Proportion(ProportionType.Pixels, 120));
+
+                window.RowsProportions.Add(new Proportion(ProportionType.Pixels, 25));
+                window.RowsProportions.Add(new Proportion(ProportionType.Fill));
+
+                Grid.SetRow(window, 1);
+
+                Grid.SetRow(speakerBox, 0);
+                Grid.SetRow(txtBox, 1);
+
+                Widgets.Add(window);
+
+                window.Widgets.Add(speakerBox);
+                window.Widgets.Add(txtBox);
+
+                speakerBox.Widgets.Add(speaker);
+                txtBox.Widgets.Add(txt);
             }
         }
     }
