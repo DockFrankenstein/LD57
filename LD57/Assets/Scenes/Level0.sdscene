@@ -13,6 +13,8 @@ Hierarchy:
         - ref!! 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
         - ref!! e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
         - ref!! 00ecfaa5-320b-4026-96a5-e835f38fe4a1
+        - ref!! d0a4675a-9580-4e42-a685-498288e50bec
+        - ref!! 106bddf0-ad6e-4f29-8d10-6a2efa67fe8f
     Parts:
         -   Entity:
                 Id: 00ecfaa5-320b-4026-96a5-e835f38fe4a1
@@ -75,6 +77,35 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: 046f2651-e709-48ba-b3ee-1f1214a2cc6d:Skybox
         -   Entity:
+                Id: 106bddf0-ad6e-4f29-8d10-6a2efa67fe8f
+                Name: cam
+                Components:
+                    a6798772aac0ce39cacfa7878bb4dc82: !TransformComponent
+                        Id: 93925a0c-edbd-4db9-9c4b-5b64f1201454
+                        Position: {X: 0.0, Y: 13.0, Z: 5.0000005}
+                        Rotation: {X: -0.57357645, Y: 0.0, Z: 0.0, W: 0.81915206}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9315efb7dfb2a2cd15d154ef6a3aafae: !LD57.Camera.CameraTarget,LD57
+                        Id: ddca367d-ab32-48c6-943f-c3efb1d3a422
+                        TargetName: ceiling
+                        TargetActive: true
+        -   Folder: null
+            Entity:
+                Id: 13e217c6-660e-49d6-9157-0e22f3bab180
+                Name: Ground
+                Components:
+                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
+                        Id: 32e31173-a71b-4890-8dd5-e9caf2c56882
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.12, Y: 1.0, Z: 0.12}
+                        Children: {}
+                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
+                        Id: d66cbf22-afef-46aa-8e4b-c23fad1c723e
+                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Materials: {}
+        -   Entity:
                 Id: 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
                 Name: Sphere
                 Components:
@@ -117,6 +148,20 @@ Hierarchy:
                     accddf2efd5c87071f830aec70dbe50e: !LD57.Player.PlayerInput,LD57
                         Id: 0f715832-b57a-49c0-8060-3059153dc20e
         -   Entity:
+                Id: 7e34ac2b-a929-4efa-8d52-3cc1efbdcbb8
+                Name: Ground
+                Components:
+                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
+                        Id: 5a2f849f-3b0f-4374-9aa8-36cf2327d5b2
+                        Position: {X: 0.0, Y: 0.0, Z: -1.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 1.0, Z: 0.3}
+                        Children: {}
+                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
+                        Id: 4213bcae-bcdc-4c86-b67f-93e4fe197dcd
+                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Materials: {}
+        -   Entity:
                 Id: 83ca07d1-e26d-472b-bbc1-d2e3373f1049
                 Name: Directional light
                 Components:
@@ -155,6 +200,25 @@ Hierarchy:
                         Id: 430d8c17-48da-4064-80ff-b50d90f4ec50
                         TargetName: player
                         TargetActive: true
+        -   Entity:
+                Id: d0a4675a-9580-4e42-a685-498288e50bec
+                Name: Bridge
+                Components:
+                    c2ddd056fc94df45b6749b052ba3fc87: !TransformComponent
+                        Id: ba0a6b23-d7d4-4a7d-9277-694eb21ef2b6
+                        Position: {X: 8.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            7654e943e2d7b141cd68beba08ac5e8c: ref!! ed64db2b-83b9-475a-9420-852bd87bc207
+                    30bd2b264102c470300b86b6bec1e697: !LD57.Puzzle.Bridge,LD57
+                        Id: 05560407-71aa-4ffb-92a8-5c6102c24917
+                        sprite: ref!! ed64db2b-83b9-475a-9420-852bd87bc207
+                        States:
+                            c8091869cc8b1cd0e6e8a2864c1aa11a: Up
+                            3bfe84b20661753856151bc7f56a9727: Left
+                        Triggers:
+                            93c3fdeebe13196e5dacdb0096279a3a: !LD57.Puzzle.Switch,LD57 ref!! c5b71bad-bba0-4523-8278-0684ed486b16
         -   Entity:
                 Id: e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
                 Name: Cube
@@ -209,3 +273,15 @@ Hierarchy:
                         Id: e0f0c2c8-3046-45a2-9b75-9ccff44777d3
                         Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
                         Materials: {}
+        -   Entity:
+                Id: fd3b702e-4791-4426-b5bc-0fe099e1cad4
+                Name: Axis
+                Components:
+                    54cad88e0f614939edd0ea1ce61c7b59: !TransformComponent
+                        Id: ed64db2b-83b9-475a-9420-852bd87bc207
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            d56eaf21da35d5c63e3278c502a12fe3: ref!! 5a2f849f-3b0f-4374-9aa8-36cf2327d5b2
+                            7f0ac074d21adccae6f10a8f161987c4: ref!! 32e31173-a71b-4890-8dd5-e9caf2c56882

@@ -1,3 +1,9 @@
-﻿dcam
+﻿# Debug
+dcam
 
+# Gameplay
+ceiling
 player
+
+# Fallback
+default
