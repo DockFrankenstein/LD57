@@ -1,10 +1,13 @@
-﻿namespace LD57.Puzzle
+﻿using Stride.BepuPhysics;
+using System.Windows.Documents;
+
+namespace LD57.Puzzle
 {
     public class Bridge : AsyncScript
     {
         public const float AnimationDuration = 0.2f;
 
-        public TransformComponent sprite;
+        public BodyComponent axis;
 
         public enum Direction
         {
@@ -18,6 +21,11 @@
         public List<Direction> States { get; set; } = new List<Direction>();
 
         public List<IActivatable> Triggers { get; set; } = new List<IActivatable>();
+
+        public BodyComponent UpBlock { get; set; }
+        public BodyComponent LeftBlock { get; set; }
+        public BodyComponent DownBlock { get; set; }
+        public BodyComponent RightBlock { get; set; }
 
         Direction curDir = Direction.Up;
 
@@ -33,15 +41,19 @@
                     Direction d = curDir;
                     curDir = States[Index];
                     float t = 0;
+
+                    ToggleBlock(GetBlock(d), true);
+                    ToggleBlock(GetBlock(curDir), false);
+
                     while (t < 1f)
                     {
-                        await Script.NextFrame();
+                        await axis.Simulation.NextUpdate();
                         t += (float)Game.UpdateTime.WarpElapsed.TotalSeconds / AnimationDuration;
                         LerpRotation(d, curDir, Tween.InOut(t, 3f));
                     }
                 }
 
-                await Script.NextFrame();
+                await axis.Simulation.NextUpdate();
             }
         }
 
@@ -53,9 +65,27 @@
             Index = (Index + 1) % States.Count;
         }
 
+        BodyComponent GetBlock(Direction dir)
+        {
+            return dir switch
+            {
+                Direction.Left => LeftBlock,
+                Direction.Down => DownBlock,
+                Direction.Right => RightBlock,
+                _ => UpBlock,
+            };
+        }
+
+        void ToggleBlock(BodyComponent block, bool active)
+        {
+            var pos = block.Position;
+            pos.Y = active ? 0f : -20f;
+            block.Position = pos;
+        }
+
         void LerpRotation(Direction a, Direction b, float t)
         {
-            sprite.Rotation = Quaternion.Lerp(GetRotation(a), GetRotation(b), Math.Clamp(t, 0f, 1f));
+            axis.Orientation = Quaternion.Lerp(GetRotation(a), GetRotation(b), Math.Clamp(t, 0f, 1f));
         }
 
         Quaternion GetRotation(Direction dir)

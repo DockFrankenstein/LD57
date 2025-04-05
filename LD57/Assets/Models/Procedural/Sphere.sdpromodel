@@ -3,6 +3,7 @@ Id: 84587a9f-8b55-4cf8-9572-7e02dbb2e385
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Type: !SphereProceduralModel
+    Radius: 0.3
     Tessellation: 30
     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
     UvScale: {X: 1.0, Y: 1.0}

@@ -1,4 +1,6 @@
-﻿namespace LD57.Puzzle
+﻿using Stride.BepuPhysics;
+
+namespace LD57.Puzzle
 {
     public class TheBigObject : AsyncScript
     {
@@ -19,14 +21,23 @@
 
         public override async Task Execute()
         {
+            for (int i = 0; i < States.Count; i++)
+                ToggleCollision(i, false);
+            
             if (States.Count > 0)
+            {
                 LerpState(States[0], 1f);
+                ToggleCollision(0, true);
+            }
+
 
             while (Entity?.Scene != null)
             {
                 if (States.Count > 0 && curState != Index)
                 {
+                    ToggleCollision(curState, false);
                     curState = Index;
+                    ToggleCollision(curState, true);
                     var t = 0f;
                     while (t < 1f)
                     {
@@ -34,7 +45,10 @@
                         {
                             if (t > 0.5f)
                                 t = 1f - t;
+
+                            ToggleCollision(curState, false);
                             curState = Index;
+                            ToggleCollision(curState, true);
                         }
 
                         await Script.NextFrame();
@@ -55,13 +69,23 @@
             Entity.Transform.Scale = Vector3.Lerp(Entity.Transform.Scale, b.scale, t);
         }
 
+        void ToggleCollision(int index, bool active)
+        {
+            if (!States.IndexInRange(index)) return;
+            if (States[index].collision == null) return;
+
+            var pos = States[index].collision.Position;
+            pos.Y = active ? 0f : -20f;
+            States[index].collision.Position = pos;
+        }
+
         [DataContract]
         public struct State
         {
             public Vector3 position;
             public Vector3 rotation;
             public Vector3 scale;
-            public float transparency;
+            public BodyComponent collision;
 
             public Quaternion GetRotation() =>
                 Quaternion.RotationYawPitchRoll(
