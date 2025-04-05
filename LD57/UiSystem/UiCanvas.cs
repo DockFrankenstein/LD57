@@ -42,7 +42,7 @@ namespace LD57.UiSystem
                 Root = _root,
             };
 
-            Services.GetService<UiManager>().RegisterCanvas(this);
+            Services.GetService<UiManager>().Canvases.Register(this);
             this.RegisterInInputFocus();
 
             if (EnabledByDefault)
@@ -51,7 +51,7 @@ namespace LD57.UiSystem
 
         public override void Cancel()
         {
-            Services.GetService<UiManager>().UnregisterCanvas(this);
+            Services.GetService<UiManager>().Canvases.Unregister(this);
             this.UnregisterInInputFocus();
         }
 

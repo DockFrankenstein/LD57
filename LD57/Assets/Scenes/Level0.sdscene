@@ -38,7 +38,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            7604153ffe44cbcbc0cba19fd1056fe0: ref!! 3bab5ad5-dda1-4e78-b9ed-846b2ba597bc
                     f0055ce876147c97bf2600d66a371d6f: !ModelComponent
                         Id: 5db2f11b-ecdb-4d2d-9c51-09b5960a8b81
                         Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
@@ -92,6 +93,20 @@ Hierarchy:
                                 ComputeTransmittance: false
                                 BiasParameters: {}
                         Intensity: 20.0
+        -   Entity:
+                Id: 9018189f-2c73-43b7-bfec-333081519736
+                Name: Cam Target
+                Components:
+                    84b5e1126283a8f3b6cb5e94471c3b6f: !TransformComponent
+                        Id: 3bab5ad5-dda1-4e78-b9ed-846b2ba597bc
+                        Position: {X: 0.0, Y: 2.8971655, Z: 3.4338622}
+                        Rotation: {X: -0.29554555, Y: 0.0, Z: 0.0, W: 0.95532864}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    04d1e4eed930e2b03fc5302f0013aa00: !LD57.Camera.CameraTarget,LD57
+                        Id: 430d8c17-48da-4064-80ff-b50d90f4ec50
+                        TargetName: player
+                        TargetActive: true
         -   Entity:
                 Id: ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
                 Name: Ground

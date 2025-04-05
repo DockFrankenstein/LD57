@@ -1,4 +1,7 @@
-﻿using LD57.Input;
+﻿using LD57.Camera;
+using LD57.Input;
+using NuGet.Packaging.Signing;
+using qASIC.Console;
 
 namespace LD57
 {
@@ -34,16 +37,35 @@ namespace LD57
 
         public string InputFocusableName => "debug_camera";
 
-        bool active = false;
+        public bool Active { get; set; } = false;
 
-        public bool WantsInputFocus => active;
+        [Command("dcam", Description = "Changes active state of the debug camera.")]
+        public void Cmd_Dcam(GameCommandContext context)
+        {
+            Active = !Active;
+            target.TargetActive = Active;
+            if (Active)
+            {
+                var cam = Services.GetService<CameraController>();
+
+                Entity.Transform.Position = cam.Entity.Transform.Position;
+                Entity.Transform.Rotation = cam.Entity.Transform.Rotation;
+            }
+
+            context.Logs.Log($"Debug camera {(Active ? "activated" : "deactivated")}.");
+        }
+
+        public bool WantsInputFocus => Active;
         [DataMemberIgnore] public bool HasInputFocus { get; set; }
+
+        CameraTarget target;
 
         public override void Start()
         {
             base.Start();
 
             this.RegisterInInputFocus();
+            this.RegisterInQ();
 
             // Default up-direction
             upVector = Vector3.UnitY;
@@ -54,11 +76,15 @@ namespace LD57
                 Input.Gestures.Add(new GestureConfigDrag());
                 Input.Gestures.Add(new GestureConfigComposite());
             }
+
+            target = Entity.Get<CameraTarget>();
+            target.TargetActive = Active;
         }
 
         public override void Cancel()
         {
             this.UnregisterInInputFocus();
+            this.UnregisterInQ();
         }
 
         public override void Update()
@@ -154,9 +180,7 @@ namespace LD57
                 if (Input.HasMouse)
                 {
                     // Rotate with mouse
-                    active = Input.IsMouseButtonDown(MouseButton.Right);
-
-                    if (active && HasInputFocus)
+                    if (HasInputFocus && Input.IsMouseButtonDown(MouseButton.Right))
                     {
                         Input.LockMousePosition();
                         Game.IsMouseVisible = false;
