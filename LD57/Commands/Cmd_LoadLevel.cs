@@ -8,6 +8,7 @@ namespace LD57.Commands
     public class Cmd_LoadLevel : GameCommand
     {
         public override string CommandName => "loadlevel";
+        public override string[] Aliases => ["ll"];
         public override string Description => "Loads a level.";
 
         public override object Run(GameCommandContext context)

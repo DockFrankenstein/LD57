@@ -6,6 +6,8 @@ namespace LD57.Dialogues
 {
     public class DialogueManager : AsyncScript
     {
+        static qColor LogColor = new qColor(166, 110, 173);
+
         public override async Task Execute()
         {
             this.RegisterInQ();
@@ -20,6 +22,10 @@ namespace LD57.Dialogues
 
         public static async Task CompileInk()
         {
+            var logColor = new qColor(178, 237, 18);
+
+            qDebug.Log("[Dialogue Manager] Compiling ink scripts...", logColor);
+
             var inkPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data/ink");
             var compiledPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data/ink_compiled");
 
@@ -34,7 +40,6 @@ namespace LD57.Dialogues
                 
                 try
                 {
-
                     var txt = await File.ReadAllTextAsync(item);
                     var compiler = new Compiler(txt);
                     var story = compiler.Compile();
@@ -46,6 +51,8 @@ namespace LD57.Dialogues
                     qDebug.LogError($"There was an error while compiling ink file at '{item}': {e}");
                 }
             }
+
+            qDebug.Log("[Dialogue Manager] Ink compilation compleated!", logColor);
         }
 
         public Dictionary<string, Ink.Runtime.Story> LoadedStories { get; private set; } = new Dictionary<string, Ink.Runtime.Story>();
@@ -54,16 +61,17 @@ namespace LD57.Dialogues
         private void Cmd_Stories(GameCommandContext context)
         {
             var tree = TextTree.Fancy;
-            var root = new TextTreeItem("Loaded ink stories:");
+            var root = new TextTreeItem("[Dialogue Manager] Loaded ink stories:");
 
             foreach (var item in LoadedStories)
                 root.Add(item.Key);
 
-            context.Logs.Log(tree.GenerateTree(root));
+            context.Logs.Log(tree.GenerateTree(root), LogColor);
         }
 
         public async Task LoadInk()
         {
+            qDebug.Log("[Dialogue Manager] Loading ink scripts...", LogColor);
             LoadedStories.Clear();
 
             var inkPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data/ink_compiled");
@@ -88,6 +96,8 @@ namespace LD57.Dialogues
                     qDebug.LogError($"There was an error while loading ink file at '{item}': {e}");
                 }
             }
+            
+            qDebug.Log($"[Dialogue Manager] Loaded {LoadedStories.Count} ink stories.", LogColor);
         }
 
         public void StartDialogue(string name)

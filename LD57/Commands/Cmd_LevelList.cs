@@ -9,6 +9,9 @@ namespace LD57.Commands
     public class Cmd_LevelList : GameCommand
     {
         public override string CommandName => "levellist";
+        public override string[] Aliases => ["lli"];
+        public override string Description => "Shows a list of avaliable scenes";
+
         public override object Run(GameCommandContext context)
         {
             var tree = TextTree.Fancy;
