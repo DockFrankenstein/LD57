@@ -22,10 +22,13 @@ namespace LD57.Player
 
         public override void Update()
         {
-            if (input.HasInputFocus)
+            if (input.HasInputFocus && Focused != null)
             {
                 if (Input.IsKeyPressed(Keys.E))
-                    Interact();
+                    Focused.Interact();
+
+                if (Input.IsKeyPressed(Keys.Q))
+                    Focused.Interact2();
             }
 
             DebugText.Print($"Focused: {(Focused == null ? "NULL" : (Focused as ScriptComponent).Entity.Name)}", new Int2(50,50));
@@ -68,12 +71,6 @@ namespace LD57.Player
             var interactable = other.Entity.BetterGet<IInteractable>();
             if (interactable == null) return;
             inRange.Remove(interactable);
-        }
-
-        public void Interact()
-        {
-            if (Focused == null) return;
-            Focused.Interact();
         }
 
         public void SimulationUpdate(BepuSimulation simulation, float simTimeStep)

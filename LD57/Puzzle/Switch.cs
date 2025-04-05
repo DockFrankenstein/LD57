@@ -22,5 +22,8 @@ namespace LD57.Puzzle
             State = !State;
             OnActivate?.Invoke();
         }
+
+        public void Interact2() =>
+            Interact();
     }
 }

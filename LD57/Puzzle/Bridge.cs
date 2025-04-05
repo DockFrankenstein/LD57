@@ -36,8 +36,8 @@
                     while (t < 1f)
                     {
                         await Script.NextFrame();
-                        t += (float)Game.UpdateTime.Elapsed.TotalSeconds / AnimationDuration;
-                        LerpRotation(d, curDir, Tween.InOut(t, 2f));
+                        t += (float)Game.UpdateTime.WarpElapsed.TotalSeconds / AnimationDuration;
+                        LerpRotation(d, curDir, Tween.InOut(t, 3f));
                     }
                 }
 

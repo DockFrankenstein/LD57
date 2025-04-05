@@ -12,6 +12,7 @@ Hierarchy:
         - ref!! ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
         - ref!! 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
         - ref!! e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
+        - ref!! d9d43300-3071-4ca1-809d-d8d02ca5ee64
         - ref!! 00ecfaa5-320b-4026-96a5-e835f38fe4a1
         - ref!! d0a4675a-9580-4e42-a685-498288e50bec
         - ref!! 106bddf0-ad6e-4f29-8d10-6a2efa67fe8f
@@ -82,10 +83,11 @@ Hierarchy:
                 Components:
                     a6798772aac0ce39cacfa7878bb4dc82: !TransformComponent
                         Id: 93925a0c-edbd-4db9-9c4b-5b64f1201454
-                        Position: {X: 0.0, Y: 13.0, Z: 5.0000005}
+                        Position: {X: 0.0, Y: 13.0, Z: 7.0}
                         Rotation: {X: -0.57357645, Y: 0.0, Z: 0.0, W: 0.81915206}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            2940e26d6288df546998012d1525cb5e: ref!! f1fe1637-a9a1-43e1-8d5a-69a1f0945741
                     9315efb7dfb2a2cd15d154ef6a3aafae: !LD57.Camera.CameraTarget,LD57
                         Id: ddca367d-ab32-48c6-943f-c3efb1d3a422
                         TargetName: ceiling
@@ -187,6 +189,44 @@ Hierarchy:
                                 BiasParameters: {}
                         Intensity: 20.0
         -   Entity:
+                Id: 8b521d4f-a7a4-426a-8303-e3c7bb63aea0
+                Name: The big object
+                Components:
+                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
+                        Id: f1fe1637-a9a1-43e1-8d5a-69a1f0945741
+                        Position: {X: 0.0, Y: -7.1173565E-07, Z: -6.0}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.7, Y: 0.7, Z: 0.7}
+                        Children: {}
+                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
+                        Id: 10de2ec6-77e5-4a12-bfd4-36cde86d8761
+                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Materials:
+                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Ryba
+                    bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
+                        Id: 5ed58fdc-7e42-46d9-a65e-245d09524440
+                        States:
+                            e536e6fe0c11acf928222a0c3980cfb8:
+                                position: {X: 0.0, Y: 0.0, Z: -11.0}
+                                rotation: {X: 90.0, Y: 0.0, Z: 0.0}
+                                scale: {X: 0.1, Y: 0.1, Z: 0.1}
+                                transparency: 0.0
+                            5a98286409a3848da80913a48f6e34e3:
+                                position: {X: 0.0, Y: 0.0, Z: -10.0}
+                                rotation: {X: 90.0, Y: 0.0, Z: 0.0}
+                                scale: {X: 0.2, Y: 0.2, Z: 0.2}
+                                transparency: 1.0
+                            a9c22161c872542a9e12e15efe9ad7b8:
+                                position: {X: 0.0, Y: 0.0, Z: -6.0}
+                                rotation: {X: 90.0, Y: 0.0, Z: 0.0}
+                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                transparency: 1.0
+                            c7fa0a02e7fbe6351e10eca37e1174ef:
+                                position: {X: 0.0, Y: 0.0, Z: -5.0}
+                                rotation: {X: 90.0, Y: 0.0, Z: 0.0}
+                                scale: {X: 0.7, Y: 0.7, Z: 0.7}
+                                transparency: 1.0
+        -   Entity:
                 Id: 9018189f-2c73-43b7-bfec-333081519736
                 Name: Cam Target
                 Components:
@@ -219,6 +259,46 @@ Hierarchy:
                             3bfe84b20661753856151bc7f56a9727: Left
                         Triggers:
                             93c3fdeebe13196e5dacdb0096279a3a: !LD57.Puzzle.Switch,LD57 ref!! c5b71bad-bba0-4523-8278-0684ed486b16
+        -   Folder: null
+            Entity:
+                Id: d9d43300-3071-4ca1-809d-d8d02ca5ee64
+                Name: Reel
+                Components:
+                    dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
+                        Id: d6794c71-0805-41ca-90a3-235c5f5525f1
+                        Position: {X: -3.5, Y: 0.5, Z: 3.4999995}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    505179e15f47cff2a7235205966781e7: !ModelComponent
+                        Id: 94a3807d-7719-4e3a-b16a-f441b66d4698
+                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Materials: {}
+                    21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: cad000f2-04eb-4532-82a4-c8289e5c5f06
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
+                        Id: 14d586b9-a07d-4659-9442-8cd447210b5a
+                        Target: ref!! 5ed58fdc-7e42-46d9-a65e-245d09524440
+                        Interactable: true
         -   Entity:
                 Id: e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
                 Name: Cube

@@ -7,5 +7,6 @@
         bool Focused { get; set; }
 
         void Interact();
+        void Interact2();
     }
 }

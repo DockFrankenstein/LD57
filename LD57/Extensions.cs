@@ -10,5 +10,8 @@
 
             return default;
         }
+
+        public static int BetterMod(this int value, int mod) =>
+            (value % mod + mod) % mod;
     }
 }
