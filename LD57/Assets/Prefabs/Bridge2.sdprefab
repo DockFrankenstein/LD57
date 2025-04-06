@@ -1,0 +1,22 @@
+!PrefabAsset
+Id: 90a29e24-32e6-4581-b624-195d7b9842e7
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! b300a329-cc32-41bb-9370-223b515ab0c9
+    Parts:
+        -   Entity:
+                Id: b300a329-cc32-41bb-9370-223b515ab0c9
+                Name: Bridge2
+                Components:
+                    9945f67fed5a219bfdce0e7b25852d74: !TransformComponent
+                        Id: 5127a807-fa41-488e-9d5a-a00b64ebf984
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    959a439abb2904b9e47d035adc2348ad: !ModelComponent
+                        Id: 1a159763-aceb-44fa-a52b-76aacd8ce73b
+                        Model: 571ca0f4-6717-42b3-b9e9-20c1337acec2:Models/Procedural/Bridge2
+                        Materials: {}

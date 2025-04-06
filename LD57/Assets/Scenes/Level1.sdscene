@@ -1,0 +1,567 @@
+!SceneAsset
+Id: 8b074673-db3b-4b81-a8cb-e094b4b24c43
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 7dfd0d22-8311-4b22-a51e-33295431a185
+        - ref!! 9c9cecb3-56f7-46af-afd0-8fe4cacd39fb
+        - ref!! ded374de-2909-4938-9709-e5f05bf06a29
+        - ref!! de76dc7d-1870-4546-b97e-cf84e4802734
+        - ref!! a667c8fb-24d3-4fa6-80c1-91820e8b4e96
+        - ref!! c794b9a7-1526-4d5d-a8c7-931e3c92d34f
+        - ref!! 5e20d42a-2679-4086-8bb6-1723e209dbfe
+        - ref!! b1050b4a-96ef-41f3-aac9-4e529bae8693
+        - ref!! 0658352b-3074-4739-81be-16fd658e1c65
+        - ref!! 030923e6-2ae2-44e0-8744-010a6207f4c8
+        - ref!! 31a10169-d7ce-455e-9a82-27e4159faeb9
+        - ref!! a0a7d6b0-278d-41e7-9053-ca0bb856f3b1
+        - ref!! 538c8107-0446-49c8-99bb-8a70f7ddad37
+        - ref!! b3178e1a-30f6-47d1-b0e3-bbebe6562346
+        - ref!! 324d632e-51d3-4698-a3f6-2a4ab3f52256
+    Parts:
+        -   Folder: Geometry
+            Entity:
+                Id: 030923e6-2ae2-44e0-8744-010a6207f4c8
+                Name: Platform3x3
+                Components:
+                    3b72e387f28e3dc400be4eb6d00b7d2d: !TransformComponent
+                        Id: 25168e6a-d795-4e78-a9c8-5b1da65d7e95
+                        Position: {X: 6.0, Y: 0.0, Z: -2.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            f9614b53f8f448cedde7b355ef215f17: ref!! 01728f60-bde8-42bf-80a6-be769734ca21
+        -   Folder: Geometry
+            Entity:
+                Id: 0658352b-3074-4739-81be-16fd658e1c65
+                Name: Bridge5
+                Components:
+                    0d251b1f77aa7472263b2e6c1e955186: !TransformComponent
+                        Id: 77b18e40-498b-47e2-a449-69a71ea06181
+                        Position: {X: 1.5, Y: 0.0, Z: 3.5}
+                        Rotation: {X: 0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a854106231193b841c82d0d45823f514: ref!! eb0fd53f-5f43-48bb-86a0-8a1957653e6d
+        -   Entity:
+                Id: 07bef418-3c8d-41d1-9857-6f61cc332ad4
+                Name: Platform3x3
+                Components:
+                    591b881ff287819b2310ef23a3720b14: !TransformComponent
+                        Id: 01728f60-bde8-42bf-80a6-be769734ca21
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    540108cc218709cb53e809cdd1baecc0: !ModelComponent
+                        Id: b9159ce8-a66f-4e0f-84e0-006df5045d7f
+                        Model: 1c669514-bad8-498b-903b-8f9ba0778cb8:Models/Procedural/Platform3x3
+                        Materials: {}
+            Base:
+                BasePartAsset: 6288bc9d-ef58-4277-b167-a2ab5db14ac2:Prefabs/Platform3x3
+                BasePartId: b8ae3b7c-3e9d-4637-bbec-fac3e05d28ae
+                InstanceId: 0dad3c65-c140-4e8e-bac3-977a6f856306
+        -   Entity:
+                Id: 0e5d68fd-9b5c-4261-a9a2-4a1009f881ff
+                Name: Cam Target
+                Components:
+                    84b5e1126283a8f3b6cb5e94471c3b6f: !TransformComponent
+                        Id: 722a9d45-ddcf-4238-a8bf-f3364302be20
+                        Position: {X: 0.0, Y: 2.8971655, Z: 3.4338622}
+                        Rotation: {X: -0.29554555, Y: 0.0, Z: 0.0, W: 0.95532864}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    04d1e4eed930e2b03fc5302f0013aa00: !LD57.Camera.CameraTarget,LD57
+                        Id: a1bde490-27bb-4be1-92ee-654f492ad364
+                        TargetName: player
+                        TargetActive: true
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 78c254f9-f653-46ad-948d-f90aab0e139e
+                InstanceId: 1961ffb1-da5d-4a4c-8bf5-afb478f4e4bf
+        -   Entity:
+                Id: 1a1144e2-ab8c-461b-874d-439defa73076
+                Name: Platform3x4
+                Components:
+                    1ddf16c9d7280832945ba4391911c594: !TransformComponent
+                        Id: 672f00fe-c224-47ab-8bdf-c27e91c7fba4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6008eae729521faf43224e15d519347a: !ModelComponent
+                        Id: 2921c8ee-d6f4-477d-adfb-a896a4f25d9c
+                        Model: a17a6963-5ca6-44aa-9a9c-1d5c00f5654c:Models/Procedural/Platform3x4
+                        Materials: {}
+            Base:
+                BasePartAsset: 7f739888-baa6-4173-8569-cfec06169f6f:Prefabs/Platform3x4
+                BasePartId: 98df31cd-7a62-4b12-8f33-ace4971159a9
+                InstanceId: 781a2e74-a929-4a18-affb-60bb421c0aef
+        -   Folder: Geometry
+            Entity:
+                Id: 31a10169-d7ce-455e-9a82-27e4159faeb9
+                Name: Bridge3
+                Components:
+                    c54727892bc95564280f42345d8119a9: !TransformComponent
+                        Id: cf8ef51d-edaf-40f7-9280-fa2983f95b62
+                        Position: {X: 6.0, Y: 0.0, Z: 0.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            932542cad30eb5637749a09f44aef29c: ref!! 4da6335e-b217-4093-80fd-457a53d3f1a5
+        -   Folder: Lights
+            Entity:
+                Id: 324d632e-51d3-4698-a3f6-2a4ab3f52256
+                Name: Spot light
+                Components:
+                    a5b3379073d5e99aa8434965b526d198: !TransformComponent
+                        Id: 581e0a41-d4ca-4786-80ea-545fe53b13b7
+                        Position: {X: 0.5, Y: 12.698, Z: 4.889}
+                        Rotation: {X: -0.57357645, Y: 0.0, Z: 0.0, W: 0.81915206}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e505ee3d03c372ef8daf1544d78b4d0e: !LightComponent
+                        Id: 7c88dd2c-60d7-40dd-aa3c-055ce8e415e9
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.9529412, G: 0.95941174, B: 1.0}
+                            Range: 20.0
+                            AngleInner: 11.6
+                            AngleOuter: 79.1
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 140.0
+        -   Entity:
+                Id: 3590a1f2-aaf0-4a94-9377-a1875a3202b2
+                Name: cam
+                Components:
+                    8bc0d52fff999f9c1b95b9e9b91d38b8: !TransformComponent
+                        Id: 697cb26e-f68c-4b11-b40b-3f7332f27dd8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.57357645, Y: 0.0, Z: 0.0, W: 0.81915206}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            883b3ea16068aed98b203d9843488ae9: ref!! 2de74d01-99a5-40be-98ea-536150caeb14
+                    1616e7dc5a1e968928959bd8f627b7f4: !LD57.Camera.CameraTarget,LD57
+                        Id: a99aa88d-8368-4380-9c5c-b19c52543f60
+                        TargetName: ceiling
+                        TargetActive: true
+                    a5119141280e90390f7566ae557b059f: !CameraComponent
+                        Id: 3f8f6fa4-baad-49e2-8712-2587ffcd305c
+                        Enabled: false
+                        Name: null
+                        Projection: Perspective
+                        Slot: 00000000-0000-0000-0000-000000000000
+            Base:
+                BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
+                BasePartId: d7dd94f9-d7fd-45cd-a286-ce1b549d696c
+                InstanceId: e2ebc0c3-d25b-40fb-bfe4-8076ce77fb62
+        -   Entity:
+                Id: 35e29fbb-7332-4084-8e8f-2202edb379f3
+                Name: Bridge3
+                Components:
+                    9d6f8154d2c7c28e046e34a8f2362bfb: !TransformComponent
+                        Id: 4da6335e-b217-4093-80fd-457a53d3f1a5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3781309e0e850ddcd8fed8a8d279cf55: !ModelComponent
+                        Id: 20505ed5-8efa-41fd-bc7f-68853a7187a4
+                        Model: bb4a613e-a0e0-4b25-8d0a-2cf82e0238b4:Models/Procedural/Bridge3
+                        Materials: {}
+            Base:
+                BasePartAsset: 96838afa-4916-418c-82e8-c1ae9994e051:Prefabs/Bridge3
+                BasePartId: 0b617083-2979-472c-b604-c9f13f3a2c2b
+                InstanceId: 6ee296ed-3ed7-487e-ba9c-5e6436eeeef9
+        -   Folder: null
+            Entity:
+                Id: 3c8efb57-b8fb-45fc-8e73-6b1d7c88d7ab
+                Name: Reel
+                Components:
+                    dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
+                        Id: 580a3bd3-d036-4d9b-82b5-356c195010ce
+                        Position*: {X: 0.49999997, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    505179e15f47cff2a7235205966781e7: !ModelComponent
+                        Id: 71afb8fd-053f-4625-b92a-62f96a558904
+                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Materials: {}
+                    21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 6e430901-2d9d-444a-8c8f-af830baa83d6
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
+                        Id: 41647607-52fc-4533-8224-e28b0946d65d
+                        Target: null
+                        Interactable: true
+            Base:
+                BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
+                BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
+                InstanceId: e5e505ff-6667-4867-9981-52528308c815
+        -   Folder: Puzzle Elements
+            Entity:
+                Id: 538c8107-0446-49c8-99bb-8a70f7ddad37
+                Name: Reel
+                Components:
+                    0d870047c2bc37f81e7c2e1e0dbe6b71: !TransformComponent
+                        Id: 20cc00ef-a436-44f2-b484-156ee2166e22
+                        Position: {X: 4.0, Y: 0.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            2865fcc92e8de1fd19cc9c1e478ee15e: ref!! 580a3bd3-d036-4d9b-82b5-356c195010ce
+        -   Folder: Geometry
+            Entity:
+                Id: 5e20d42a-2679-4086-8bb6-1723e209dbfe
+                Name: Platform3x4
+                Components:
+                    e5b2fbfdf5270cd52c55a457934385ba: !TransformComponent
+                        Id: 88cf793a-b973-4c8f-a39d-059bfbf7343e
+                        Position: {X: -3.0, Y: 0.0, Z: 3.5}
+                        Rotation: {X: 0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b410ce6d9b954bbd580e35a2c6879aab: ref!! 672f00fe-c224-47ab-8bdf-c27e91c7fba4
+        -   Entity:
+                Id: 7dfd0d22-8311-4b22-a51e-33295431a185
+                Name: Player
+                Components:
+                    6dda25d18b9ff2502bb69f1821acf6ef: !TransformComponent
+                        Id: bb753d3f-3ff1-46d6-9b4a-6358da71ca03
+                        Position: {X: -4.0, Y: 0.0, Z: 3.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            bb40720264065e70d9ccafab28aa4898: ref!! 4e5accc2-7c55-48be-b997-63357fc1a819
+        -   Entity:
+                Id: 864025dd-242b-4078-81a2-412295d867c9
+                Name: Bridge5
+                Components:
+                    4f291ba045611eef6d31a00691de9e72: !TransformComponent
+                        Id: eb0fd53f-5f43-48bb-86a0-8a1957653e6d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    edd4150d45cf6da39559987040c28740: !ModelComponent
+                        Id: d9b83f0c-ae0d-42dd-9fcd-de3966e8296a
+                        Model: 77ced1ec-47e7-42bb-a953-03c9853eec1f:Models/Procedural/Bridge5
+                        Materials: {}
+            Base:
+                BasePartAsset: fa6a7fe0-1738-4303-8001-32821ebcb8ea:Prefabs/Bridge5
+                BasePartId: 48fffff2-aa51-47e4-98e1-0b7dde1279f0
+                InstanceId: 5ae75190-e247-45d9-bc18-2c2456bad084
+        -   Folder: Lights
+            Entity:
+                Id: 9c9cecb3-56f7-46af-afd0-8fe4cacd39fb
+                Name: Spot light
+                Components:
+                    a5b3379073d5e99aa8434965b526d198: !TransformComponent
+                        Id: 0585ab81-05ec-4b70-b366-9972e3903a6c
+                        Position: {X: -4.7683716E-07, Y: 5.0, Z: 0.50000024}
+                        Rotation: {X: -0.07847813, Y: -0.8605214, Z: -0.45717403, W: -0.21056128}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e505ee3d03c372ef8daf1544d78b4d0e: !LightComponent
+                        Id: 03a33c86-75dd-41a6-bf3a-deaf16f8da93
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.9978125, G: 0.95625, B: 1.0}
+                            Range: 10.0
+                            AngleOuter: 57.8
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 300.0
+        -   Entity:
+                Id: 9f559a2a-0788-421a-81a4-131f22a0008d
+                Name: The big object
+                Components:
+                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
+                        Id: 2de74d01-99a5-40be-98ea-536150caeb14
+                        Position: {X: 0.0, Y: 0.0, Z: -9.361844}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.7, Y: 0.7, Z: 0.7}
+                        Children: {}
+                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
+                        Id: 85f97739-42be-42ca-b7c8-b7957f248e4c
+                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Materials:
+                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Ryba
+                    bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
+                        Id: 944add9a-0e17-4971-bbed-2228ebe3f2c2
+                        States: {}
+            Base:
+                BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
+                BasePartId: 49c43870-e9f2-4396-9a7a-8bcf11aa3900
+                InstanceId: e2ebc0c3-d25b-40fb-bfe4-8076ce77fb62
+        -   Folder: Puzzle Elements
+            Entity:
+                Id: a0a7d6b0-278d-41e7-9053-ca0bb856f3b1
+                Name: Reel
+                Components:
+                    0d870047c2bc37f81e7c2e1e0dbe6b71: !TransformComponent
+                        Id: 8f34ad21-cac8-4f07-90bb-9e3c3d1c9d7e
+                        Position: {X: -3.0, Y: 0.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            2865fcc92e8de1fd19cc9c1e478ee15e: ref!! b80fce32-2d58-40f6-80d4-23a291dbba30
+        -   Entity:
+                Id: a43f78fc-bfa7-46f2-9f62-6257b854f7cd
+                Name: Player
+                Components:
+                    35dee7a9c98182ed520a64e4e2065ba7: !TransformComponent
+                        Id: 4e5accc2-7c55-48be-b997-63357fc1a819
+                        Position: {X: 0.0, Y: 0.3, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            7604153ffe44cbcbc0cba19fd1056fe0: ref!! 722a9d45-ddcf-4238-a8bf-f3364302be20
+                    f0055ce876147c97bf2600d66a371d6f: !ModelComponent
+                        Id: 33238b68-0d19-402d-8cbc-5aed31b8319f
+                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
+                        Materials: {}
+                    6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 61454f22-ce15-4fac-bfa5-da4b2680094d
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                5d22bc5a802cc37c7f468d8608f64ccf: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.3
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer1
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: false
+                        InterpolationMode: Interpolated
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    0c3397f45102991fc6fae1ba1c0d3164: !LD57.Player.PlayerMove,LD57
+                        Id: 47883f22-734b-43df-a07b-ee5762939df4
+                        Speed: 6.0
+                    accddf2efd5c87071f830aec70dbe50e: !LD57.Player.PlayerInput,LD57
+                        Id: 18ef2257-2ddc-462c-a96c-dbe5a74f261e
+                    899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
+                        Id: dc896b0c-5b13-48b1-b046-8e5f7402544a
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
+                InstanceId: 1961ffb1-da5d-4a4c-8bf5-afb478f4e4bf
+        -   Folder: Lights
+            Entity:
+                Id: a667c8fb-24d3-4fa6-80c1-91820e8b4e96
+                Name: Spot light
+                Components:
+                    a5b3379073d5e99aa8434965b526d198: !TransformComponent
+                        Id: 394dc011-8759-4e59-993b-3e869e04f01a
+                        Position: {X: 2.3841858E-07, Y: 5.0, Z: 2.5}
+                        Rotation: {X: -0.20737605, Y: -0.691455, Z: -0.5896071, W: 0.3622825}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e505ee3d03c372ef8daf1544d78b4d0e: !LightComponent
+                        Id: 8a82c265-3299-4938-b3c3-b16d400b9521
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.9529412, G: 0.95941174, B: 1.0}
+                            Range: 10.0
+                            AngleOuter: 57.8
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 140.0
+        -   Folder: Geometry
+            Entity:
+                Id: b1050b4a-96ef-41f3-aac9-4e529bae8693
+                Name: Platform3x4
+                Components:
+                    e5b2fbfdf5270cd52c55a457934385ba: !TransformComponent
+                        Id: 91351457-23e9-481d-9f73-e8773c9e826b
+                        Position: {X: 6.0, Y: 0.0, Z: 3.5}
+                        Rotation: {X: 0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            b410ce6d9b954bbd580e35a2c6879aab: ref!! 2ab13725-28d6-4272-b9af-1fef2948bc68
+        -   Entity:
+                Id: b3178e1a-30f6-47d1-b0e3-bbebe6562346
+                Name: cam
+                Components:
+                    d776d278bd69c55e03600759a0f880c5: !TransformComponent
+                        Id: f058d7bb-8ce1-4c0a-a1d8-664737a99d94
+                        Position: {X: 1.5, Y: 10.948, Z: 4.889}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ce79f8ab0e5c3f8b5dd9817f4899d4cb: ref!! 697cb26e-f68c-4b11-b40b-3f7332f27dd8
+        -   Folder: null
+            Entity:
+                Id: c1b40f2c-afec-44b5-a4fd-57313e5ebbd0
+                Name: Reel
+                Components:
+                    dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
+                        Id: b80fce32-2d58-40f6-80d4-23a291dbba30
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    505179e15f47cff2a7235205966781e7: !ModelComponent
+                        Id: 24234552-8555-4eff-ac1c-d9411390631d
+                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Materials: {}
+                    21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 530045a3-3895-4502-95e9-b92a59ae8977
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
+                        Id: dba13446-7961-4e4d-bdf7-523eb9b94b40
+                        Target: null
+                        Interactable: true
+            Base:
+                BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
+                BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
+                InstanceId: bd8bc04a-46c5-46d5-b1cc-c490f8cc280f
+        -   Folder: Lights
+            Entity:
+                Id: c794b9a7-1526-4d5d-a8c7-931e3c92d34f
+                Name: Spot light
+                Components:
+                    a5b3379073d5e99aa8434965b526d198: !TransformComponent
+                        Id: 85bfc310-aef8-41e2-96fa-7b7cbfa5a5b3
+                        Position: {X: 4.5, Y: 5.0, Z: -0.25}
+                        Rotation: {X: -0.20737605, Y: -0.691455, Z: -0.5896071, W: 0.3622825}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e505ee3d03c372ef8daf1544d78b4d0e: !LightComponent
+                        Id: 8dce4c14-8350-49d0-98e3-e9b99f6b6c96
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.9529412, G: 0.95941174, B: 1.0}
+                            Range: 10.0
+                            AngleInner: 11.6
+                            AngleOuter: 42.0
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 140.0
+        -   Folder: Lights
+            Entity:
+                Id: de76dc7d-1870-4546-b97e-cf84e4802734
+                Name: Spot light
+                Components:
+                    a5b3379073d5e99aa8434965b526d198: !TransformComponent
+                        Id: d70c8b9a-ef26-43d4-9480-4c43852b611d
+                        Position: {X: 1.2499998, Y: 5.0, Z: -3.5}
+                        Rotation: {X: -0.43796802, Y: -0.60106236, Z: -0.15281019, W: 0.6508126}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e505ee3d03c372ef8daf1544d78b4d0e: !LightComponent
+                        Id: d87c5c9f-e1f3-44d1-a09a-477f02636250
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.9978125, G: 0.95625, B: 1.0}
+                            Range: 10.0
+                            AngleOuter: 57.8
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 300.0
+        -   Folder: Lights
+            Entity:
+                Id: ded374de-2909-4938-9709-e5f05bf06a29
+                Name: Spot light
+                Components:
+                    a5b3379073d5e99aa8434965b526d198: !TransformComponent
+                        Id: d531b30f-30ff-451f-abc1-578bf354a500
+                        Position: {X: 3.5, Y: 5.0, Z: -0.74999976}
+                        Rotation: {X: -0.30978662, Y: -0.8405637, Z: -0.3452523, W: 0.27979577}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e505ee3d03c372ef8daf1544d78b4d0e: !LightComponent
+                        Id: fbd79b28-cd98-4cef-bcb2-128eaf366de3
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.9978125, G: 0.95625, B: 1.0}
+                            Range: 10.0
+                            AngleOuter: 57.8
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 300.0
+        -   Entity:
+                Id: e2381c6d-144c-43c2-b71e-da45206b4f1a
+                Name: Platform3x4
+                Components:
+                    1ddf16c9d7280832945ba4391911c594: !TransformComponent
+                        Id: 2ab13725-28d6-4272-b9af-1fef2948bc68
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6008eae729521faf43224e15d519347a: !ModelComponent
+                        Id: 0fef40af-68f4-4a32-9f26-2da30731dfe7
+                        Model: a17a6963-5ca6-44aa-9a9c-1d5c00f5654c:Models/Procedural/Platform3x4
+                        Materials: {}
+            Base:
+                BasePartAsset: 7f739888-baa6-4173-8569-cfec06169f6f:Prefabs/Platform3x4
+                BasePartId: 98df31cd-7a62-4b12-8f33-ace4971159a9
+                InstanceId: add760d4-d22e-4d6a-a86a-144a4108d2a2

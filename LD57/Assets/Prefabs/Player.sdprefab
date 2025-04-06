@@ -1,0 +1,66 @@
+!PrefabAsset
+Id: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 4986d447-ec25-46f5-a89d-8a78507a91c0
+    Parts:
+        -   Entity:
+                Id: 4986d447-ec25-46f5-a89d-8a78507a91c0
+                Name: Player
+                Components:
+                    35dee7a9c98182ed520a64e4e2065ba7: !TransformComponent
+                        Id: fd06a74e-07f9-44cf-8e9c-f229dd795372
+                        Position: {X: 0.0, Y: 0.3, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            7604153ffe44cbcbc0cba19fd1056fe0: ref!! 945045e0-b62a-4241-b2a2-500f24b68c4d
+                    f0055ce876147c97bf2600d66a371d6f: !ModelComponent
+                        Id: 5fd1b9dd-147f-4de9-acf4-e98f826efae2
+                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
+                        Materials: {}
+                    6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 85171cb2-fd10-4946-a3ef-2fd022f40a05
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                5d22bc5a802cc37c7f468d8608f64ccf: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.3
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer1
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: false
+                        InterpolationMode: Interpolated
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    0c3397f45102991fc6fae1ba1c0d3164: !LD57.Player.PlayerMove,LD57
+                        Id: 3c27b481-1edc-40bb-b9f1-26bbfa6bdc57
+                        Speed: 6.0
+                    accddf2efd5c87071f830aec70dbe50e: !LD57.Player.PlayerInput,LD57
+                        Id: 746c9149-bb0c-4e6b-9e94-edaf1ad868ac
+                    899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
+                        Id: e705581f-b1fb-445d-be63-54f3c85ebb44
+        -   Entity:
+                Id: 78c254f9-f653-46ad-948d-f90aab0e139e
+                Name: Cam Target
+                Components:
+                    84b5e1126283a8f3b6cb5e94471c3b6f: !TransformComponent
+                        Id: 945045e0-b62a-4241-b2a2-500f24b68c4d
+                        Position: {X: 0.0, Y: 2.8971655, Z: 3.4338622}
+                        Rotation: {X: -0.29554555, Y: 0.0, Z: 0.0, W: 0.95532864}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    04d1e4eed930e2b03fc5302f0013aa00: !LD57.Camera.CameraTarget,LD57
+                        Id: d773646c-2e89-41e6-a358-4371e3905b0d
+                        TargetName: player
+                        TargetActive: true

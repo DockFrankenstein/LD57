@@ -1,0 +1,22 @@
+!PrefabAsset
+Id: 00258bb7-aab8-4a2b-855b-c78da65d8b88
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! eeeaae85-6704-4faa-8010-9543db4e9394
+    Parts:
+        -   Entity:
+                Id: eeeaae85-6704-4faa-8010-9543db4e9394
+                Name: Platform3x5
+                Components:
+                    39fddfa79353235fa512c188bc8c4aa2: !TransformComponent
+                        Id: 95c1e0a2-c0e1-4230-a538-3e40492f274c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    44192a6bff55b4d1e56407af8bcab1d4: !ModelComponent
+                        Id: e54c25bf-8719-4ea2-ae9e-d4277b341189
+                        Model: aa9ab92a-2556-4824-afaf-a27b62ea55e6:Models/Procedural/Platform3x5
+                        Materials: {}

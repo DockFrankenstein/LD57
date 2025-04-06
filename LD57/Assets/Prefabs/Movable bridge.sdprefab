@@ -1,0 +1,246 @@
+!PrefabAsset
+Id: 335b95f6-42c6-4dba-b177-76e4d44b4c47
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! b96c36d8-d43c-4b37-9b9f-b9b0915778e3
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 0ec3c32e-afaf-4773-8175-dd958b470102
+                Name: Down
+                Components:
+                    db7d01df25ff9b8fd2bda27597f94370: !TransformComponent
+                        Id: e2565890-c3d1-4455-a7f5-8f68a00ed8a6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dfec426fb057885ace8dfe950d79a180: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 3f56ff07-f775-425a-ba3b-d201a03a9187
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                4930ae229401cbe51bc142977ebc427b: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 2.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 3.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer2
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+        -   Entity:
+                Id: 45482a83-0a22-4817-8d08-e82ddb816c8c
+                Name: Axis
+                Components:
+                    54cad88e0f614939edd0ea1ce61c7b59: !TransformComponent
+                        Id: 1f46862b-7728-43ff-9b06-1597406cb10d
+                        Position: {X: -1.4901161E-08, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            d56eaf21da35d5c63e3278c502a12fe3: ref!! 74161f28-efc3-4df1-90d7-48c125860a2b
+                            7f0ac074d21adccae6f10a8f161987c4: ref!! d24ae254-e008-40fd-9604-39646ece5205
+                    de15b1d65d15173839ae9fb6eecd9f01: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 3f6d9838-e46b-4e2c-9201-f45cc2a05eb1
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                aaa2a80b6306594c8dcde258607f6e50: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.55, Y: 1.5, Z: -2.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 0.1, Y: 3.0, Z: 3.0}
+                                38d0b3a6fbcde5847424bdd4677291ca: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: -0.55, Y: 1.5, Z: -2.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 0.1, Y: 3.0, Z: 3.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer3
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: Interpolated
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+        -   Entity:
+                Id: 6e0c02f0-17bf-46c3-b299-9b359681a3d6
+                Name: Up
+                Components:
+                    db7d01df25ff9b8fd2bda27597f94370: !TransformComponent
+                        Id: 501f2f1c-baba-4567-8e08-7530fb6f6acd
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dfec426fb057885ace8dfe950d79a180: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: c0b251aa-fe93-40ce-aed0-5b40ac992a77
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                4930ae229401cbe51bc142977ebc427b: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: -2.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 3.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer2
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+        -   Folder: null
+            Entity:
+                Id: 98f52ca8-c634-44f9-834e-55efdb9f61c8
+                Name: Ground
+                Components:
+                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
+                        Id: d24ae254-e008-40fd-9604-39646ece5205
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.12, Y: 1.0, Z: 0.12}
+                        Children: {}
+                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
+                        Id: b762f7fb-0fcc-41a7-aa48-5d56340bfa45
+                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Materials: {}
+        -   Entity:
+                Id: b5425da8-be49-4842-afc0-4453087e5a12
+                Name: Ground
+                Components:
+                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
+                        Id: 74161f28-efc3-4df1-90d7-48c125860a2b
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 1.0, Z: 0.3}
+                        Children: {}
+                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
+                        Id: 59c6e8a6-0d33-4cbb-b635-e8a85ab2b4b2
+                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Materials: {}
+        -   Entity:
+                Id: b96c36d8-d43c-4b37-9b9f-b9b0915778e3
+                Name: Bridge
+                Components:
+                    c2ddd056fc94df45b6749b052ba3fc87: !TransformComponent
+                        Id: b9465b88-4c7b-44c6-9d8e-bf6a35cb69d7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            7654e943e2d7b141cd68beba08ac5e8c: ref!! 1f46862b-7728-43ff-9b06-1597406cb10d
+                            c0bfb84d75590c6b71096cd23e2d435e: ref!! e65cf687-4cad-4f88-a39e-fb6688730d7a
+                    30bd2b264102c470300b86b6bec1e697: !LD57.Puzzle.Bridge,LD57
+                        Id: d9b61698-df35-4fd1-a12a-0c089def44f1
+                        axis: ref!! 3f6d9838-e46b-4e2c-9201-f45cc2a05eb1
+                        States:
+                            c8091869cc8b1cd0e6e8a2864c1aa11a: Up
+                            3bfe84b20661753856151bc7f56a9727: Left
+                        Triggers: {}
+                        UpBlock: ref!! c0b251aa-fe93-40ce-aed0-5b40ac992a77
+                        LeftBlock: ref!! abcc5cf1-a64b-44f9-b826-dbae50ff62e2
+                        DownBlock: ref!! 3f56ff07-f775-425a-ba3b-d201a03a9187
+                        RightBlock: ref!! bd69c33d-167c-4dec-a3c8-eca33e7c6ccc
+                        UpFree: false
+                        LeftFree: false
+                        DownFree: false
+                        RightFree: false
+        -   Entity:
+                Id: d0485983-6388-4df9-bfc0-00cb06606062
+                Name: Left
+                Components:
+                    db7d01df25ff9b8fd2bda27597f94370: !TransformComponent
+                        Id: 7a0c68d5-6d3c-4cbc-91c5-2fd401b0dd63
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dfec426fb057885ace8dfe950d79a180: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: abcc5cf1-a64b-44f9-b826-dbae50ff62e2
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                4930ae229401cbe51bc142977ebc427b: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: -2.0, Y: 1.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer2
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+        -   Entity:
+                Id: d06885e3-4ecf-406e-b9f7-ecf1bc44ece7
+                Name: Blocks
+                Components:
+                    29d1916b615415ae0dfa75712a2dc0cb: !TransformComponent
+                        Id: e65cf687-4cad-4f88-a39e-fb6688730d7a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            92618ddae0f751931632b3f72db27d8b: ref!! 501f2f1c-baba-4567-8e08-7530fb6f6acd
+                            29ef02597842b0aeae953565fc32b55e: ref!! 7a0c68d5-6d3c-4cbc-91c5-2fd401b0dd63
+                            79a8555fe3b1284feacbd8c46ccf050e: ref!! e2565890-c3d1-4455-a7f5-8f68a00ed8a6
+                            640bbff1d4b4521612df1ad1e3c9310b: ref!! d8ad0468-f9f0-4c98-97ef-ee3891a19769
+        -   Entity:
+                Id: de77fc5f-9caf-4614-9320-7f4ca17ad6d4
+                Name: Right
+                Components:
+                    db7d01df25ff9b8fd2bda27597f94370: !TransformComponent
+                        Id: d8ad0468-f9f0-4c98-97ef-ee3891a19769
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dfec426fb057885ace8dfe950d79a180: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: bd69c33d-167c-4dec-a3c8-eca33e7c6ccc
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                4930ae229401cbe51bc142977ebc427b: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 2.0, Y: 1.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer2
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32

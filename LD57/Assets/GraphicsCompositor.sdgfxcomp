@@ -166,7 +166,7 @@ SharedRenderers:
     34ecb9b2633eacfc439ba8744fe05102: !PostProcessingEffects
         Id: 45e71188-2eb2-4e56-bed1-ace056a28c32
         Outline:
-            Enabled: false
+            Enabled*: false
             NormalWeight: 2.0
             DepthWeight: 0.2
             NormalNearCutoff: 0.1
@@ -177,7 +177,7 @@ SharedRenderers:
             FogStart: 10.0
             SkipBackground: false
         AmbientOcclusion:
-            Enabled: false
+            Enabled*: true
         LocalReflections:
             Enabled: false
             ResolvePassResolution: Full
@@ -188,12 +188,15 @@ SharedRenderers:
         BrightFilter:
             Color: {R: 1.0, G: 1.0, B: 1.0}
         Bloom:
+            Enabled*: true
             Distortion: {X: 1.0, Y: 1.0}
             Afterimage:
                 Enabled: false
         LightStreak:
+            Enabled*: false
             Attenuation: 0.7
-        LensFlare: {}
+        LensFlare:
+            Enabled*: false
         ColorTransforms:
             Transforms:
                 1e06f805f8b2e949a06c30d45fe413ef: !ToneMap

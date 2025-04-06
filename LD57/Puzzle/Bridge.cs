@@ -27,12 +27,22 @@ namespace LD57.Puzzle
         public BodyComponent DownBlock { get; set; }
         public BodyComponent RightBlock { get; set; }
 
+        public bool UpFree { get; set; }
+        public bool LeftFree { get; set; }
+        public bool DownFree { get; set; }
+        public bool RightFree { get; set; }
+
         Direction curDir = Direction.Up;
 
         public override async Task Execute()
         {
             foreach (var item in Triggers)
                 item.OnActivate += Switch;
+
+            if (UpFree) ToggleBlock(UpBlock, false);
+            if (LeftFree) ToggleBlock(LeftBlock, false);
+            if (DownFree) ToggleBlock(DownBlock, false);
+            if (RightFree) ToggleBlock(RightBlock, false);
 
             while (Game.IsRunning && Entity?.Scene != null)
             {

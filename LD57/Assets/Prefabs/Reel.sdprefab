@@ -1,0 +1,48 @@
+!PrefabAsset
+Id: e13965e9-13bc-4cf6-a940-c4b9aef41b99
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
+                Name: Reel
+                Components:
+                    dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
+                        Id: 2bf0af0f-9c1c-463f-a1fc-8e3843c49d99
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    505179e15f47cff2a7235205966781e7: !ModelComponent
+                        Id: 5027abc4-b81a-4713-bfca-e095211a797d
+                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Materials: {}
+                    21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 199291c8-92ba-480a-927a-94ea6c9b5217
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
+                        Id: f5929b49-2823-4143-bbae-ae7f1b5f2f48
+                        Target: null
+                        Interactable: true

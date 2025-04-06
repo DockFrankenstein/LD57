@@ -2,27 +2,23 @@
 using LD57.Interaction;
 using Stride.BepuPhysics;
 using Stride.BepuPhysics.Components;
-using Stride.BepuPhysics.Definitions.Contacts;
 using Stride.BepuPhysics.Definitions;
 using System.Collections.ObjectModel;
 
 namespace LD57.Player
 {
-    public class PlayerInteract : SyncScript, IContactEventHandler, ISimulationUpdate
+    public class PlayerInteract : SyncScript, ISimulationUpdate
     {
-        public PlayerInput input;
-
-        BodyComponent _body;
+        PlayerInput _input;
 
         public override void Start()
         {
-            _body = Entity.Get<BodyComponent>();
-            _body.ContactEventHandler = this;
+            _input = Entity.Get<PlayerInput>();
         }
 
         public override void Update()
         {
-            if (input.HasInputFocus && Focused != null)
+            if (_input.HasInputFocus && Focused != null)
             {
                 if (Input.IsKeyPressed(Keys.E))
                     Focused.Interact();
@@ -57,26 +53,14 @@ namespace LD57.Player
             }
         }
 
-        public bool NoContactResponse => true;
-
-        void IContactEventHandler.OnStartedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other, ref TManifold contactManifold, bool flippedManifold, int workerIndex, BepuSimulation bepuSimulation)
-        {
-            var interactable = other.Entity.BetterGet<IInteractable>();
-            if (interactable == null) return;
-            inRange.Add(interactable);
-        }
-
-        void IContactEventHandler.OnStoppedTouching<TManifold>(CollidableComponent eventSource, CollidableComponent other, ref TManifold contactManifold, bool flippedManifold, int workerIndex, BepuSimulation bepuSimulation)
-        {
-            var interactable = other.Entity.BetterGet<IInteractable>();
-            if (interactable == null) return;
-            inRange.Remove(interactable);
-        }
-
         public void SimulationUpdate(BepuSimulation simulation, float simTimeStep)
         {
             Collection<HitInfo> res = new Collection<HitInfo>();
-            simulation.SweepCastPenetrating(sphere, new RigidPose(_body.Position + 6f*Vector3.UnitY, _body.Orientation), new BodyVelocity(-Vector3.UnitY, Vector3.Zero), 10f, res);
+            simulation.SweepCastPenetrating(sphere, 
+                new RigidPose(Entity.Transform.Position + 6f*Vector3.UnitY, Entity.Transform.Rotation), 
+                new BodyVelocity(-Vector3.UnitY, Vector3.Zero), 
+                10f, 
+                res);
 
             inRange.Clear();
 

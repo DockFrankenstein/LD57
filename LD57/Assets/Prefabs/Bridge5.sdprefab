@@ -1,0 +1,22 @@
+!PrefabAsset
+Id: fa6a7fe0-1738-4303-8001-32821ebcb8ea
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 48fffff2-aa51-47e4-98e1-0b7dde1279f0
+    Parts:
+        -   Entity:
+                Id: 48fffff2-aa51-47e4-98e1-0b7dde1279f0
+                Name: Bridge5
+                Components:
+                    4f291ba045611eef6d31a00691de9e72: !TransformComponent
+                        Id: d47f8e56-35ca-4d8b-bb66-88da06fef4df
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    edd4150d45cf6da39559987040c28740: !ModelComponent
+                        Id: ea76ce3f-d34f-4dd9-b574-b642aa703de1
+                        Model: 77ced1ec-47e7-42bb-a953-03c9853eec1f:Models/Procedural/Bridge5
+                        Materials: {}

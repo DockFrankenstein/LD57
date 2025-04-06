@@ -1,0 +1,22 @@
+!PrefabAsset
+Id: 96838afa-4916-418c-82e8-c1ae9994e051
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 0b617083-2979-472c-b604-c9f13f3a2c2b
+    Parts:
+        -   Entity:
+                Id: 0b617083-2979-472c-b604-c9f13f3a2c2b
+                Name: Bridge3
+                Components:
+                    9d6f8154d2c7c28e046e34a8f2362bfb: !TransformComponent
+                        Id: 6abd4fb8-7914-4171-ab0d-64a26dcfcb43
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3781309e0e850ddcd8fed8a8d279cf55: !ModelComponent
+                        Id: a974d21c-7193-4d3f-842d-d653406883a2
+                        Model: bb4a613e-a0e0-4b25-8d0a-2cf82e0238b4:Models/Procedural/Bridge3
+                        Materials: {}

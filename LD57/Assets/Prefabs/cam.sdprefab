@@ -1,0 +1,47 @@
+!PrefabAsset
+Id: a3572c76-3267-4700-ad1c-78b18937524d
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! d7dd94f9-d7fd-45cd-a286-ce1b549d696c
+    Parts:
+        -   Entity:
+                Id: 49c43870-e9f2-4396-9a7a-8bcf11aa3900
+                Name: The big object
+                Components:
+                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
+                        Id: 8bdbeae8-b6d6-4892-b939-550d27a33dbb
+                        Position: {X: 0.0, Y: 0.0, Z: -9.361844}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.7, Y: 0.7, Z: 0.7}
+                        Children: {}
+                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
+                        Id: 7aa1b088-9c9a-42d8-87dc-06a358fbcb40
+                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Materials:
+                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Ryba
+                    bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
+                        Id: 106f20ac-dca5-4f6b-8f91-65c21811c6a1
+                        States: {}
+        -   Entity:
+                Id: d7dd94f9-d7fd-45cd-a286-ce1b549d696c
+                Name: cam
+                Components:
+                    8bc0d52fff999f9c1b95b9e9b91d38b8: !TransformComponent
+                        Id: 497d1fad-39bf-497b-8e25-1d1efa964b68
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.57357645, Y: 0.0, Z: 0.0, W: 0.81915206}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            883b3ea16068aed98b203d9843488ae9: ref!! 8bdbeae8-b6d6-4892-b939-550d27a33dbb
+                    1616e7dc5a1e968928959bd8f627b7f4: !LD57.Camera.CameraTarget,LD57
+                        Id: 75f9dbd8-d503-4f1f-8f9b-fe7a5d49821d
+                        TargetName: ceiling
+                        TargetActive: true
+                    a5119141280e90390f7566ae557b059f: !CameraComponent
+                        Id: 52923ba3-9dec-47de-be86-0472d0d3734f
+                        Enabled: false
+                        Name: null
+                        Projection: Perspective
+                        Slot: 00000000-0000-0000-0000-000000000000

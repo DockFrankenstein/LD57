@@ -74,7 +74,8 @@ namespace LD57
 
         public void Unregister(T element)
         {
-            var targets = Elements.Where(x => x.element == element);
+            var targets = Elements.Where(x => x.element == element)
+                .ToArray();
 
             foreach (var item in targets)
                 Elements.Remove(item);

@@ -14,54 +14,10 @@ Hierarchy:
         - ref!! e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
         - ref!! 900a3066-8ec6-4e42-92a1-34fb30b1da9b
         - ref!! d9d43300-3071-4ca1-809d-d8d02ca5ee64
-        - ref!! 00ecfaa5-320b-4026-96a5-e835f38fe4a1
         - ref!! d0a4675a-9580-4e42-a685-498288e50bec
         - ref!! 106bddf0-ad6e-4f29-8d10-6a2efa67fe8f
         - ref!! 05b4e226-7c6b-44b3-b939-fee43ebc6d7c
     Parts:
-        -   Entity:
-                Id: 00ecfaa5-320b-4026-96a5-e835f38fe4a1
-                Name: Interact
-                Components:
-                    6a615779b9e973644325f39e1bec1781: !TransformComponent
-                        Id: a50c8680-b17d-4fe4-aa93-5694f4b247ce
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    595d14350e3d98df00975193f8e1b8c5: !LD57.Player.PlayerInteract,LD57
-                        Id: c95f6b1c-a35a-438a-812e-6b582e1d1f65
-                        input: ref!! 0f715832-b57a-49c0-8060-3059153dc20e
-                    5e89b6195756c1281f69203a2b5dfc72: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: d132964e-1682-4ada-9c2e-3547d08351d2
-                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
-                            Colliders:
-                                7187942f0823118d2d55f9d51973dccc: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
-                                    Mass: 1.0
-                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Radius: 2.0
-                        SpringFrequency: 30.0
-                        SpringDampingRatio: 3.0
-                        FrictionCoefficient: 1.0
-                        MaximumRecoveryVelocity: 1000.0
-                        CollisionLayer: Layer1
-                        CollisionGroup: {}
-                        ContactEventHandler: null
-                        Kinematic: true
-                        Gravity: false
-                        InterpolationMode: None
-                        ContinuousDetectionMode: Discrete
-                        SleepThreshold: 0.01
-                        MinimumTimestepCountUnderThreshold: 32
-                    4d78c1351a9f9b838dd70ffeba059df0: !LD57.FollowObject,LD57
-                        Id: cea1ae74-6a20-42a7-956f-f49380fd6881
-                        Target: ref!! 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
-                        FollowPosition: true
-                        FollowRotation: true
-                        WhenUpdate: false
-                        WhenSimulationUpdate: false
-                        WhenAfterSimulationUpdate: true
         -   Entity:
                 Id: 05b4e226-7c6b-44b3-b939-fee43ebc6d7c
                 Name: Big obj collisions
@@ -87,14 +43,14 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     dfec426fb057885ace8dfe950d79a180: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: eea7f415-a28d-4b17-93a9-cd01e8c00e85
+                        Id: d0de5f57-3362-4312-b91f-87600ff82b92
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 4930ae229401cbe51bc142977ebc427b: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
-                                    PositionLocal: {X: 2.5, Y: 1.5, Z: 0.0}
+                                    PositionLocal: {X: 2.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 3.0, Z: 2.0}
+                                    Size: {X: 3.0, Y: 3.0, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -108,6 +64,10 @@ Hierarchy:
                         ContinuousDetectionMode: Discrete
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: de77fc5f-9caf-4614-9320-7f4ca17ad6d4
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Entity:
                 Id: 0c99741d-6c86-41f6-998d-d6298df98a5e
                 Name: Skybox
@@ -140,6 +100,12 @@ Hierarchy:
                         Id: ddca367d-ab32-48c6-943f-c3efb1d3a422
                         TargetName: ceiling
                         TargetActive: true
+                    00e429cd863f7440bcfc135354fc0ea0: !CameraComponent
+                        Id: dd3c0e40-cfe0-4801-b08e-a450b9e5d170
+                        Enabled: false
+                        Name: null
+                        Projection: Perspective
+                        Slot: 00000000-0000-0000-0000-000000000000
         -   Folder: null
             Entity:
                 Id: 13e217c6-660e-49d6-9157-0e22f3bab180
@@ -152,26 +118,30 @@ Hierarchy:
                         Scale: {X: 0.12, Y: 1.0, Z: 0.12}
                         Children: {}
                     9f9285e3338657015050ccdb4107f3ea: !ModelComponent
-                        Id: d66cbf22-afef-46aa-8e4b-c23fad1c723e
+                        Id: 6b25a1e8-73b8-4444-8e8c-743973245c1a
                         Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
                         Materials: {}
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: 98f52ca8-c634-44f9-834e-55efdb9f61c8
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Entity:
                 Id: 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
-                Name: Sphere
+                Name: Player
                 Components:
                     35dee7a9c98182ed520a64e4e2065ba7: !TransformComponent
                         Id: 1404bd1b-074a-4035-9a88-0f72c3f902e9
-                        Position: {X: 0.0, Y: 0.15, Z: 0.0}
+                        Position*: {X: -2.7499998, Y: 0.3, Z: -0.74999994}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7604153ffe44cbcbc0cba19fd1056fe0: ref!! 3bab5ad5-dda1-4e78-b9ed-846b2ba597bc
                     f0055ce876147c97bf2600d66a371d6f: !ModelComponent
-                        Id: 5db2f11b-ecdb-4d2d-9c51-09b5960a8b81
+                        Id: 77af0653-dcba-4f30-8fc4-fdbd452cec56
                         Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
                         Materials: {}
                     6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 0703d334-51ac-42cb-8395-25f03af7f38a
+                        Id: 3e74e38b-ea23-4adf-8c3d-779c8168ad8a
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 5d22bc5a802cc37c7f468d8608f64ccf: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
@@ -193,10 +163,16 @@ Hierarchy:
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
                     0c3397f45102991fc6fae1ba1c0d3164: !LD57.Player.PlayerMove,LD57
-                        Id: 683debb5-4649-458c-87ae-411f85919c08
+                        Id: b38654b7-0fd0-4567-be31-7e88b087ee51
                         Speed: 6.0
                     accddf2efd5c87071f830aec70dbe50e: !LD57.Player.PlayerInput,LD57
-                        Id: 0f715832-b57a-49c0-8060-3059153dc20e
+                        Id: 215fb4be-d773-431d-9ea1-9f6ac4b52b5d
+                    899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
+                        Id: e7c895a3-0874-412d-9c7c-7d8eee5c7bf3
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
+                InstanceId: 94b9081e-f18f-4783-91b7-991ab69f5795
         -   Entity:
                 Id: 76a21b6b-5c66-49a1-983f-fe7ddb9b06f3
                 Name: Left
@@ -208,14 +184,14 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     dfec426fb057885ace8dfe950d79a180: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 55b0267e-7745-46f6-bc73-662999a3e15c
+                        Id: fdd246fa-3c2e-4dc9-9810-6def38927984
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 4930ae229401cbe51bc142977ebc427b: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
-                                    PositionLocal: {X: -2.5, Y: 1.5, Z: 0.0}
+                                    PositionLocal: {X: -2.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 3.0, Z: 2.0}
+                                    Size: {X: 3.0, Y: 3.0, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -229,20 +205,28 @@ Hierarchy:
                         ContinuousDetectionMode: Discrete
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: d0485983-6388-4df9-bfc0-00cb06606062
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Entity:
                 Id: 7e34ac2b-a929-4efa-8d52-3cc1efbdcbb8
                 Name: Ground
                 Components:
                     ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
                         Id: 5a2f849f-3b0f-4374-9aa8-36cf2327d5b2
-                        Position: {X: 0.0, Y: 0.0, Z: -1.5}
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.1, Y: 1.0, Z: 0.3}
                         Children: {}
                     9f9285e3338657015050ccdb4107f3ea: !ModelComponent
-                        Id: 4213bcae-bcdc-4c86-b67f-93e4fe197dcd
+                        Id: 2a7e39b4-7ffb-4469-a2a1-cae91c12269c
                         Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
                         Materials: {}
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: b5425da8-be49-4842-afc0-4453087e5a12
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Entity:
                 Id: 83ca07d1-e26d-472b-bbc1-d2e3373f1049
                 Name: Directional light
@@ -275,7 +259,7 @@ Hierarchy:
                 Components:
                     e7cbd7862127699993f69a60bdef00fa: !TransformComponent
                         Id: 475e3810-7fe4-4b69-a0c2-eb6e34198df1
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -20.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -389,9 +373,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     04d1e4eed930e2b03fc5302f0013aa00: !LD57.Camera.CameraTarget,LD57
-                        Id: 430d8c17-48da-4064-80ff-b50d90f4ec50
+                        Id: 52efb335-7f55-440d-adfd-14535071ff44
                         TargetName: player
                         TargetActive: true
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 78c254f9-f653-46ad-948d-f90aab0e139e
+                InstanceId: 94b9081e-f18f-4783-91b7-991ab69f5795
         -   Folder: null
             Entity:
                 Id: 9afbabd2-24ed-46bb-a018-c3d77e4643d3
@@ -399,7 +387,7 @@ Hierarchy:
                 Components:
                     e7cbd7862127699993f69a60bdef00fa: !TransformComponent
                         Id: d7b72661-e0e3-4d03-8c7b-289d731f904a
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -20.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -431,7 +419,7 @@ Hierarchy:
                 Components:
                     e7cbd7862127699993f69a60bdef00fa: !TransformComponent
                         Id: 5fc1f51e-19c2-4ad8-b2f2-c521666d95ee
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -20.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -463,24 +451,32 @@ Hierarchy:
                 Components:
                     c2ddd056fc94df45b6749b052ba3fc87: !TransformComponent
                         Id: ba0a6b23-d7d4-4a7d-9277-694eb21ef2b6
-                        Position: {X: 8.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7654e943e2d7b141cd68beba08ac5e8c: ref!! ed64db2b-83b9-475a-9420-852bd87bc207
                             c0bfb84d75590c6b71096cd23e2d435e: ref!! 82b00d6e-ed19-4c24-b151-de7c14148617
                     30bd2b264102c470300b86b6bec1e697: !LD57.Puzzle.Bridge,LD57
-                        Id: 05560407-71aa-4ffb-92a8-5c6102c24917
-                        axis: ref!! e278ca94-eefb-4ded-be75-09b7b2524365
+                        Id: 548bdd8e-9d3b-4496-b88a-467d47c34afb
+                        axis: ref!! ac530187-6fb8-4db0-bd70-e4bb70268318
                         States:
                             c8091869cc8b1cd0e6e8a2864c1aa11a: Up
                             3bfe84b20661753856151bc7f56a9727: Left
                         Triggers:
-                            93c3fdeebe13196e5dacdb0096279a3a: !LD57.Puzzle.Switch,LD57 ref!! c5b71bad-bba0-4523-8278-0684ed486b16
-                        UpBlock: ref!! dcb795d3-0372-4851-892e-daf31543869c
-                        LeftBlock: ref!! 55b0267e-7745-46f6-bc73-662999a3e15c
-                        DownBlock: ref!! e72a7ef7-d0b7-4d99-9279-76d1a534f7c4
-                        RightBlock: ref!! eea7f415-a28d-4b17-93a9-cd01e8c00e85
+                            742febbeadc84dbd263df320b3026445*: !LD57.Puzzle.Switch,LD57 ref!! ed785bbf-9bc8-4316-802b-498bd7621e09
+                        UpBlock: ref!! 72368403-2125-4d3c-9900-08480a24f3ac
+                        LeftBlock: ref!! fdd246fa-3c2e-4dc9-9810-6def38927984
+                        DownBlock: ref!! 9615a956-a734-4043-ac99-4c4d355736ca
+                        RightBlock: ref!! d0de5f57-3362-4312-b91f-87600ff82b92
+                        UpFree: false
+                        LeftFree: false
+                        DownFree: false
+                        RightFree: false
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: b96c36d8-d43c-4b37-9b9f-b9b0915778e3
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Folder: null
             Entity:
                 Id: d9d43300-3071-4ca1-809d-d8d02ca5ee64
@@ -488,16 +484,16 @@ Hierarchy:
                 Components:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: d6794c71-0805-41ca-90a3-235c5f5525f1
-                        Position: {X: -3.5, Y: 0.5, Z: 3.4999995}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     505179e15f47cff2a7235205966781e7: !ModelComponent
-                        Id: 94a3807d-7719-4e3a-b16a-f441b66d4698
+                        Id: f2799304-acb1-4eff-9b34-17d26dad5510
                         Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
                         Materials: {}
                     21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: cad000f2-04eb-4532-82a4-c8289e5c5f06
+                        Id: 4cce6ed1-9a74-4cb0-85bf-c62907151d13
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
@@ -518,9 +514,13 @@ Hierarchy:
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
                     c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
-                        Id: 14d586b9-a07d-4659-9442-8cd447210b5a
-                        Target: ref!! 5ed58fdc-7e42-46d9-a65e-245d09524440
+                        Id: 272e5a2c-5a47-4b9c-99ce-6ba6a1adac84
+                        Target*: ref!! 5ed58fdc-7e42-46d9-a65e-245d09524440
                         Interactable: true
+            Base:
+                BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
+                BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
+                InstanceId: 90f97426-b7bb-4a62-ab46-d73acca96d58
         -   Entity:
                 Id: db3950c3-36e4-4da4-a624-c84d6493b024
                 Name: Blocks
@@ -535,22 +535,26 @@ Hierarchy:
                             29ef02597842b0aeae953565fc32b55e: ref!! 107bff28-c6a6-448e-834b-b0476815cd25
                             79a8555fe3b1284feacbd8c46ccf050e: ref!! 0b9d81e0-2687-444b-912d-608c00f1c3e2
                             640bbff1d4b4521612df1ad1e3c9310b: ref!! ed8c0519-13d2-4c99-b8fd-baa93760ce85
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: d06885e3-4ecf-406e-b9f7-ecf1bc44ece7
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Entity:
                 Id: e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
-                Name: Cube
+                Name: Button
                 Components:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: ae487c05-2d13-47b2-854e-15c026746274
-                        Position: {X: 3.5, Y: 0.5, Z: -2.5}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     505179e15f47cff2a7235205966781e7: !ModelComponent
-                        Id: 32dff5c4-1de0-48f4-8e63-c209b7d248a3
+                        Id: 9afbe1e2-ce7e-4fae-9b1f-b75388e350e3
                         Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
                         Materials: {}
                     21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 7388bf53-ef18-4ee4-bd3f-0fbb437b41b2
+                        Id: c4b8a7d7-3771-4712-bbbd-ac4332f5e823
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
@@ -571,10 +575,14 @@ Hierarchy:
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
                     28b23fad950834a79eb8b5b8eda9ce5e: !LD57.Puzzle.Switch,LD57
-                        Id: c5b71bad-bba0-4523-8278-0684ed486b16
+                        Id: ed785bbf-9bc8-4316-802b-498bd7621e09
                         State: false
                         CanEnable: true
                         CanDisable: true
+            Base:
+                BasePartAsset: 7dfbc479-4baf-463f-b36e-c757d3c9c276:Prefabs/Button
+                BasePartId: 1f05f494-21d4-4185-890b-9c62f1cf5c46
+                InstanceId: 04a4452a-04de-4511-a8fe-349e71f5aa55
         -   Entity:
                 Id: ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
                 Name: Ground
@@ -636,14 +644,14 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     dfec426fb057885ace8dfe950d79a180: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: e72a7ef7-d0b7-4d99-9279-76d1a534f7c4
+                        Id: 9615a956-a734-4043-ac99-4c4d355736ca
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 4930ae229401cbe51bc142977ebc427b: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
-                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 2.5}
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 2.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 2.0, Y: 3.0, Z: 1.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 3.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -657,6 +665,10 @@ Hierarchy:
                         ContinuousDetectionMode: Discrete
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: 0ec3c32e-afaf-4773-8175-dd958b470102
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Folder: null
             Entity:
                 Id: fc30c3ae-0122-452b-afd6-81d66c380d1e
@@ -664,7 +676,7 @@ Hierarchy:
                 Components:
                     e7cbd7862127699993f69a60bdef00fa: !TransformComponent
                         Id: 49b59591-c928-4580-96a1-519c790ef52f
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -20.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -701,14 +713,14 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     dfec426fb057885ace8dfe950d79a180: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: dcb795d3-0372-4851-892e-daf31543869c
+                        Id: 72368403-2125-4d3c-9900-08480a24f3ac
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 4930ae229401cbe51bc142977ebc427b: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
-                                    PositionLocal: {X: 0.0, Y: 1.5, Z: -2.5}
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: -2.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 2.0, Y: 3.0, Z: 1.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 3.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -722,6 +734,10 @@ Hierarchy:
                         ContinuousDetectionMode: Discrete
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: 6e0c02f0-17bf-46c3-b299-9b359681a3d6
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Entity:
                 Id: fd3b702e-4791-4426-b5bc-0fe099e1cad4
                 Name: Axis
@@ -735,24 +751,19 @@ Hierarchy:
                             d56eaf21da35d5c63e3278c502a12fe3: ref!! 5a2f849f-3b0f-4374-9aa8-36cf2327d5b2
                             7f0ac074d21adccae6f10a8f161987c4: ref!! 32e31173-a71b-4890-8dd5-e9caf2c56882
                     de15b1d65d15173839ae9fb6eecd9f01: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: e278ca94-eefb-4ded-be75-09b7b2524365
+                        Id: ac530187-6fb8-4db0-bd70-e4bb70268318
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 aaa2a80b6306594c8dcde258607f6e50: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
-                                    PositionLocal: {X: 1.0, Y: 1.5, Z: -0.75}
+                                    PositionLocal: {X: 0.55, Y: 1.5, Z: -2.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 3.0, Z: 4.5}
+                                    Size: {X: 0.1, Y: 3.0, Z: 3.0}
                                 38d0b3a6fbcde5847424bdd4677291ca: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
-                                    PositionLocal: {X: -1.0, Y: 1.5, Z: -0.75}
+                                    PositionLocal: {X: -0.55, Y: 1.5, Z: -2.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 3.0, Z: 4.5}
-                                6e2f0e6cd35fee679f6a858dc4cbe64f: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
-                                    Mass: 1.0
-                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 1.0}
-                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                    Size: {X: 0.1, Y: 3.0, Z: 3.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -766,3 +777,7 @@ Hierarchy:
                         ContinuousDetectionMode: Discrete
                         SleepThreshold: 0.01
                         MinimumTimestepCountUnderThreshold: 32
+            Base:
+                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
+                BasePartId: 45482a83-0a22-4817-8d08-e82ddb816c8c
+                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e

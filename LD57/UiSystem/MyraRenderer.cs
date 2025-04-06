@@ -10,7 +10,8 @@ namespace LD57.UiSystem
         protected override void DrawCore(RenderContext context, RenderDrawContext drawContext)
         {
             drawContext.CommandList.Clear(GraphicsDevice.Presenter.DepthStencilBuffer, Stride.Graphics.DepthStencilClearOptions.DepthBuffer);
-            foreach (var item in Canvases)
+            
+            foreach (var item in Canvases.ToArray())
                 item.DrawUi();
         }
     }
