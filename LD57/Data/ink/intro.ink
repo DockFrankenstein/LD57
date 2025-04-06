@@ -7,33 +7,33 @@ Have you seen {jeremy}?
 No.
 
 ~ speaker = "???"
-Oh.
-...
-Okay.
+Oh...
+Okay...
 ...
 
 ~ speaker = "Olivia"
 Sorry, my name is Olivia. And you are?
 
 ~ speaker = "You"
-...
-I don't know.
+I... don't know.
 
 ~ speaker = "Olivia"
 Oh. I see.
-...
 Well, if you run into {jeremy}, please let me know where he is.
 
 ~ speaker = "You"
 Why? What do you need him for?
 
 ~ speaker = "Olivia"
-Oh you know, for the same thing that everyone else needs him.
+Oh you know, for the same thing that everyone else needs him for.
 
 ~ speaker = "You"
-Uhh. Okay, I'll let you know when I see him.
+Uhh... okay. I'll let you know when I see him.
 
 ~ speaker = "Olivia"
-Okay. Thank you.
+Thank you!
+
+~ speaker = "You"
+(This interaction leaves you with nothing, except the will to find {jeremy} and not tell Olivia about it.)
 
 -> END

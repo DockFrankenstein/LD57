@@ -159,7 +159,7 @@ Hierarchy:
                         Canvas: ref!! 65990681-445d-4fd4-bba9-73be22bac6e3
                     44ed61eb3db75f944bbf0bb6fe6f0556: !LD57.UiSystem.UiCanvas,LD57
                         Id: 65990681-445d-4fd4-bba9-73be22bac6e3
-                        EnabledByDefault: true
+                        EnabledByDefault: false
                         UiName: console
                         TakeInputFocus: true
         -   Entity:

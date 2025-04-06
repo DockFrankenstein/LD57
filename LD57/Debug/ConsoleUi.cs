@@ -1,5 +1,4 @@
 ﻿using LD57.UiSystem;
-using Myra;
 using Myra.Graphics2D.Brushes;
 using Myra.Graphics2D.UI;
 using qASIC.Console;
@@ -28,6 +27,12 @@ namespace LD57.Debug
             root.inputBox.Char += InputBox_Char;
 
             RefreshLogs();
+
+#if DEBUG
+            Canvas.UiEnabled = true;
+            root.inputBox.Enabled = false;
+            enableInputNextFrame = true;
+#endif
         }
 
         private void InputBox_Char(object sender, Myra.Events.GenericEventArgs<char> e)
