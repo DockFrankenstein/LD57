@@ -74,9 +74,16 @@ namespace LD57.Puzzle
             if (!States.IndexInRange(index)) return;
             if (States[index].collision == null) return;
 
-            var pos = States[index].collision.Position;
-            pos.Y = active ? 0f : -20f;
-            States[index].collision.Position = pos;
+            var collisions = States[index].collision.GetChildren()
+                .Select(x => x.Get<BodyComponent>())
+                .Where(x => x != null);
+
+            foreach (var item in collisions)
+            {
+                var pos = item.Position;
+                pos.Y = active ? 0f : -20f;
+                item.Position = pos;
+            }
         }
 
         [DataContract]
@@ -85,7 +92,7 @@ namespace LD57.Puzzle
             public Vector3 position;
             public Vector3 rotation;
             public Vector3 scale;
-            public BodyComponent collision;
+            public Entity collision;
 
             public Quaternion GetRotation() =>
                 Quaternion.RotationYawPitchRoll(

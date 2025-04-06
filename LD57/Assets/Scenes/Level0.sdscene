@@ -280,7 +280,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     9f0225fcea8df6139c9d4e845957a7bc: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 2a7eb9de-3099-47e7-bf12-2748f74c744e
+                        Id: ad32c753-fb75-4cf2-becb-aab0de8347b3
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 fce8c23122b2184f51147f1ad4bbd9fb: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
@@ -323,22 +323,22 @@ Hierarchy:
                                 position: {X: 0.0, Y: 0.0, Z: -11.0}
                                 rotation: {X: 90.0, Y: 0.0, Z: 0.0}
                                 scale: {X: 0.1, Y: 0.1, Z: 0.1}
-                                collision: ref!! b617832e-8de6-4698-b91b-f0fda88788c7
+                                collision: ref!! c4e2db21-dfa0-4e63-90a4-f8891acb204d
                             5a98286409a3848da80913a48f6e34e3:
                                 position: {X: 0.0, Y: 0.0, Z: -10.0}
                                 rotation: {X: 90.0, Y: 0.0, Z: 0.0}
                                 scale: {X: 0.2, Y: 0.2, Z: 0.2}
-                                collision: ref!! 2a7eb9de-3099-47e7-bf12-2748f74c744e
+                                collision: ref!! 85769274-479b-47ae-8a34-adfacb94acaa
                             a9c22161c872542a9e12e15efe9ad7b8:
                                 position: {X: 0.0, Y: 0.0, Z: -6.0}
                                 rotation: {X: 90.0, Y: 0.0, Z: 0.0}
                                 scale: {X: 0.5, Y: 0.5, Z: 0.5}
-                                collision: ref!! 711d8ba8-f975-4335-8cc9-f53b9a5e3583
+                                collision: ref!! 9afbabd2-24ed-46bb-a018-c3d77e4643d3
                             c7fa0a02e7fbe6351e10eca37e1174ef:
                                 position: {X: 0.0, Y: 0.0, Z: -5.0}
                                 rotation: {X: 90.0, Y: 0.0, Z: 0.0}
                                 scale: {X: 0.7, Y: 0.7, Z: 0.7}
-                                collision: ref!! c9fb5ac3-57aa-446e-bf9d-5327e558511c
+                                collision: ref!! fc30c3ae-0122-452b-afd6-81d66c380d1e
         -   Folder: null
             Entity:
                 Id: 900a3066-8ec6-4e42-92a1-34fb30b1da9b
@@ -404,7 +404,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     9f0225fcea8df6139c9d4e845957a7bc: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 711d8ba8-f975-4335-8cc9-f53b9a5e3583
+                        Id: 990befd5-f69f-4b07-ac2b-f386e088b6aa
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 fce8c23122b2184f51147f1ad4bbd9fb: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
@@ -436,7 +436,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     9f0225fcea8df6139c9d4e845957a7bc: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: b617832e-8de6-4698-b91b-f0fda88788c7
+                        Id: b02a1bad-d0ef-46ba-bef3-96ba6220425a
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 fce8c23122b2184f51147f1ad4bbd9fb: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
@@ -669,7 +669,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     9f0225fcea8df6139c9d4e845957a7bc: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: c9fb5ac3-57aa-446e-bf9d-5327e558511c
+                        Id: 61f786f5-96f7-49c2-9928-f50945902926
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 fce8c23122b2184f51147f1ad4bbd9fb: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
