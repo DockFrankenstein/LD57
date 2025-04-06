@@ -56,15 +56,20 @@ Hierarchy:
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
                             Colliders:
                                 aaa2a80b6306594c8dcde258607f6e50: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
-                                    Mass: 1.0
+                                    Mass: 0.0
                                     PositionLocal: {X: 0.55, Y: 1.5, Z: -2.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                                     Size: {X: 0.1, Y: 3.0, Z: 3.0}
                                 38d0b3a6fbcde5847424bdd4677291ca: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
-                                    Mass: 1.0
+                                    Mass: 0.0
                                     PositionLocal: {X: -0.55, Y: 1.5, Z: -2.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                                     Size: {X: 0.1, Y: 3.0, Z: 3.0}
+                                e92d66f13f6fe37e9b2bcca77fcf752c: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: -3.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0

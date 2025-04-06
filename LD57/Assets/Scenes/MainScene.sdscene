@@ -19,7 +19,21 @@ Hierarchy:
         - ref!! e1a1fd5f-3452-4561-9fea-fcfe1261189f
         - ref!! d7785c3c-d2c1-44d8-8233-ed81098df600
         - ref!! 8e4b03ce-1e86-4e56-a6d9-14cd8e522233
+        - ref!! 2b8dc6eb-cfec-41d6-89b3-76fe029da5ff
     Parts:
+        -   Entity:
+                Id: 2b8dc6eb-cfec-41d6-89b3-76fe029da5ff
+                Name: Skybox
+                Components:
+                    af6cfe3ca9fa2f703884891ca2298869: !TransformComponent
+                        Id: c207b289-1428-499c-936f-c534268c6036
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bff8a2b9a6e04207d89160c49760d798: !BackgroundComponent
+                        Id: 488a8f63-04f5-44b3-9a72-5898048d04cf
+                        Texture: 4c4cdc32-eba3-4772-8365-5b3971de07f4:Textures/black
         -   Entity:
                 Id: 48b8e6d7-fdb4-4103-9eac-0da9b2ed015d
                 Name: Ui Manager
@@ -39,6 +53,7 @@ Hierarchy:
                             CaviarDreamsItalic: null
                             CaviarDreamsBold: null
                             CaviarDreamsBoldItalic: null
+                            Roboto: null
         -   Entity:
                 Id: 7fb2f57d-52aa-422c-87c9-43d67a771e56
                 Name: Input Focus

@@ -138,7 +138,7 @@ Hierarchy:
                             Shadow:
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 140.0
+                        Intensity: 50.0
         -   Entity:
                 Id: 3590a1f2-aaf0-4a94-9377-a1875a3202b2
                 Name: cam
@@ -278,14 +278,14 @@ Hierarchy:
                             Shadow:
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 300.0
+                        Intensity: 100.0
         -   Entity:
                 Id: 9f559a2a-0788-421a-81a4-131f22a0008d
                 Name: The big object
                 Components:
                     ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
                         Id: 2de74d01-99a5-40be-98ea-536150caeb14
-                        Position: {X: 0.0, Y: 0.0, Z: -9.361844}
+                        Position*: {X: 0.0, Y: -3.9931666E-07, Z: -15.611844}
                         Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
                         Scale: {X: 0.7, Y: 0.7, Z: 0.7}
                         Children: {}
@@ -372,7 +372,7 @@ Hierarchy:
                             Shadow:
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 140.0
+                        Intensity: 30.0
         -   Folder: Geometry
             Entity:
                 Id: b1050b4a-96ef-41f3-aac9-4e529bae8693
@@ -517,7 +517,7 @@ Hierarchy:
                             Shadow:
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 140.0
+                        Intensity: 30.0
         -   Folder: Lights
             Entity:
                 Id: de76dc7d-1870-4546-b97e-cf84e4802734
@@ -541,7 +541,7 @@ Hierarchy:
                             Shadow:
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 300.0
+                        Intensity: 100.0
         -   Folder: Lights
             Entity:
                 Id: ded374de-2909-4938-9709-e5f05bf06a29
@@ -565,7 +565,7 @@ Hierarchy:
                             Shadow:
                                 BiasParameters:
                                     DepthBias: 0.001
-                        Intensity: 300.0
+                        Intensity: 100.0
         -   Entity:
                 Id: e2381c6d-144c-43c2-b71e-da45206b4f1a
                 Name: Platform3x4
