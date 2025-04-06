@@ -3,10 +3,11 @@ Id: 8b074673-db3b-4b81-a8cb-e094b4b24c43
 SerializedVersion: {Stride: 3.1.0.1}
 Tags: []
 ChildrenIds: []
+Parent: 7ab23059-c8d7-4549-92f9-f1981cd984db:Scenes/MainScene
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
-        - ref!! 7dfd0d22-8311-4b22-a51e-33295431a185
+        - ref!! a43f78fc-bfa7-46f2-9f62-6257b854f7cd
         - ref!! 9c9cecb3-56f7-46af-afd0-8fe4cacd39fb
         - ref!! ded374de-2909-4938-9709-e5f05bf06a29
         - ref!! de76dc7d-1870-4546-b97e-cf84e4802734
@@ -17,10 +18,11 @@ Hierarchy:
         - ref!! 0658352b-3074-4739-81be-16fd658e1c65
         - ref!! 030923e6-2ae2-44e0-8744-010a6207f4c8
         - ref!! 31a10169-d7ce-455e-9a82-27e4159faeb9
-        - ref!! a0a7d6b0-278d-41e7-9053-ca0bb856f3b1
-        - ref!! 538c8107-0446-49c8-99bb-8a70f7ddad37
         - ref!! b3178e1a-30f6-47d1-b0e3-bbebe6562346
         - ref!! 324d632e-51d3-4698-a3f6-2a4ab3f52256
+        - ref!! c1b40f2c-afec-44b5-a4fd-57313e5ebbd0
+        - ref!! 3c8efb57-b8fb-45fc-8e73-6b1d7c88d7ab
+        - ref!! ba775a31-4f1f-4a1d-a728-f3183688c8c5
     Parts:
         -   Folder: Geometry
             Entity:
@@ -180,14 +182,13 @@ Hierarchy:
                 BasePartAsset: 96838afa-4916-418c-82e8-c1ae9994e051:Prefabs/Bridge3
                 BasePartId: 0b617083-2979-472c-b604-c9f13f3a2c2b
                 InstanceId: 6ee296ed-3ed7-487e-ba9c-5e6436eeeef9
-        -   Folder: null
-            Entity:
+        -   Entity:
                 Id: 3c8efb57-b8fb-45fc-8e73-6b1d7c88d7ab
                 Name: Reel
                 Components:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: 580a3bd3-d036-4d9b-82b5-356c195010ce
-                        Position*: {X: 0.49999997, Y: 0.0, Z: 0.0}
+                        Position*: {X: -3.4999998, Y: 0.0, Z: 2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -218,24 +219,12 @@ Hierarchy:
                         MinimumTimestepCountUnderThreshold: 32
                     c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
                         Id: 41647607-52fc-4533-8224-e28b0946d65d
-                        Target: null
+                        Target*: ref!! 944add9a-0e17-4971-bbed-2228ebe3f2c2
                         Interactable: true
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
                 InstanceId: e5e505ff-6667-4867-9981-52528308c815
-        -   Folder: Puzzle Elements
-            Entity:
-                Id: 538c8107-0446-49c8-99bb-8a70f7ddad37
-                Name: Reel
-                Components:
-                    0d870047c2bc37f81e7c2e1e0dbe6b71: !TransformComponent
-                        Id: 20cc00ef-a436-44f2-b484-156ee2166e22
-                        Position: {X: 4.0, Y: 0.0, Z: 2.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            2865fcc92e8de1fd19cc9c1e478ee15e: ref!! 580a3bd3-d036-4d9b-82b5-356c195010ce
         -   Folder: Geometry
             Entity:
                 Id: 5e20d42a-2679-4086-8bb6-1723e209dbfe
@@ -248,17 +237,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             b410ce6d9b954bbd580e35a2c6879aab: ref!! 672f00fe-c224-47ab-8bdf-c27e91c7fba4
-        -   Entity:
-                Id: 7dfd0d22-8311-4b22-a51e-33295431a185
-                Name: Player
-                Components:
-                    6dda25d18b9ff2502bb69f1821acf6ef: !TransformComponent
-                        Id: bb753d3f-3ff1-46d6-9b4a-6358da71ca03
-                        Position: {X: -4.0, Y: 0.0, Z: 3.5}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            bb40720264065e70d9ccafab28aa4898: ref!! 4e5accc2-7c55-48be-b997-63357fc1a819
         -   Entity:
                 Id: 864025dd-242b-4078-81a2-412295d867c9
                 Name: Bridge5
@@ -323,25 +301,13 @@ Hierarchy:
                 BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
                 BasePartId: 49c43870-e9f2-4396-9a7a-8bcf11aa3900
                 InstanceId: e2ebc0c3-d25b-40fb-bfe4-8076ce77fb62
-        -   Folder: Puzzle Elements
-            Entity:
-                Id: a0a7d6b0-278d-41e7-9053-ca0bb856f3b1
-                Name: Reel
-                Components:
-                    0d870047c2bc37f81e7c2e1e0dbe6b71: !TransformComponent
-                        Id: 8f34ad21-cac8-4f07-90bb-9e3c3d1c9d7e
-                        Position: {X: -3.0, Y: 0.0, Z: 2.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            2865fcc92e8de1fd19cc9c1e478ee15e: ref!! b80fce32-2d58-40f6-80d4-23a291dbba30
         -   Entity:
                 Id: a43f78fc-bfa7-46f2-9f62-6257b854f7cd
                 Name: Player
                 Components:
                     35dee7a9c98182ed520a64e4e2065ba7: !TransformComponent
                         Id: 4e5accc2-7c55-48be-b997-63357fc1a819
-                        Position: {X: 0.0, Y: 0.3, Z: 0.0}
+                        Position*: {X: -3.5000002, Y: 0.3, Z: 3.5000002}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -430,14 +396,67 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             ce79f8ab0e5c3f8b5dd9817f4899d4cb: ref!! 697cb26e-f68c-4b11-b40b-3f7332f27dd8
-        -   Folder: null
-            Entity:
+        -   Entity:
+                Id: ba775a31-4f1f-4a1d-a728-f3183688c8c5
+                Name: Hole
+                Components:
+                    d10eb7abc741c8e1fd6a8d4afa98a5ba: !TransformComponent
+                        Id: 67ec9ca1-6175-4f62-b648-2fefde52fde1
+                        Position*: {X: 6.0000005, Y: 0.0, Z: -2.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    263d872a8bdb57e9edb4e5a05b21afc9: !ModelComponent
+                        Id: 6dbcf3db-4d2a-41c2-9869-132123f94f16
+                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
+                        Materials:
+                            f4219b723faa62d3b4a690fdf9b02569~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Ryba
+                    b4c9a8a4c05357216f2bc9903caaf624: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 9b535e47-9953-47d6-8dfa-8b42e063443c
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                11e74936dce339878df10c8331fe05bb: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.5
+                                    Length: 1.0
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: !LD57.BepuTrigger,LD57 ref!! 7fb2efc1-d501-4500-bc23-4131b92a4abc
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    a44360ac1af879d807f8205613a99628: !LD57.BepuTrigger,LD57
+                        Id: 7fb2efc1-d501-4500-bc23-4131b92a4abc
+                    df7b5cd26d9be926758f20b291c0d72c: !LD57.Puzzle.Hole,LD57
+                        Id: 14c759b1-754b-4b99-ba55-80dabf3bafc8
+                        Priority: -1
+                        Canvas: ref!! 4204f621-19b3-48aa-90cd-4d0d72b4406b
+                        Target*: ref!! 944add9a-0e17-4971-bbed-2228ebe3f2c2
+                        NextLevel*: lv2
+                    d113abd036420102919b845bd145c888: !LD57.UiSystem.UiCanvas,LD57
+                        Id: 4204f621-19b3-48aa-90cd-4d0d72b4406b
+                        EnabledByDefault: false
+                        UiName: hole
+                        TakeInputFocus: true
+            Base:
+                BasePartAsset: f028c0f0-f0a6-4aa0-989d-f0cc3e5383bb:Prefabs/Hole
+                BasePartId: a99c2b37-a4b2-484c-8c72-19e635987ceb
+                InstanceId: 5a7d55cd-2571-4cb4-9bf2-d79d5f65e95e
+        -   Entity:
                 Id: c1b40f2c-afec-44b5-a4fd-57313e5ebbd0
                 Name: Reel
                 Components:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: b80fce32-2d58-40f6-80d4-23a291dbba30
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position*: {X: 4.5000005, Y: 0.0, Z: 1.7499998}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -468,7 +487,7 @@ Hierarchy:
                         MinimumTimestepCountUnderThreshold: 32
                     c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
                         Id: dba13446-7961-4e4d-bdf7-523eb9b94b40
-                        Target: null
+                        Target*: ref!! 944add9a-0e17-4971-bbed-2228ebe3f2c2
                         Interactable: true
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel

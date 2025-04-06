@@ -44,7 +44,7 @@ namespace LD57.Puzzle
             if (DownFree) ToggleBlock(DownBlock, false);
             if (RightFree) ToggleBlock(RightBlock, false);
 
-            while (Game.IsRunning && Entity?.Scene != null)
+            while (Game.IsRunning && Entity?.Scene != null && axis?.Simulation != null)
             {
                 if (States.Count > 0 && curDir != States[Index])
                 {
@@ -57,13 +57,16 @@ namespace LD57.Puzzle
 
                     while (t < 1f)
                     {
-                        await axis.Simulation.NextUpdate();
+                        if (axis?.Simulation != null)
+                            await axis.Simulation.NextUpdate();
+
                         t += (float)Game.UpdateTime.WarpElapsed.TotalSeconds / AnimationDuration;
                         LerpRotation(d, curDir, Tween.InOut(t, 3f));
                     }
                 }
 
-                await axis.Simulation.NextUpdate();
+                if (axis?.Simulation != null)
+                    await axis.Simulation.NextUpdate();
             }
         }
 

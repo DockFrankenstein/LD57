@@ -54,12 +54,16 @@ namespace LD57.Player
 
         public void AfterSimulationUpdate(BepuSimulation simulation, float simTimeStep)
         {
+            if (body == null) return;
+
             body.AngularVelocity = Vector3.Zero;
             body.Orientation = rot;
         }
 
         public void SimulationUpdate(BepuSimulation simulation, float simTimeStep)
         {
+            if (body == null) return;
+
             body.Awake = true;
 
             Entity.Transform.UpdateWorldMatrix();

@@ -10,13 +10,13 @@ Hierarchy:
         - ref!! 83ca07d1-e26d-472b-bbc1-d2e3373f1049
         - ref!! 0c99741d-6c86-41f6-998d-d6298df98a5e
         - ref!! ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
-        - ref!! 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
         - ref!! e03e7bb0-96f3-4fef-ab2b-ab34226ffe72
         - ref!! 900a3066-8ec6-4e42-92a1-34fb30b1da9b
-        - ref!! d9d43300-3071-4ca1-809d-d8d02ca5ee64
         - ref!! d0a4675a-9580-4e42-a685-498288e50bec
         - ref!! 106bddf0-ad6e-4f29-8d10-6a2efa67fe8f
         - ref!! 05b4e226-7c6b-44b3-b939-fee43ebc6d7c
+        - ref!! e1c23b19-77c3-4c13-acde-1475f668e2b8
+        - ref!! fa1d7381-fd9d-4b2b-8bca-3a5eea47a620
     Parts:
         -   Entity:
                 Id: 05b4e226-7c6b-44b3-b939-fee43ebc6d7c
@@ -32,6 +32,54 @@ Hierarchy:
                             e90d960f297f951d616f3a91c3297a8a: ref!! 475e3810-7fe4-4b69-a0c2-eb6e34198df1
                             9ac066fbf6d4d626a2c9908da0d50e59: ref!! d7b72661-e0e3-4d03-8c7b-289d731f904a
                             3f7f43393fb426dbafff5a00727a90f5: ref!! 49b59591-c928-4580-96a1-519c790ef52f
+        -   Entity:
+                Id: 0b1a9739-b47f-45df-b5f7-93578dd012e7
+                Name: Player
+                Components:
+                    35dee7a9c98182ed520a64e4e2065ba7: !TransformComponent
+                        Id: 3fbf5bf4-f6dc-4f6b-bd57-25101d453dd7
+                        Position: {X: 0.0, Y: 0.3, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            7604153ffe44cbcbc0cba19fd1056fe0: ref!! 8fae1a63-6ced-4bc7-aa02-25953a1752e6
+                    f0055ce876147c97bf2600d66a371d6f: !ModelComponent
+                        Id: 3ad626fe-e9ab-4610-962d-73627a2a3daa
+                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
+                        Materials: {}
+                    6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 27921723-01c0-4e1d-bd38-9a2240cf41ef
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                5d22bc5a802cc37c7f468d8608f64ccf: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.3
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer1
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: false
+                        InterpolationMode: Interpolated
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    0c3397f45102991fc6fae1ba1c0d3164: !LD57.Player.PlayerMove,LD57
+                        Id: 056b86f0-4b45-45e3-91b4-3463c295d8ef
+                        Speed: 6.0
+                    accddf2efd5c87071f830aec70dbe50e: !LD57.Player.PlayerInput,LD57
+                        Id: 9870dbd5-b0ca-4b7c-af14-501b891daf2b
+                    899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
+                        Id: 051fcd40-cc34-4d38-bfd2-8f2bd1ef2bff
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
+                InstanceId: 1d0f441e-a04c-4ef2-8712-684ac03aa2d0
         -   Entity:
                 Id: 0c01137b-11d9-4954-8f9b-df08ee828f0c
                 Name: Right
@@ -126,53 +174,23 @@ Hierarchy:
                 BasePartId: 98f52ca8-c634-44f9-834e-55efdb9f61c8
                 InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Entity:
-                Id: 26a71588-7cac-4d3a-9a7b-9f2acd2fa5eb
-                Name: Player
+                Id: 508f9a5a-341a-4dc6-8949-b4937cd72a59
+                Name: Cam Target
                 Components:
-                    35dee7a9c98182ed520a64e4e2065ba7: !TransformComponent
-                        Id: 1404bd1b-074a-4035-9a88-0f72c3f902e9
-                        Position*: {X: -2.7499998, Y: 0.3, Z: -0.74999994}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    84b5e1126283a8f3b6cb5e94471c3b6f: !TransformComponent
+                        Id: 8fae1a63-6ced-4bc7-aa02-25953a1752e6
+                        Position: {X: 0.0, Y: 2.8971655, Z: 3.4338622}
+                        Rotation: {X: -0.29554555, Y: 0.0, Z: 0.0, W: 0.95532864}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            7604153ffe44cbcbc0cba19fd1056fe0: ref!! 3bab5ad5-dda1-4e78-b9ed-846b2ba597bc
-                    f0055ce876147c97bf2600d66a371d6f: !ModelComponent
-                        Id: 77af0653-dcba-4f30-8fc4-fdbd452cec56
-                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
-                        Materials: {}
-                    6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 3e74e38b-ea23-4adf-8c3d-779c8168ad8a
-                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
-                            Colliders:
-                                5d22bc5a802cc37c7f468d8608f64ccf: !Stride.BepuPhysics.Definitions.Colliders.SphereCollider,Stride.BepuPhysics
-                                    Mass: 1.0
-                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Radius: 0.3
-                        SpringFrequency: 30.0
-                        SpringDampingRatio: 3.0
-                        FrictionCoefficient: 1.0
-                        MaximumRecoveryVelocity: 1000.0
-                        CollisionLayer: Layer1
-                        CollisionGroup: {}
-                        ContactEventHandler: null
-                        Kinematic: false
-                        Gravity: false
-                        InterpolationMode: Interpolated
-                        ContinuousDetectionMode: Discrete
-                        SleepThreshold: 0.01
-                        MinimumTimestepCountUnderThreshold: 32
-                    0c3397f45102991fc6fae1ba1c0d3164: !LD57.Player.PlayerMove,LD57
-                        Id: b38654b7-0fd0-4567-be31-7e88b087ee51
-                        Speed: 6.0
-                    accddf2efd5c87071f830aec70dbe50e: !LD57.Player.PlayerInput,LD57
-                        Id: 215fb4be-d773-431d-9ea1-9f6ac4b52b5d
-                    899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
-                        Id: e7c895a3-0874-412d-9c7c-7d8eee5c7bf3
+                        Children: {}
+                    04d1e4eed930e2b03fc5302f0013aa00: !LD57.Camera.CameraTarget,LD57
+                        Id: 7aebe631-cfe5-40a0-9f18-b4c9a782549e
+                        TargetName: player
+                        TargetActive: true
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
-                BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
-                InstanceId: 94b9081e-f18f-4783-91b7-991ab69f5795
+                BasePartId: 78c254f9-f653-46ad-948d-f90aab0e139e
+                InstanceId: 1d0f441e-a04c-4ef2-8712-684ac03aa2d0
         -   Entity:
                 Id: 76a21b6b-5c66-49a1-983f-fe7ddb9b06f3
                 Name: Left
@@ -362,24 +380,6 @@ Hierarchy:
                     d9212809287a504bff5cbe570303a6cb: !LD57.Dialogues.NPC,LD57
                         Id: d2bf348a-86ab-4079-88c3-817661112085
                         DialogueName: intro
-        -   Entity:
-                Id: 9018189f-2c73-43b7-bfec-333081519736
-                Name: Cam Target
-                Components:
-                    84b5e1126283a8f3b6cb5e94471c3b6f: !TransformComponent
-                        Id: 3bab5ad5-dda1-4e78-b9ed-846b2ba597bc
-                        Position: {X: 0.0, Y: 2.8971655, Z: 3.4338622}
-                        Rotation: {X: -0.29554555, Y: 0.0, Z: 0.0, W: 0.95532864}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    04d1e4eed930e2b03fc5302f0013aa00: !LD57.Camera.CameraTarget,LD57
-                        Id: 52efb335-7f55-440d-adfd-14535071ff44
-                        TargetName: player
-                        TargetActive: true
-            Base:
-                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
-                BasePartId: 78c254f9-f653-46ad-948d-f90aab0e139e
-                InstanceId: 94b9081e-f18f-4783-91b7-991ab69f5795
         -   Folder: null
             Entity:
                 Id: 9afbabd2-24ed-46bb-a018-c3d77e4643d3
@@ -451,7 +451,7 @@ Hierarchy:
                 Components:
                     c2ddd056fc94df45b6749b052ba3fc87: !TransformComponent
                         Id: ba0a6b23-d7d4-4a7d-9277-694eb21ef2b6
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position*: {X: 8.5, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -477,50 +477,6 @@ Hierarchy:
                 BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
                 BasePartId: b96c36d8-d43c-4b37-9b9f-b9b0915778e3
                 InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
-        -   Folder: null
-            Entity:
-                Id: d9d43300-3071-4ca1-809d-d8d02ca5ee64
-                Name: Reel
-                Components:
-                    dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
-                        Id: d6794c71-0805-41ca-90a3-235c5f5525f1
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    505179e15f47cff2a7235205966781e7: !ModelComponent
-                        Id: f2799304-acb1-4eff-9b34-17d26dad5510
-                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
-                        Materials: {}
-                    21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
-                        Id: 4cce6ed1-9a74-4cb0-85bf-c62907151d13
-                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
-                            Colliders:
-                                7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
-                                    Mass: 1.0
-                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                        SpringFrequency: 30.0
-                        SpringDampingRatio: 3.0
-                        FrictionCoefficient: 1.0
-                        MaximumRecoveryVelocity: 1000.0
-                        CollisionGroup: {}
-                        ContactEventHandler: null
-                        Kinematic: true
-                        Gravity: false
-                        InterpolationMode: None
-                        ContinuousDetectionMode: Discrete
-                        SleepThreshold: 0.01
-                        MinimumTimestepCountUnderThreshold: 32
-                    c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
-                        Id: 272e5a2c-5a47-4b9c-99ce-6ba6a1adac84
-                        Target*: ref!! 5ed58fdc-7e42-46d9-a65e-245d09524440
-                        Interactable: true
-            Base:
-                BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
-                BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
-                InstanceId: 90f97426-b7bb-4a62-ab46-d73acca96d58
         -   Entity:
                 Id: db3950c3-36e4-4da4-a624-c84d6493b024
                 Name: Blocks
@@ -583,6 +539,17 @@ Hierarchy:
                 BasePartAsset: 7dfbc479-4baf-463f-b36e-c757d3c9c276:Prefabs/Button
                 BasePartId: 1f05f494-21d4-4185-890b-9c62f1cf5c46
                 InstanceId: 04a4452a-04de-4511-a8fe-349e71f5aa55
+        -   Entity:
+                Id: e1c23b19-77c3-4c13-acde-1475f668e2b8
+                Name: Player
+                Components:
+                    a3bdb20fa8ed4b1f9d9aec56a173cd35: !TransformComponent
+                        Id: 7239a7bc-3ceb-4f74-b536-38618438f2f4
+                        Position: {X: -1.75, Y: 0.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            fd5824396308008db7405396cdfa2e00: ref!! 3fbf5bf4-f6dc-4f6b-bd57-25101d453dd7
         -   Entity:
                 Id: ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
                 Name: Ground
@@ -669,6 +636,49 @@ Hierarchy:
                 BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
                 BasePartId: 0ec3c32e-afaf-4773-8175-dd958b470102
                 InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
+        -   Entity:
+                Id: fa1d7381-fd9d-4b2b-8bca-3a5eea47a620
+                Name: Reel
+                Components:
+                    dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
+                        Id: 933ed45d-cc4c-427f-8769-742cced8c980
+                        Position*: {X: -3.75, Y: 0.0, Z: 3.4999998}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    505179e15f47cff2a7235205966781e7: !ModelComponent
+                        Id: a8ee314b-e43b-4cc2-8754-efe14d3dd1d2
+                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Materials: {}
+                    21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 241908dc-6df3-4ae7-835d-3346e6787cbf
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
+                        Id: d401e591-2546-49d3-a9df-33da6cb7d3b1
+                        Target: null
+                        Interactable: true
+            Base:
+                BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
+                BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
+                InstanceId: 365cebef-d0b0-454e-9cf7-1c66090c4bf1
         -   Folder: null
             Entity:
                 Id: fc30c3ae-0122-452b-afd6-81d66c380d1e

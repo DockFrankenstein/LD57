@@ -11,11 +11,23 @@ namespace LD57.Puzzle
 
         public void Interact()
         {
-            Target.ChangeState(1);
+            if (Target == null)
+            {
+                qDebug.LogError("Big Object not assigned to reel!");
+                return;
+            }
+
+            Target?.ChangeState(1);
         }
 
         public void Interact2()
         {
+            if (Target == null)
+            {
+                qDebug.LogError("Big Object not assigned to reel!");
+                return;
+            }
+
             Target.ChangeState(-1);
         }
     }

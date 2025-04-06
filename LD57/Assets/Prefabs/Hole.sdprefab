@@ -1,0 +1,58 @@
+!PrefabAsset
+Id: f028c0f0-f0a6-4aa0-989d-f0cc3e5383bb
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! a99c2b37-a4b2-484c-8c72-19e635987ceb
+    Parts:
+        -   Entity:
+                Id: a99c2b37-a4b2-484c-8c72-19e635987ceb
+                Name: Hole
+                Components:
+                    d10eb7abc741c8e1fd6a8d4afa98a5ba: !TransformComponent
+                        Id: 4268f6e9-0c93-4b5e-8660-292f7d391b43
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    263d872a8bdb57e9edb4e5a05b21afc9: !ModelComponent
+                        Id: ab4e7e89-eab3-4c5e-8c3f-5ac54600fa02
+                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
+                        Materials:
+                            f4219b723faa62d3b4a690fdf9b02569~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Ryba
+                    b4c9a8a4c05357216f2bc9903caaf624: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: d4d7f17d-de4a-4769-a7c4-1c1b487544c0
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                11e74936dce339878df10c8331fe05bb: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.5
+                                    Length: 1.0
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: !LD57.BepuTrigger,LD57 ref!! 33a4190d-3d1d-49e5-b48d-f057b4b2e399
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    a44360ac1af879d807f8205613a99628: !LD57.BepuTrigger,LD57
+                        Id: 33a4190d-3d1d-49e5-b48d-f057b4b2e399
+                    df7b5cd26d9be926758f20b291c0d72c: !LD57.Puzzle.Hole,LD57
+                        Id: 8aaf1495-ae59-4807-bc4f-0b63328f0e24
+                        Priority: -1
+                        Canvas: ref!! 95ebf93a-18f2-4998-bab0-ed8c44ca28e3
+                        Target: null
+                        NextLevel: null
+                    d113abd036420102919b845bd145c888: !LD57.UiSystem.UiCanvas,LD57
+                        Id: 95ebf93a-18f2-4998-bab0-ed8c44ca28e3
+                        EnabledByDefault: false
+                        UiName: hole
+                        TakeInputFocus: true

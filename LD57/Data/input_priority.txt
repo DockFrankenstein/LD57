@@ -3,5 +3,6 @@ console
 debug_camera
 
 # Gameplay
+hole
 dialogue
 player
