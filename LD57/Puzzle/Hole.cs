@@ -3,6 +3,7 @@ using LD57.Interaction;
 using LD57.LevelManagement;
 using LD57.UiSystem;
 using Myra.Graphics2D.UI;
+using qASIC.Console;
 
 namespace LD57.Puzzle
 {
@@ -29,7 +30,7 @@ namespace LD57.Puzzle
 
         public override void Start()
         {
-            ui = new HoleWidget();
+            ui = new HoleWidget(Services.GetService<UiManager>());
             Canvas.Root = ui;
         }
 
@@ -54,7 +55,7 @@ namespace LD57.Puzzle
 
         public class HoleWidget : Grid
         {
-            public HoleWidget()
+            public HoleWidget(UiManager manager)
             {
                 RowsProportions.Add(new Proportion(ProportionType.Fill));
                 RowsProportions.Add(new Proportion(ProportionType.Part, 0.25f));
@@ -63,7 +64,8 @@ namespace LD57.Puzzle
                 {
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
-                    Text = "Press [E] to continue",
+                    Text = "PRESS [E] TO CONTINUE",
+                    Font = manager.Fonts.CaviarDreamsBold.GetFont(32),
                 };
 
                 SetRow(cont, 1);

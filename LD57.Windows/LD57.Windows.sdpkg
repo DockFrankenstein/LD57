@@ -14,4 +14,9 @@ OutputGroupDirectories: {}
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
-RootAssets: []
+RootAssets:
+    - 35c2af12-3083-49a8-a8f3-d6524c805e08:Fonts/CaviarDreams_BoldItalic
+    - 7b16e383-4f2f-406e-869b-fce289ec6462:Fonts/CaviarDreams_Bold
+    - 7c942262-1be0-49ac-821c-c9d8002f616e:Fonts/Roboto-Regular
+    - 9f55a1c3-c2b9-48e3-9f85-61f45cd392d4:Fonts/CaviarDreams_Italic
+    - f77a9cc4-1fa6-45a8-a502-4d51ba3633df:Fonts/CaviarDreams

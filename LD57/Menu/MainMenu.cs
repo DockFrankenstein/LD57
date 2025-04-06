@@ -12,7 +12,7 @@ namespace LD57.Menu
 
         public override void Start()
         {
-            widget = new MenuWidget(Canvas.Desktop);
+            widget = new MenuWidget(Services.GetService<UiManager>(), Canvas.Desktop);
             widget.play.Click += (_, _) => { };
             widget.exit.Click += (_, _) => Environment.Exit(0);
 
@@ -29,7 +29,7 @@ namespace LD57.Menu
             Window selectWindow;
             Window settingsWindow;
 
-            public MenuWidget(Desktop desktop)
+            public MenuWidget(UiManager manager, Desktop desktop)
             {
                 RowsProportions.Add(new Proportion(ProportionType.Part, 0.35f));
                 RowsProportions.Add(new Proportion(ProportionType.Fill));
@@ -39,7 +39,8 @@ namespace LD57.Menu
                 {
                     Text = "Where is Jeremy Wattson?",
                     VerticalAlignment = VerticalAlignment.Center,
-                    Margin = new Myra.Graphics2D.Thickness(30,30)
+                    Margin = new Myra.Graphics2D.Thickness(30,30),
+                    Font = manager.Fonts.CaviarDreamsBold.GetFont(72),
                 };
 
                 var buttons = new HorizontalStackPanel()
@@ -59,6 +60,7 @@ namespace LD57.Menu
                     Width = 500,
                     Height = 300,
                     Title = "Level Select",
+                    TitleFont = manager.Fonts.CaviarDreams.GetFont(18),
                 };
 
                 settingsWindow = new Window()
@@ -66,6 +68,7 @@ namespace LD57.Menu
                     Width = 400,
                     Height = 600,
                     Title = "Settings",
+                    TitleFont = manager.Fonts.CaviarDreams.GetFont(18),
                 };
 
                 SetRow(title, 0);
@@ -106,29 +109,31 @@ namespace LD57.Menu
                             break;
                     }
                 };
-            }
 
-            Button CreateButton(string text)
-            {
-                var button = new Button()
+
+                Button CreateButton(string text)
                 {
-                    VerticalAlignment = VerticalAlignment.Center,
-                    Height = 40,
-                    Width = 100,
-                    Background = new SolidBrush(new Color(10,10,10)),
-                    Border = new SolidBrush(new Color(150,150,150)),
-                    BorderThickness = new Myra.Graphics2D.Thickness(2,2),
-                };
+                    var button = new Button()
+                    {
+                        VerticalAlignment = VerticalAlignment.Center,
+                        Height = 40,
+                        Width = 100,
+                        Background = new SolidBrush(new Color(10,10,10)),
+                        Border = new SolidBrush(new Color(150,150,150)),
+                        BorderThickness = new Myra.Graphics2D.Thickness(2,2),
+                    };
 
-                var label = new Label()
-                {
-                    Text = text,
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    VerticalAlignment = VerticalAlignment.Center,
-                };
+                    var label = new Label()
+                    {
+                        Text = text,
+                        HorizontalAlignment = HorizontalAlignment.Center,
+                        VerticalAlignment = VerticalAlignment.Center,
+                        Font = manager.Fonts.CaviarDreams.GetFont(18),
+                    };
 
-                button.Content = label;
-                return button;
+                    button.Content = label;
+                    return button;
+                }
             }
         }
     }

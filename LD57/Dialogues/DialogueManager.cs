@@ -23,7 +23,7 @@ namespace LD57.Dialogues
 
             Services.AddService(this);
 
-            ui = new DialogueWidget();
+            ui = new DialogueWidget(Services.GetService<UiManager>());
             canvas.Root = ui;
 
             while (Entity?.Scene != null)
@@ -191,7 +191,7 @@ namespace LD57.Dialogues
             public Label speaker;
             public Label txt;
 
-            public DialogueWidget()
+            public DialogueWidget(UiManager manager)
             {
                 Padding = new Myra.Graphics2D.Thickness(50,50);
 
@@ -217,6 +217,7 @@ namespace LD57.Dialogues
                     VerticalAlignment = VerticalAlignment.Center,
                     HorizontalAlignment = HorizontalAlignment.Stretch,
                     TextAlign = FontStashSharp.RichText.TextHorizontalAlignment.Center,
+                    Font = manager.Fonts.CaviarDreamsBold.GetFont(32),
                 };
 
                 var txtBox = new Grid()
@@ -232,12 +233,13 @@ namespace LD57.Dialogues
                     HorizontalAlignment = HorizontalAlignment.Stretch,
                     TextAlign = FontStashSharp.RichText.TextHorizontalAlignment.Center,
                     Wrap = true,
+                    Font = manager.Fonts.CaviarDreams.GetFont(24),
                 };
 
                 RowsProportions.Add(new Proportion(ProportionType.Fill));
                 RowsProportions.Add(new Proportion(ProportionType.Pixels, 120));
 
-                window.RowsProportions.Add(new Proportion(ProportionType.Pixels, 25));
+                window.RowsProportions.Add(new Proportion(ProportionType.Pixels, 32));
                 window.RowsProportions.Add(new Proportion(ProportionType.Fill));
 
                 Grid.SetRow(window, 1);

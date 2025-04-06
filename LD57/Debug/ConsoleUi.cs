@@ -21,7 +21,7 @@ namespace LD57.Debug
             console.Logs.OnLog += _ => RefreshLogs();
             console.Logs.OnUpdateLog += _ => RefreshLogs();
 
-            root = new ConsoleWidget();
+            root = new ConsoleWidget(Services.GetService<UiManager>());
             Canvas.Root = root;
 
             root.inputBox.Char += InputBox_Char;
@@ -108,7 +108,7 @@ namespace LD57.Debug
             public ScrollViewer scroll;
             public Label logs;
 
-            public ConsoleWidget()
+            public ConsoleWidget(UiManager manager)
             {
                 var window = new Grid()
                 {
@@ -134,6 +134,7 @@ namespace LD57.Debug
                 {
                     HorizontalAlignment = HorizontalAlignment.Stretch,
                     Wrap = true,
+                    Font = manager.Fonts.Roboto.GetFont(18),
                 };
 
                 var input = new Grid()
@@ -148,6 +149,7 @@ namespace LD57.Debug
                 inputBox = new TextBox()
                 {
                     VerticalAlignment = VerticalAlignment.Stretch,
+                    Font = manager.Fonts.Roboto.GetFont(18),
                 };
 
                 inputButton = new Button()
@@ -161,6 +163,7 @@ namespace LD57.Debug
                     Text = "Execute",
                     VerticalAlignment = VerticalAlignment.Center,
                     HorizontalAlignment = HorizontalAlignment.Center,
+                    Font = manager.Fonts.Roboto.GetFont(18),
                 };
 
                 Grid.SetRow(scroll, 0);

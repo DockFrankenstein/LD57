@@ -34,6 +34,11 @@ Hierarchy:
                         Id: c2404bb5-7328-4b24-855c-952d4e8d13f5
                         Priority: -7
                         Canvases: null
+                        Fonts:
+                            CaviarDreams: null
+                            CaviarDreamsItalic: null
+                            CaviarDreamsBold: null
+                            CaviarDreamsBoldItalic: null
         -   Entity:
                 Id: 7fb2f57d-52aa-422c-87c9-43d67a771e56
                 Name: Input Focus

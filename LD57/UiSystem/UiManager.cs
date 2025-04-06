@@ -1,4 +1,7 @@
-﻿using Myra;
+﻿using FontStashSharp;
+using Myra;
+using Stride.Core.Serialization;
+using Stride.Engine.Network;
 using Stride.Rendering.Compositing;
 
 namespace LD57.UiSystem
@@ -9,6 +12,8 @@ namespace LD57.UiSystem
         public MyraRenderer Renderer { get; set; } = new MyraRenderer();
 
         public PriorityList<IUiCanvas> Canvases { get; set; }
+
+        public LoadedFonts Fonts { get; set; } = new LoadedFonts();
 
         public override async Task Execute()
         {
@@ -22,12 +27,31 @@ namespace LD57.UiSystem
 
             await Canvases.LoadPriorityAsync();
 
+            Fonts.CaviarDreams = await LoadFont("Fonts/CaviarDreams");
+            Fonts.CaviarDreamsItalic = await LoadFont("Fonts/CaviarDreams_Italic");
+            Fonts.CaviarDreamsBold = await LoadFont("Fonts/CaviarDreams_Bold");
+            Fonts.CaviarDreamsBoldItalic = await LoadFont("Fonts/CaviarDreams_BoldItalic");
+            Fonts.Roboto = await LoadFont("Fonts/Roboto-Regular");
+
             MyraEnvironment.DefaultAssetManager = new AssetManagementBase.AssetManager(new StrideAssetAccessor(Content), AppDomain.CurrentDomain.BaseDirectory);
             MyraEnvironment.Game = (Game)Game;
 
             AddSceneRenderer((Game as Game).SceneSystem.GraphicsCompositor, Renderer);
 
             Services.AddService(this);
+        }
+
+        async Task<FontSystem> LoadFont(string path)
+        {
+            var font = new FontSystem();
+            using (var stream = Content.OpenAsStream(path, Stride.Core.IO.StreamFlags.None))
+            {
+                var bytes = new byte[stream.Length];
+                await stream.ReadAllAsync(bytes, 0, bytes.Length);
+                font.AddFont(bytes);
+            }
+                
+            return font;
         }
 
         void UpdateRenderer()
@@ -58,6 +82,16 @@ namespace LD57.UiSystem
             }
 
             return graphicsCompositor;
+        }
+
+        [DataContractIgnore]
+        public class LoadedFonts
+        {
+            public FontSystem CaviarDreams { get; set; }
+            public FontSystem CaviarDreamsItalic { get; set; }
+            public FontSystem CaviarDreamsBold { get; set; }
+            public FontSystem CaviarDreamsBoldItalic { get; set; }
+            public FontSystem Roboto { get; set; }
         }
     }
 }
