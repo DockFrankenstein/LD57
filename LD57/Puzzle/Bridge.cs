@@ -44,6 +44,13 @@ namespace LD57.Puzzle
             if (DownFree) ToggleBlock(DownBlock, false);
             if (RightFree) ToggleBlock(RightBlock, false);
 
+            if (States.Count > 0)
+            {
+                curDir = States[0];
+                LerpRotation(curDir, curDir, 1f);
+                ToggleBlock(GetBlock(curDir), false);
+            }
+
             while (Game.IsRunning && Entity?.Scene != null && axis?.Simulation != null)
             {
                 if (States.Count > 0 && curDir != States[Index])

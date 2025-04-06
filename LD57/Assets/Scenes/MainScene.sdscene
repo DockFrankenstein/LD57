@@ -7,6 +7,9 @@ ChildrenIds:
     - 9b01b6e8-3ddc-4350-9af6-de8d44fc5746
     - 8b074673-db3b-4b81-a8cb-e094b4b24c43
     - 910fe4ac-56f4-422a-a748-5b6b5fd4e598
+    - 0c967305-713e-4f79-9d2a-8aad1f839cd9
+    - d75df9fa-c724-44dd-b997-0a68367431b0
+    - 08f12a20-aa1c-41bb-838a-42a23ce88252
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
@@ -217,4 +220,19 @@ Hierarchy:
                                 tag: lv2
                                 scenes:
                                     c7481d5fd47e949249ae0caaff048e2a: 910fe4ac-56f4-422a-a748-5b6b5fd4e598:Scenes/Level2
+                                utilityScenes: {}
+                            06a5871e2fd5954ee14d7ea650e2d919:
+                                tag: lv3
+                                scenes:
+                                    3cd41d302dc09e70342cc28a54df5704: 0c967305-713e-4f79-9d2a-8aad1f839cd9:Scenes/Level3
+                                utilityScenes: {}
+                            1fddddaa9f23c87549909a154b14b488:
+                                tag: lv4
+                                scenes:
+                                    35c2ffc013b3b8aea8a7b663c7047868: d75df9fa-c724-44dd-b997-0a68367431b0:Scenes/Level4
+                                utilityScenes: {}
+                            d345feae639d5c4f0cadf3c99dfa0829:
+                                tag: lv5
+                                scenes:
+                                    e8f57b043e8e046447710f5880fdedcf: 08f12a20-aa1c-41bb-838a-42a23ce88252:Scenes/Level5
                                 utilityScenes: {}

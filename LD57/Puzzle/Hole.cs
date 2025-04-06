@@ -1,9 +1,7 @@
-﻿using LD57.Input;
-using LD57.Interaction;
+﻿using LD57.Interaction;
 using LD57.LevelManagement;
 using LD57.UiSystem;
 using Myra.Graphics2D.UI;
-using qASIC.Console;
 
 namespace LD57.Puzzle
 {
@@ -41,7 +39,7 @@ namespace LD57.Puzzle
                 
             }
 
-            if (Canvas.UiEnabled)
+            if (Canvas.UiEnabled && Canvas.HasInputFocus)
             {
                 if (Input.IsKeyPressed(Keys.E))
                     LoadNextLevel();

@@ -12,8 +12,6 @@ namespace LD57.Puzzle
         public int Index { get; private set; } = 0;
         public List<State> States { get; set; } = new List<State>();
 
-        int curState = 0;
-
         State cur;
 
         public void ChangeState(int delta)

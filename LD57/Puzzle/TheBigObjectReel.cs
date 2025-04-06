@@ -5,6 +5,7 @@ namespace LD57.Puzzle
     public class TheBigObjectReel : StartupScript, IInteractable
     {
         public TheBigObject Target { get; set; }
+        public List<bool> StateAvaliability { get; set; } = new List<bool>();
 
         public bool Interactable { get; set; } = true;
         [DataMemberIgnore] public bool Focused { get; set; }
@@ -17,7 +18,8 @@ namespace LD57.Puzzle
                 return;
             }
 
-            Target?.ChangeState(1);
+            if (Avaliable(Target.Index) && Avaliable(Target.Index + 1))
+                Target?.ChangeState(1);
         }
 
         public void Interact2()
@@ -28,7 +30,11 @@ namespace LD57.Puzzle
                 return;
             }
 
-            Target.ChangeState(-1);
+            if (Avaliable(Target.Index) && Avaliable(Target.Index - 1))
+                Target.ChangeState(-1);
         }
+
+        bool Avaliable(int index) =>
+            index >= 0 && (StateAvaliability.Count <= index || StateAvaliability[index]);
     }
 }
