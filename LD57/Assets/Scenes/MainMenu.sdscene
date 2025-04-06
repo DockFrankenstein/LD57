@@ -6,5 +6,24 @@ ChildrenIds: []
 Parent: 7ab23059-c8d7-4549-92f9-f1981cd984db:Scenes/MainScene
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
-    RootParts: []
-    Parts: []
+    RootParts:
+        - ref!! f4f65c1e-3612-4a31-aad3-c0f198033ae7
+    Parts:
+        -   Entity:
+                Id: f4f65c1e-3612-4a31-aad3-c0f198033ae7
+                Name: Menu
+                Components:
+                    c6ba4ba089bc0c37e3a4d693c5b9385b: !TransformComponent
+                        Id: 2adae7b7-0e06-46cb-8dc7-cbffb0318ba2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    2b0764d39e54f827b40caecd2b137145: !LD57.UiSystem.UiCanvas,LD57
+                        Id: 328635ed-1b6a-42e3-832e-b6110636aad6
+                        EnabledByDefault: true
+                        UiName: main_menu
+                        TakeInputFocus: false
+                    6f3716ccf4088510897b252207c311e5: !LD57.Menu.MainMenu,LD57
+                        Id: e9239333-8486-459d-adf8-6434030a6017
+                        Canvas: ref!! 328635ed-1b6a-42e3-832e-b6110636aad6
