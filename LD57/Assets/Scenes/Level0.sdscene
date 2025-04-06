@@ -15,7 +15,7 @@ Hierarchy:
         - ref!! d0a4675a-9580-4e42-a685-498288e50bec
         - ref!! 106bddf0-ad6e-4f29-8d10-6a2efa67fe8f
         - ref!! 05b4e226-7c6b-44b3-b939-fee43ebc6d7c
-        - ref!! e1c23b19-77c3-4c13-acde-1475f668e2b8
+        - ref!! 0b1a9739-b47f-45df-b5f7-93578dd012e7
         - ref!! fa1d7381-fd9d-4b2b-8bca-3a5eea47a620
     Parts:
         -   Entity:
@@ -38,7 +38,7 @@ Hierarchy:
                 Components:
                     35dee7a9c98182ed520a64e4e2065ba7: !TransformComponent
                         Id: 3fbf5bf4-f6dc-4f6b-bd57-25101d453dd7
-                        Position: {X: 0.0, Y: 0.3, Z: 0.0}
+                        Position*: {X: -2.2499998, Y: 0.3, Z: 0.74999994}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -269,7 +269,7 @@ Hierarchy:
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 ComputeTransmittance: false
                                 BiasParameters: {}
-                        Intensity: 20.0
+                        Intensity: 4.0
         -   Folder: null
             Entity:
                 Id: 85769274-479b-47ae-8a34-adfacb94acaa
@@ -540,17 +540,6 @@ Hierarchy:
                 BasePartId: 1f05f494-21d4-4185-890b-9c62f1cf5c46
                 InstanceId: 04a4452a-04de-4511-a8fe-349e71f5aa55
         -   Entity:
-                Id: e1c23b19-77c3-4c13-acde-1475f668e2b8
-                Name: Player
-                Components:
-                    a3bdb20fa8ed4b1f9d9aec56a173cd35: !TransformComponent
-                        Id: 7239a7bc-3ceb-4f74-b536-38618438f2f4
-                        Position: {X: -1.75, Y: 0.0, Z: 2.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            fd5824396308008db7405396cdfa2e00: ref!! 3fbf5bf4-f6dc-4f6b-bd57-25101d453dd7
-        -   Entity:
                 Id: ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
                 Name: Ground
                 Components:
@@ -673,7 +662,7 @@ Hierarchy:
                         MinimumTimestepCountUnderThreshold: 32
                     c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
                         Id: d401e591-2546-49d3-a9df-33da6cb7d3b1
-                        Target: null
+                        Target*: ref!! 5ed58fdc-7e42-46d9-a65e-245d09524440
                         Interactable: true
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel

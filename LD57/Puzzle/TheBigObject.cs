@@ -4,19 +4,26 @@ namespace LD57.Puzzle
 {
     public class TheBigObject : AsyncScript
     {
-        const float LERP_DURATION = 3f;
+        const float LERP_SPEED = 20f;
+        const float POS_SPEED = 20f;
+        const float ROT_SPEED = 360f;
+        const float SCALE_SPEED = 8f;
 
         public int Index { get; private set; } = 0;
         public List<State> States { get; set; } = new List<State>();
 
         int curState = 0;
 
+        State cur;
+
         public void ChangeState(int delta)
         {
             if (States.Count == 0)
                 return;
 
+            ToggleCollision(Index, false);
             Index = Math.Clamp(Index + delta, 0, States.Count - 1);
+            ToggleCollision(Index, true);
         }
 
         public override async Task Execute()
@@ -28,34 +35,25 @@ namespace LD57.Puzzle
             {
                 LerpState(States[0], 1f);
                 ToggleCollision(0, true);
+                cur = new State()
+                {
+                    position = States[0].position,
+                    rotation = States[0].rotation,
+                    scale = States[0].scale,
+                };
             }
-
 
             while (Entity?.Scene != null)
             {
-                if (States.Count > 0 && curState != Index)
+                var time = (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
+                if (States.Count > 0)
                 {
-                    ToggleCollision(curState, false);
-                    curState = Index;
-                    ToggleCollision(curState, true);
-                    var t = 0f;
-                    while (t < 1f)
-                    {
-                        if (curState != Index)
-                        {
-                            if (t > 0.5f)
-                                t = 1f - t;
-
-                            ToggleCollision(curState, false);
-                            curState = Index;
-                            ToggleCollision(curState, true);
-                        }
-
-                        await Script.NextFrame();
-                        t += (float)Game.UpdateTime.WarpElapsed.TotalSeconds / LERP_DURATION;
-                        LerpState(States[curState], Tween.InOut(t, 3f));
-                    }
+                    cur.position = MoveLerp(cur.position, States[Index].position, time * POS_SPEED);
+                    cur .rotation = MoveLerp(cur.rotation, States[Index].rotation, time * ROT_SPEED);
+                    cur.scale = MoveLerp(cur.scale, States[Index].scale, time * SCALE_SPEED);
                 }
+
+                LerpState(cur, time * LERP_SPEED);
 
                 await Script.NextFrame();
             }
@@ -84,6 +82,18 @@ namespace LD57.Puzzle
                 pos.Y = active ? 0f : -20f;
                 item.Position = pos;
             }
+        }
+
+        static Vector3 MoveLerp(Vector3 a, Vector3 b, float distance)
+        {
+            var diff = b - a;
+
+            if (diff.Length() < distance)
+                return a + diff;
+
+            diff.Normalize();
+            diff *= distance;
+            return a + diff;
         }
 
         [DataContract]
