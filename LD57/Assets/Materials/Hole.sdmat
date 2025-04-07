@@ -1,0 +1,35 @@
+!MaterialAsset
+Id: 01aa7686-ee3a-46d5-98e4-76c414812597
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Attributes:
+    MicroSurface: !MaterialGlossinessMapFeature
+        GlossinessMap: !ComputeFloat
+            Value: 0.1
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: 394500c9-924b-452a-910e-7c1ff903ff42:Sprites/hole
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Emissive: !MaterialEmissiveMapFeature
+        Enabled: false
+        EmissiveMap: !ComputeTextureColor
+            Texture: 03f16799-6b28-45da-be9b-5fda213bddfa:Sprites/button
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
+        Intensity: !ComputeFloat
+            Value: 1.0
+        UseAlpha: true
+    Transparency: !MaterialTransparencyCutoffFeature
+        Alpha: !ComputeFloat
+            Value: 0.5
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+Layers: {}

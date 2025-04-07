@@ -128,32 +128,32 @@ Hierarchy:
                 Components:
                     ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
                         Id: 1e3fc207-c4f8-44a5-8216-1018582d15ca
-                        Position*: {X: 0.0, Y: 0.0, Z: -20.0}
-                        Rotation*: {X: 0.7071067, Y: 0.0, Z: 0.0, W: 0.7071067}
-                        Scale: {X: 0.7, Y: 0.7, Z: 0.7}
+                        Position*: {X: -1.5, Y: 1.5, Z: -10.0}
+                        Rotation*: {X: 0.49999994, Y: 0.5, Z: 0.5, W: 0.49999994}
+                        Scale*: {X: 0.6, Y: 0.6, Z: 0.6}
                         Children: {}
                     9f9285e3338657015050ccdb4107f3ea: !ModelComponent
                         Id: 1cb9c4f6-62e5-4118-813c-1cb0e70ba3ac
                         Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
                         Materials:
-                            9d3a7555fa464974b66ff95ffea89914*~0: 59ef62e2-4d25-48e6-8002-d444fcc16483:Materials/Big Objects/Fish
+                            9d3a7555fa464974b66ff95ffea89914*~0: eb678c32-7fa4-4c50-83a0-dd2b2087a7a2:Materials/Big Objects/Dananananana
                     bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
                         Id: 6a8907cd-6eb4-4a4b-914d-4c937836ce14
                         States:
                             6e143a3a12c5817ab10fed915a4ae16b*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
+                                position: {X: 2.0, Y: 0.0, Z: -10.0}
                                 rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                scale: {X: 0.2, Y: 0.2, Z: 0.2}
                                 collision: ref!! 99e44caa-82fd-4a87-aab4-9d0af2d79513
                             e399da0ec4b512e00c0fa812e9b461c6*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
+                                position: {X: 0.0, Y: -0.5, Z: -10.0}
                                 rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                scale: {X: 0.3, Y: 0.3, Z: 0.3}
                                 collision: null
                             9bc7fb55a0b15215c4d069cbdb4a90ce*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: -1.5, Y: 1.5, Z: -10.0}
+                                rotation: {X: 180.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.6, Y: 0.6, Z: 0.6}
                                 collision: ref!! 997cd950-d6c0-4d34-b1b2-e6e60de6d3b1
             Base:
                 BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
@@ -578,9 +578,8 @@ Hierarchy:
                         Children: {}
                     263d872a8bdb57e9edb4e5a05b21afc9: !ModelComponent
                         Id: f3366c1b-0841-4848-84de-9ef26e5e1e93
-                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
-                        Materials:
-                            f4219b723faa62d3b4a690fdf9b02569~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
+                        Model: d92d2d7e-7bd2-4698-ba68-8e1101fad1f2:Models/Procedural/Hole
+                        Materials: {}
                     b4c9a8a4c05357216f2bc9903caaf624: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 24835029-2afe-4233-be77-c0609577bce1
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics

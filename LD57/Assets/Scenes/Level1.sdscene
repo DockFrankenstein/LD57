@@ -1068,9 +1068,8 @@ Hierarchy:
                         Children: {}
                     263d872a8bdb57e9edb4e5a05b21afc9: !ModelComponent
                         Id: 6dbcf3db-4d2a-41c2-9869-132123f94f16
-                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
-                        Materials:
-                            f4219b723faa62d3b4a690fdf9b02569~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
+                        Model: d92d2d7e-7bd2-4698-ba68-8e1101fad1f2:Models/Procedural/Hole
+                        Materials: {}
                     b4c9a8a4c05357216f2bc9903caaf624: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 9b535e47-9953-47d6-8dfa-8b42e063443c
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
