@@ -466,7 +466,8 @@ Hierarchy:
                         Position*: {X: -3.4999998, Y: 0.0, Z: 2.25}
                         Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            0e3edc92bacb621a8317b1442da3c492: ref!! bdd98f0b-b309-4287-9ba5-bf224f3c68f0
                     505179e15f47cff2a7235205966781e7: !ModelComponent
                         Id: 71afb8fd-053f-4625-b92a-62f96a558904
                         Model: 5e00ee9e-f552-44dd-990e-824fb987fe4f:Models/Procedural/Reel
@@ -500,6 +501,10 @@ Hierarchy:
                         IndicatorModel: 32b8e63f-5864-4dc6-aacf-bed8b41bdef7:Models/Procedural/Indicator
                         IndMatOn: 21997260-0e9c-475e-a6e3-ad62da16b99f:Materials/Reel IndicatorOn
                         IndMatOff: 593b2b1d-7645-4b22-8b91-4afe6ad009d1:Materials/Reel Indicator Off
+                        IndicatorHeadModel: 7dc2377a-ba32-413b-b41c-07b699096918:Models/Procedural/Indicator Head
+                    4e39c6a89d9c21d4ac611ccc91ec4912: !LD57.Interaction.Indicator,LD57
+                        Id: 76f5e5d1-859c-4959-b32a-481fe233f583
+                        Ind: ref!! 696b052a-7781-43d6-81a2-b90bd5bc880e
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
@@ -731,6 +736,25 @@ Hierarchy:
                 BasePartAsset: fa6a7fe0-1738-4303-8001-32821ebcb8ea:Prefabs/Bridge5
                 BasePartId: 48fffff2-aa51-47e4-98e1-0b7dde1279f0
                 InstanceId: 5ae75190-e247-45d9-bc18-2c2456bad084
+        -   Entity:
+                Id: 8c80919b-d744-467e-92b8-7794628f8eab
+                Name: Indicator
+                Components:
+                    cf98d522ad27bfa58c27b8c528f05984: !TransformComponent
+                        Id: bdd98f0b-b309-4287-9ba5-bf224f3c68f0
+                        Position: {X: 0.0, Y: 0.6, Z: 0.0}
+                        Rotation: {X: -0.17364818, Y: 0.0, Z: 0.0, W: 0.9848077}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dde2d341fcd64e5f3fc557a200d6dca0: !ModelComponent
+                        Id: 696b052a-7781-43d6-81a2-b90bd5bc880e
+                        Model: bf495165-08a1-4942-b926-7e3edef4b23e:Models/Procedural/Ind
+                        Materials:
+                            b588012425d36b8a3fa339ae10b2ef32~0: 8ee00040-1b5f-4376-9f5d-42c9f3bb1aa3:Materials/Ind
+            Base:
+                BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
+                BasePartId: 48ab8952-5422-4d4b-86b6-ea82c94ec278
+                InstanceId: e5e505ff-6667-4867-9981-52528308c815
         -   Folder: Collision
             Entity:
                 Id: 968fc814-4f80-4f65-93c8-90e1e8fb6468
@@ -980,7 +1004,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
                         Scale: {X: 1.945, Y: 1.945, Z: 1.945}
-                        Children: {}
+                        Children:
+                            c16f96152cd7610e4c6881548f54e1a6: ref!! 530eae2f-43b9-4e13-8cb6-27eeb673ec64
                     0b04c96d52fd1c3df484ccb7491961ed: !ModelComponent
                         Id: 0fd0994d-8f19-4929-93ad-206ea0b39128
                         Model: 70876253-d84e-49a1-bb22-eb4457c10895:Models/Procedural/Cat
@@ -990,6 +1015,25 @@ Hierarchy:
                 BasePartAsset: 3cf909f0-fede-4da6-b5f5-0c94a35bb4a2:Prefabs/NPC
                 BasePartId: f282375b-e023-4af3-8a86-7784abe3fddb
                 InstanceId: 94bbdf0c-6f65-4ce0-9f4e-7196097071c0
+        -   Entity:
+                Id: b58c9429-6a84-416e-b0ca-bb6c9cd14a19
+                Name: Indicator
+                Components:
+                    cf98d522ad27bfa58c27b8c528f05984: !TransformComponent
+                        Id: a1d98667-054a-439c-81d0-8c048006906a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dde2d341fcd64e5f3fc557a200d6dca0: !ModelComponent
+                        Id: 404e8863-4df5-4b5d-a1b0-6db1042c07d5
+                        Model: bf495165-08a1-4942-b926-7e3edef4b23e:Models/Procedural/Ind
+                        Materials:
+                            b588012425d36b8a3fa339ae10b2ef32~0: 8ee00040-1b5f-4376-9f5d-42c9f3bb1aa3:Materials/Ind
+            Base:
+                BasePartAsset: f028c0f0-f0a6-4aa0-989d-f0cc3e5383bb:Prefabs/Hole
+                BasePartId: 38bca89c-bc42-49f2-b1f7-2b023191ac79
+                InstanceId: 5a7d55cd-2571-4cb4-9bf2-d79d5f65e95e
         -   Folder: Collision
             Entity:
                 Id: b5b27165-4d98-43cb-89dd-00d1598c31c5
@@ -1052,6 +1096,9 @@ Hierarchy:
                     5b1671be4bbfb3239561ccd3674c8fc3: !LD57.Dialogues.NPC,LD57
                         Id: aed721ed-523d-4d5b-9c97-18e72773f37a
                         DialogueName*: tutorial
+                    eb97e2685deac2ccd72a3a36d1ba7df3: !LD57.Interaction.Indicator,LD57
+                        Id: 5e95ffe0-0db6-404c-98cd-dec6060a5554
+                        Ind: ref!! 587a51ac-7b81-454c-8312-040a8a5deda7
             Base:
                 BasePartAsset: 3cf909f0-fede-4da6-b5f5-0c94a35bb4a2:Prefabs/NPC
                 BasePartId: 87142ca1-3e60-4108-a624-f76d8096be83
@@ -1065,7 +1112,8 @@ Hierarchy:
                         Position*: {X: 6.0000005, Y: 0.0, Z: -2.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            c0fd4582dc37bef3b16ee199e97803dc: ref!! a1d98667-054a-439c-81d0-8c048006906a
                     263d872a8bdb57e9edb4e5a05b21afc9: !ModelComponent
                         Id: 6dbcf3db-4d2a-41c2-9869-132123f94f16
                         Model: d92d2d7e-7bd2-4698-ba68-8e1101fad1f2:Models/Procedural/Hole
@@ -1105,6 +1153,9 @@ Hierarchy:
                         EnabledByDefault: false
                         UiName: hole
                         TakeInputFocus: true
+                    f3ffcdc033c5dfe8bcdfccd943bf8c88: !LD57.Interaction.Indicator,LD57
+                        Id: d4ed1227-7e8e-4cf3-8677-e0e7566b1cc3
+                        Ind: ref!! 404e8863-4df5-4b5d-a1b0-6db1042c07d5
             Base:
                 BasePartAsset: f028c0f0-f0a6-4aa0-989d-f0cc3e5383bb:Prefabs/Hole
                 BasePartId: a99c2b37-a4b2-484c-8c72-19e635987ceb
@@ -1144,7 +1195,8 @@ Hierarchy:
                         Position*: {X: 4.5000005, Y: 0.0, Z: 2.2499998}
                         Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            7580ffdac92e98525412d9bd6d714c10: ref!! ca4dccd5-2892-4556-ba18-d8cb9a84c59a
                     505179e15f47cff2a7235205966781e7: !ModelComponent
                         Id: 24234552-8555-4eff-ac1c-d9411390631d
                         Model: 5e00ee9e-f552-44dd-990e-824fb987fe4f:Models/Procedural/Reel
@@ -1178,6 +1230,10 @@ Hierarchy:
                         IndicatorModel: 32b8e63f-5864-4dc6-aacf-bed8b41bdef7:Models/Procedural/Indicator
                         IndMatOn: 21997260-0e9c-475e-a6e3-ad62da16b99f:Materials/Reel IndicatorOn
                         IndMatOff: 593b2b1d-7645-4b22-8b91-4afe6ad009d1:Materials/Reel Indicator Off
+                        IndicatorHeadModel: 7dc2377a-ba32-413b-b41c-07b699096918:Models/Procedural/Indicator Head
+                    4e39c6a89d9c21d4ac611ccc91ec4912: !LD57.Interaction.Indicator,LD57
+                        Id: 88a66c81-661a-4e7d-89d9-02564ca50de5
+                        Ind: ref!! 61df22ad-d50a-442f-8308-104fce8e9934
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
@@ -1262,6 +1318,25 @@ Hierarchy:
                         IsShadowCaster: false
                         Materials: {}
         -   Entity:
+                Id: dfb66bdd-4c54-4d12-af42-60782bbd8cd3
+                Name: Indicator
+                Components:
+                    cf98d522ad27bfa58c27b8c528f05984: !TransformComponent
+                        Id: 530eae2f-43b9-4e13-8cb6-27eeb673ec64
+                        Position: {X: 0.0, Y: 0.4, Z: 0.0}
+                        Rotation: {X: -0.17364818, Y: 0.0, Z: 0.0, W: 0.9848077}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: {}
+                    dde2d341fcd64e5f3fc557a200d6dca0: !ModelComponent
+                        Id: 587a51ac-7b81-454c-8312-040a8a5deda7
+                        Model: bf495165-08a1-4942-b926-7e3edef4b23e:Models/Procedural/Ind
+                        Materials:
+                            b588012425d36b8a3fa339ae10b2ef32~0: 8ee00040-1b5f-4376-9f5d-42c9f3bb1aa3:Materials/Ind
+            Base:
+                BasePartAsset: 3cf909f0-fede-4da6-b5f5-0c94a35bb4a2:Prefabs/NPC
+                BasePartId: 71674881-37ee-4552-9c96-17c3008b5f71
+                InstanceId: 94bbdf0c-6f65-4ce0-9f4e-7196097071c0
+        -   Entity:
                 Id: e2381c6d-144c-43c2-b71e-da45206b4f1a
                 Name: Platform3x4
                 Components:
@@ -1294,6 +1369,25 @@ Hierarchy:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: cd21a685-93b5-4c87-abd1-729834b8c9bd
                 InstanceId: 1961ffb1-da5d-4a4c-8bf5-afb478f4e4bf
+        -   Entity:
+                Id: eae7883d-47bc-453f-bb5e-eb44e72e3bde
+                Name: Indicator
+                Components:
+                    cf98d522ad27bfa58c27b8c528f05984: !TransformComponent
+                        Id: ca4dccd5-2892-4556-ba18-d8cb9a84c59a
+                        Position: {X: 0.0, Y: 0.6, Z: 0.0}
+                        Rotation: {X: -0.17364818, Y: 0.0, Z: 0.0, W: 0.9848077}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dde2d341fcd64e5f3fc557a200d6dca0: !ModelComponent
+                        Id: 61df22ad-d50a-442f-8308-104fce8e9934
+                        Model: bf495165-08a1-4942-b926-7e3edef4b23e:Models/Procedural/Ind
+                        Materials:
+                            b588012425d36b8a3fa339ae10b2ef32~0: 8ee00040-1b5f-4376-9f5d-42c9f3bb1aa3:Materials/Ind
+            Base:
+                BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
+                BasePartId: 48ab8952-5422-4d4b-86b6-ea82c94ec278
+                InstanceId: bd8bc04a-46c5-46d5-b1cc-c490f8cc280f
         -   Entity:
                 Id: ecbfe7e8-b36d-4edb-9e81-89f45b440a81
                 Name: skybox

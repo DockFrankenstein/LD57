@@ -1,0 +1,7 @@
+!Texture
+Id: 7cf4aac8-a007-4040-a42f-dba7b785ae27
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/indicator.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

@@ -3,7 +3,7 @@ using Stride.Rendering;
 
 namespace LD57.Puzzle
 {
-    public class TheBigObjectReel : StartupScript, IInteractable
+    public class TheBigObjectReel : SyncScript, IInteractable
     {
         const float IND_ROOT_Y = -3f;
 
@@ -16,6 +16,7 @@ namespace LD57.Puzzle
         public Model IndicatorModel { get; set; }
         public Material IndMatOn { get; set; }
         public Material IndMatOff { get; set; }
+        public Model IndicatorHeadModel { get; set; }
 
         public void Interact()
         {
@@ -46,22 +47,30 @@ namespace LD57.Puzzle
 
         Entity indRoot;
         List<Indicator> Indicators = new List<Indicator>();
+        Entity indHead;
 
         public override void Start()
         {
             indRoot = new Entity(position: new Vector3(0f, IND_ROOT_Y + 2f, 0f));
+            indHead = new Entity();
+            var indHeadInd = new Entity(position: new Vector3(0f, -IND_ROOT_Y+0.3f, 0f));
+            var indHeadModel = new ModelComponent(IndicatorHeadModel);
+
             Entity.AddChild(indRoot);
+            indRoot.AddChild(indHead);
+            indHead.AddChild(indHeadInd);
+            indHeadInd.Add(indHeadModel);
 
             if (Target != null)
             {
-                var rollOffset = -GetRollForIndex((Target.States.Count - 1) / 2f);
+                var rollOffset = GetRollForIndex((Target.States.Count - 1) / 2f);
 
                 for (int i = 0; i < Target.States.Count; i++)
                 {
                     var ind = new Indicator()
                     {
                         pivot = new Entity(
-                            rotation: Quaternion.RotationYawPitchRoll(0f, 0f, rollOffset + GetRollForIndex(i))),
+                            rotation: Quaternion.RotationYawPitchRoll(0f, 0f, rollOffset - GetRollForIndex(i))),
                         
                         model = new ModelComponent(IndicatorModel),
                     };
@@ -80,6 +89,19 @@ namespace LD57.Puzzle
                     Indicators.Add(ind);
                 }
             }
+
+            LerpIndHead(1f);
+        }
+
+        public override void Update()
+        {
+            LerpIndHead((float)Game.UpdateTime.WarpElapsed.TotalSeconds * 20f);
+        }
+
+        void LerpIndHead(float t)
+        {
+            if (Target != null && Target.States.Count > 0)
+                indHead.Transform.Rotation = Quaternion.Lerp(indHead.Transform.Rotation, Indicators[Target.Index].pivot.Transform.Rotation, t);
         }
 
         float GetRollForIndex(float i) =>

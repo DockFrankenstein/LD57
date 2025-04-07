@@ -1,0 +1,14 @@
+!ProceduralModelAsset
+Id: 7dc2377a-ba32-413b-b41c-07b699096918
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: !PlaneProceduralModel
+    Size: {X: 0.6, Y: 0.6}
+    Tessellation: {X: 1, Y: 1}
+    Normal: UpZ
+    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+    UvScale: {X: 1.0, Y: 1.0}
+    LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+    NumberOfTextureCoordinates: 10
+    MaterialInstance:
+        Material: 714f2775-bbbe-4f88-a05f-e06c7a3315dd:Materials/Reel Ind Head

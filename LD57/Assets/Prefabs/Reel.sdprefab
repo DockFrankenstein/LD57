@@ -16,7 +16,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            d1dbbd7bda11d0f71196791e0dd5dec9: ref!! e57be518-16ec-4b35-9602-ffcdae8549ae
                     505179e15f47cff2a7235205966781e7: !ModelComponent
                         Id: 5027abc4-b81a-4713-bfca-e095211a797d
                         Model: 5e00ee9e-f552-44dd-990e-824fb987fe4f:Models/Procedural/Reel
@@ -50,3 +51,22 @@ Hierarchy:
                         IndicatorModel: 32b8e63f-5864-4dc6-aacf-bed8b41bdef7:Models/Procedural/Indicator
                         IndMatOn: 21997260-0e9c-475e-a6e3-ad62da16b99f:Materials/Reel IndicatorOn
                         IndMatOff: 593b2b1d-7645-4b22-8b91-4afe6ad009d1:Materials/Reel Indicator Off
+                        IndicatorHeadModel: 7dc2377a-ba32-413b-b41c-07b699096918:Models/Procedural/Indicator Head
+                    4e39c6a89d9c21d4ac611ccc91ec4912: !LD57.Interaction.Indicator,LD57
+                        Id: 609bcd96-9c20-4853-ae61-a8270c86d835
+                        Ind: ref!! bd6a3608-f0e4-4aaf-a849-2871751e7c0a
+        -   Entity:
+                Id: 48ab8952-5422-4d4b-86b6-ea82c94ec278
+                Name: Indicator
+                Components:
+                    cf98d522ad27bfa58c27b8c528f05984: !TransformComponent
+                        Id: e57be518-16ec-4b35-9602-ffcdae8549ae
+                        Position: {X: 0.0, Y: 0.6, Z: 0.0}
+                        Rotation: {X: -0.17364818, Y: 0.0, Z: 0.0, W: 0.9848077}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dde2d341fcd64e5f3fc557a200d6dca0: !ModelComponent
+                        Id: bd6a3608-f0e4-4aaf-a849-2871751e7c0a
+                        Model: bf495165-08a1-4942-b926-7e3edef4b23e:Models/Procedural/Ind
+                        Materials:
+                            b588012425d36b8a3fa339ae10b2ef32~0: 8ee00040-1b5f-4376-9f5d-42c9f3bb1aa3:Materials/Ind

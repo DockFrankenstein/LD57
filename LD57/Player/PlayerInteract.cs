@@ -30,7 +30,7 @@ namespace LD57.Player
             DebugText.Print($"Focused: {(Focused == null ? "NULL" : (Focused as ScriptComponent).Entity.Name)}", new Int2(50,50));
         }
 
-        Sphere sphere = new Sphere(2f);
+        Sphere sphere = new Sphere(0.5f);
 
         List<IInteractable> inRange = new List<IInteractable>();
 

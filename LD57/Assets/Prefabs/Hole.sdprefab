@@ -7,6 +7,21 @@ Hierarchy:
         - ref!! a99c2b37-a4b2-484c-8c72-19e635987ceb
     Parts:
         -   Entity:
+                Id: 38bca89c-bc42-49f2-b1f7-2b023191ac79
+                Name: Indicator
+                Components:
+                    cf98d522ad27bfa58c27b8c528f05984: !TransformComponent
+                        Id: 47e3cb26-397c-4e65-bad2-c87c55e8ed2e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    dde2d341fcd64e5f3fc557a200d6dca0: !ModelComponent
+                        Id: 38e0b7d3-198d-4617-bdd7-27001f97e299
+                        Model: bf495165-08a1-4942-b926-7e3edef4b23e:Models/Procedural/Ind
+                        Materials:
+                            b588012425d36b8a3fa339ae10b2ef32~0: 8ee00040-1b5f-4376-9f5d-42c9f3bb1aa3:Materials/Ind
+        -   Entity:
                 Id: a99c2b37-a4b2-484c-8c72-19e635987ceb
                 Name: Hole
                 Components:
@@ -15,7 +30,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            45160c66aa953c397149c1ffebc17030: ref!! 47e3cb26-397c-4e65-bad2-c87c55e8ed2e
                     263d872a8bdb57e9edb4e5a05b21afc9: !ModelComponent
                         Id: ab4e7e89-eab3-4c5e-8c3f-5ac54600fa02
                         Model: d92d2d7e-7bd2-4698-ba68-8e1101fad1f2:Models/Procedural/Hole
@@ -55,3 +71,6 @@ Hierarchy:
                         EnabledByDefault: false
                         UiName: hole
                         TakeInputFocus: true
+                    f3ffcdc033c5dfe8bcdfccd943bf8c88: !LD57.Interaction.Indicator,LD57
+                        Id: 52013c39-04c9-4ca8-a18c-207cc412d371
+                        Ind: ref!! 38e0b7d3-198d-4617-bdd7-27001f97e299
