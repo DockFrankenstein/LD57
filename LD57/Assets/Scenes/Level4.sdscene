@@ -99,7 +99,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7604153ffe44cbcbc0cba19fd1056fe0: ref!! 5c99c34a-1081-41fb-8e07-6100a97165c2
-                            6383350060d6d0a13cd0027d1f51db6c: ref!! 13c4a473-b0aa-4179-8d05-94f1421c9ae1
+                            38e01a782ca1a21c81aa51322193fe4d: ref!! dbb0f88e-ca7d-49f5-826b-5960194276d6
                     6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 26e68ca2-5abc-47f1-8072-7be9b4d0b2e3
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
@@ -129,6 +129,9 @@ Hierarchy:
                         Id: 416f430f-5356-4ca2-a133-075b58eaaaad
                     899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
                         Id: 72016fb5-510c-4c5d-b853-c4319c95dc2c
+                    f678c88ad04795a300006ca41ff3ec55: !LD57.Player.PlayerAnim,LD57
+                        Id: 3b454297-492b-46bc-b290-e157ffe677f3
+                        sprite: ref!! 8265c3f8-50f5-4864-a822-d28857b9420e
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
@@ -249,8 +252,8 @@ Hierarchy:
                 Components:
                     680b4be27217c06437903b62c8fe8d48: !TransformComponent
                         Id: 13c4a473-b0aa-4179-8d05-94f1421c9ae1
-                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
-                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.945331, Y: 1.945331, Z: 1.945331}
                         Children: {}
                     f0302a07bf1e24842d32509cf15c407d: !ModelComponent
@@ -1186,6 +1189,21 @@ Hierarchy:
                 BasePartAsset: 6288bc9d-ef58-4277-b167-a2ab5db14ac2:Prefabs/Platform3x3
                 BasePartId: b8ae3b7c-3e9d-4637-bbec-fac3e05d28ae
                 InstanceId: 4b13b58e-da68-4ca8-97e4-cea6991d588b
+        -   Entity:
+                Id: af718282-4477-46d3-80e3-e9bd64023454
+                Name: Model
+                Components:
+                    88f2a20de1ba7d89e82f9e0db161ccc1: !TransformComponent
+                        Id: dbb0f88e-ca7d-49f5-826b-5960194276d6
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            94b2cf2ca1c6f1f42b61b77040c55fa2: ref!! 8265c3f8-50f5-4864-a822-d28857b9420e
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: cd21a685-93b5-4c87-abd1-729834b8c9bd
+                InstanceId: 88573a11-4dec-4d08-801f-6c876b2b8264
         -   Folder: Lights
             Entity:
                 Id: b00e70ff-6d5e-40c0-9e6d-4b5304148ad8
@@ -1379,6 +1397,21 @@ Hierarchy:
                         MaximumRecoveryVelocity: 1000.0
                         CollisionGroup: {}
                         ContactEventHandler: null
+        -   Entity:
+                Id: dcbe991a-7cd2-4b84-8230-9f76f4a7a2c8
+                Name: Entity
+                Components:
+                    43c9084b2fac72ddd9d5d75d0cc0df61: !TransformComponent
+                        Id: 8265c3f8-50f5-4864-a822-d28857b9420e
+                        Position: {X: 0.0, Y: 0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e8b900c4a854be7f7c38771ab5211c56: ref!! 13c4a473-b0aa-4179-8d05-94f1421c9ae1
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 905b2f76-61c7-4d9a-8bb6-f66fa9c6bfde
+                InstanceId: 88573a11-4dec-4d08-801f-6c876b2b8264
         -   Folder: Geometry
             Entity:
                 Id: e14836e9-e2d3-464a-bc64-68c1c7139c0a

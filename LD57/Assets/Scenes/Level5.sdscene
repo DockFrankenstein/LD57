@@ -971,7 +971,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7604153ffe44cbcbc0cba19fd1056fe0: ref!! d80ab424-e6ee-47e2-aa33-a2e775398f7b
-                            d663ef0cb240a3988385f3ae409cfd5c: ref!! 1aa31441-4c58-4aa7-9ea6-953299ac3675
+                            e5d10b291e52b34049f25d6d1b1e7af5: ref!! 14cf07fa-a18c-4479-9653-fe6476c0fbb9
                     6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: e0a203d6-aaff-48e4-a5aa-6f60b6e8fb63
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
@@ -1001,6 +1001,9 @@ Hierarchy:
                         Id: 9f972022-c389-4cab-a986-c61cc5de69da
                     899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
                         Id: 4f6acfdb-17bf-4403-bd00-e375aff55966
+                    f678c88ad04795a300006ca41ff3ec55: !LD57.Player.PlayerAnim,LD57
+                        Id: 628b410d-d05a-475f-b61a-7082a72878dc
+                        sprite: ref!! c7f3f78b-cef4-4fb6-9155-9e1f63ee70de
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
@@ -1578,6 +1581,21 @@ Hierarchy:
                                 BiasParameters:
                                     DepthBias: 0.001
         -   Entity:
+                Id: bd666550-b598-44d0-9d78-6cbb6db61f4b
+                Name: Entity
+                Components:
+                    43c9084b2fac72ddd9d5d75d0cc0df61: !TransformComponent
+                        Id: c7f3f78b-cef4-4fb6-9155-9e1f63ee70de
+                        Position: {X: 0.0, Y: 0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            79addf681fcfce5095fbf488733a5121: ref!! 1aa31441-4c58-4aa7-9ea6-953299ac3675
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 905b2f76-61c7-4d9a-8bb6-f66fa9c6bfde
+                InstanceId: 6c27b5a0-2243-480b-b34f-425200db6afe
+        -   Entity:
                 Id: bdca969c-5a29-441c-b5ba-c72e665a3800
                 Name: Platform3x5
                 Components:
@@ -1806,8 +1824,8 @@ Hierarchy:
                 Components:
                     680b4be27217c06437903b62c8fe8d48: !TransformComponent
                         Id: 1aa31441-4c58-4aa7-9ea6-953299ac3675
-                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
-                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.945331, Y: 1.945331, Z: 1.945331}
                         Children: {}
                     f0302a07bf1e24842d32509cf15c407d: !ModelComponent
@@ -2202,6 +2220,21 @@ Hierarchy:
                         MaximumRecoveryVelocity: 1000.0
                         CollisionGroup: {}
                         ContactEventHandler: null
+        -   Entity:
+                Id: eea74a93-dfeb-4a5c-9760-0a6160c49b9d
+                Name: Model
+                Components:
+                    88f2a20de1ba7d89e82f9e0db161ccc1: !TransformComponent
+                        Id: 14cf07fa-a18c-4479-9653-fe6476c0fbb9
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            68bcf5fd723a7805b4654730b7523d0f: ref!! c7f3f78b-cef4-4fb6-9155-9e1f63ee70de
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: cd21a685-93b5-4c87-abd1-729834b8c9bd
+                InstanceId: 6c27b5a0-2243-480b-b34f-425200db6afe
         -   Folder: Lights
             Entity:
                 Id: ef5bf8e2-64f7-4bab-98df-801adbb960f9

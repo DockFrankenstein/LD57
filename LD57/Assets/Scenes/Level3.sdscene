@@ -1566,7 +1566,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7604153ffe44cbcbc0cba19fd1056fe0: ref!! a9ac1371-8bf6-4e83-b453-58bd39bd821f
-                            d8f97975ad07d18ec09c11623c04f98e: ref!! 12277c16-8e4b-4999-80eb-a47a4f772aed
+                            710b860be1f4d43565cb43e1306611f0: ref!! e4bf4b82-3205-4b2c-9858-ec21745ab1ac
                     6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 48ad7f6a-8977-42f2-9e53-de529cd3b018
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
@@ -1596,6 +1596,9 @@ Hierarchy:
                         Id: f36a72d3-e322-4531-b141-d90a48e0b474
                     899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
                         Id: d9acdaec-f37b-4797-bf24-5873ea50d8fd
+                    f678c88ad04795a300006ca41ff3ec55: !LD57.Player.PlayerAnim,LD57
+                        Id: b2fd2eb7-bde5-418d-a110-474b2abc6051
+                        sprite: ref!! 8da4753d-de0b-4d14-8cfc-7680b329f78d
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
@@ -1729,6 +1732,21 @@ Hierarchy:
                 BasePartId: b96c36d8-d43c-4b37-9b9f-b9b0915778e3
                 InstanceId: 4df6402d-60d8-4b03-80bd-5f815c7cfd61
         -   Entity:
+                Id: b6a99e84-d166-44cb-b471-81602b29b826
+                Name: Entity
+                Components:
+                    43c9084b2fac72ddd9d5d75d0cc0df61: !TransformComponent
+                        Id: 8da4753d-de0b-4d14-8cfc-7680b329f78d
+                        Position: {X: 0.0, Y: 0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            04ab18128308b6961421eec6a30997fb: ref!! 12277c16-8e4b-4999-80eb-a47a4f772aed
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 905b2f76-61c7-4d9a-8bb6-f66fa9c6bfde
+                InstanceId: f43bb11e-6dce-4c4a-b248-448e6750f2c5
+        -   Entity:
                 Id: b6f77c95-a5dc-4934-8135-b3bb362acede
                 Name: Bridge2
                 Components:
@@ -1790,8 +1808,8 @@ Hierarchy:
                 Components:
                     680b4be27217c06437903b62c8fe8d48: !TransformComponent
                         Id: 12277c16-8e4b-4999-80eb-a47a4f772aed
-                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
-                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.945331, Y: 1.945331, Z: 1.945331}
                         Children: {}
                     f0302a07bf1e24842d32509cf15c407d: !ModelComponent
@@ -2066,6 +2084,21 @@ Hierarchy:
                                 BiasParameters:
                                     DepthBias: 0.001
                         Intensity: 0.2
+        -   Entity:
+                Id: e412d0e8-dce7-44c0-be8f-b29da671c9dc
+                Name: Model
+                Components:
+                    88f2a20de1ba7d89e82f9e0db161ccc1: !TransformComponent
+                        Id: e4bf4b82-3205-4b2c-9858-ec21745ab1ac
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            16ffb69cbb8c5c5e82cee63908e0b53d: ref!! 8da4753d-de0b-4d14-8cfc-7680b329f78d
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: cd21a685-93b5-4c87-abd1-729834b8c9bd
+                InstanceId: f43bb11e-6dce-4c4a-b248-448e6750f2c5
         -   Folder: Collisions
             Entity:
                 Id: e541b6af-d604-478f-8815-0c655678b557

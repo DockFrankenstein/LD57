@@ -97,6 +97,21 @@ Hierarchy:
                                 BiasParameters:
                                     DepthBias: 0.001
         -   Entity:
+                Id: 07bce214-e9e6-4c68-9f2d-0fba0cacb886
+                Name: Entity
+                Components:
+                    43c9084b2fac72ddd9d5d75d0cc0df61: !TransformComponent
+                        Id: 1461b7e6-7396-4ee8-81ae-4c54e549a9f2
+                        Position: {X: 0.0, Y: 0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            37a9af695116804c9c523bc0f7967e67: ref!! 5a388587-33cb-437c-a5b0-f6570ac93e17
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: 905b2f76-61c7-4d9a-8bb6-f66fa9c6bfde
+                InstanceId: 1961ffb1-da5d-4a4c-8bf5-afb478f4e4bf
+        -   Entity:
                 Id: 07bef418-3c8d-41d1-9857-6f61cc332ad4
                 Name: Platform3x3
                 Components:
@@ -345,8 +360,8 @@ Hierarchy:
                 Components:
                     680b4be27217c06437903b62c8fe8d48: !TransformComponent
                         Id: 5a388587-33cb-437c-a5b0-f6570ac93e17
-                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
-                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Position: {X: 0.0, Y: -0.4, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.945331, Y: 1.945331, Z: 1.945331}
                         Children: {}
                     f0302a07bf1e24842d32509cf15c407d: !ModelComponent
@@ -852,7 +867,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7604153ffe44cbcbc0cba19fd1056fe0: ref!! 722a9d45-ddcf-4238-a8bf-f3364302be20
-                            f52bc84396c886829f53063b823f0799: ref!! 5a388587-33cb-437c-a5b0-f6570ac93e17
+                            0239629ee3d15ef93167a82b1fe4588d: ref!! 760d0c5f-c65c-4cab-a032-c9390aaa57ef
                     6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 61454f22-ce15-4fac-bfa5-da4b2680094d
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
@@ -882,6 +897,9 @@ Hierarchy:
                         Id: 18ef2257-2ddc-462c-a96c-dbe5a74f261e
                     899c8f357695fb9dfdf79484834d1ecc: !LD57.Player.PlayerInteract,LD57
                         Id: dc896b0c-5b13-48b1-b046-8e5f7402544a
+                    f678c88ad04795a300006ca41ff3ec55: !LD57.Player.PlayerAnim,LD57
+                        Id: f8a580a6-9228-48e7-ad88-84c69c7b5c8f
+                        sprite: ref!! 1461b7e6-7396-4ee8-81ae-4c54e549a9f2
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
@@ -1195,6 +1213,21 @@ Hierarchy:
                 BasePartAsset: 7f739888-baa6-4173-8569-cfec06169f6f:Prefabs/Platform3x4
                 BasePartId: 98df31cd-7a62-4b12-8f33-ace4971159a9
                 InstanceId: add760d4-d22e-4d6a-a86a-144a4108d2a2
+        -   Entity:
+                Id: ea890f71-ff3b-4b63-b11a-cfaa06829930
+                Name: Model
+                Components:
+                    88f2a20de1ba7d89e82f9e0db161ccc1: !TransformComponent
+                        Id: 760d0c5f-c65c-4cab-a032-c9390aaa57ef
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            6f3cb8037fc30210e7cfc4677a5c71c5: ref!! 1461b7e6-7396-4ee8-81ae-4c54e549a9f2
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: cd21a685-93b5-4c87-abd1-729834b8c9bd
+                InstanceId: 1961ffb1-da5d-4a4c-8bf5-afb478f4e4bf
         -   Entity:
                 Id: ecbfe7e8-b36d-4edb-9e81-89f45b440a81
                 Name: skybox
