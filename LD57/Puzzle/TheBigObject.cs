@@ -1,4 +1,5 @@
 ﻿using Stride.BepuPhysics;
+using Stride.Rendering;
 
 namespace LD57.Puzzle
 {
@@ -9,8 +10,13 @@ namespace LD57.Puzzle
         const float ROT_SPEED = 360f;
         const float SCALE_SPEED = 8f;
 
+        public ModelComponent HandModel { get; set; }
+        public List<Material> Hands { get; set; } = new List<Material>();
+
         public int Index { get; private set; } = 0;
         public List<State> States { get; set; } = new List<State>();
+
+        ModelComponent model;
 
         State cur;
 
@@ -24,11 +30,15 @@ namespace LD57.Puzzle
             ToggleCollision(Index, true);
         }
 
+        float handAnim = -1f;
+
         public override async Task Execute()
         {
+            model = Entity.Get<ModelComponent>();
+
             for (int i = 0; i < States.Count; i++)
                 ToggleCollision(i, false);
-            
+
             if (States.Count > 0)
             {
                 LerpState(States[0], 1f);
@@ -47,16 +57,43 @@ namespace LD57.Puzzle
                 if (States.Count > 0)
                 {
                     cur.position = MoveLerp(cur.position, States[Index].position, time * POS_SPEED);
-                    cur .rotation = MoveLerp(cur.rotation, States[Index].rotation, time * ROT_SPEED);
+                    cur.rotation = MoveLerp(cur.rotation, States[Index].rotation, time * ROT_SPEED);
                     cur.scale = MoveLerp(cur.scale, States[Index].scale, time * SCALE_SPEED);
                 }
 
                 LerpState(cur, time * LERP_SPEED);
 
-                DebugText.Print($"Big Object: {Index+1}", new Int2(50, 100));
+                DebugText.Print($"Big Object: {Index + 1}", new Int2(50, 100));
+
+                if (handAnim >= 0f)
+                    handAnim += time;
+
+                UpdateHandAnim();
 
                 await Script.NextFrame();
             }
+        }
+
+        void UpdateHandAnim()
+        {
+            if (handAnim < 0f || handAnim > Hands.Count / 12f)
+            {
+                HandModel.Enabled = false;
+                handAnim = -1f;
+                return;
+            }
+
+            HandModel.Enabled = true;
+
+            var index = (int)(handAnim * 12f) % Hands.Count;
+            var curMaterial = Hands[index];
+            if (HandModel.Materials.Count == 0 || HandModel.Materials[0] != curMaterial)
+            {
+                HandModel.Materials.Clear();
+                HandModel.Materials.Add(0, curMaterial);
+            }
+
+            model.Enabled = index < 4;
         }
 
         void LerpState(State b, float t)
@@ -82,6 +119,11 @@ namespace LD57.Puzzle
                 pos.Y = active ? 0f : -20f;
                 item.Position = pos;
             }
+        }
+
+        public void Grab()
+        {
+            handAnim = 0f;
         }
 
         static Vector3 MoveLerp(Vector3 a, Vector3 b, float distance)

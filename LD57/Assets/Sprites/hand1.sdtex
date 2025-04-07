@@ -1,0 +1,7 @@
+!Texture
+Id: b2619617-35cc-44b7-94e8-3c2daf03ce0b
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/hand1.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

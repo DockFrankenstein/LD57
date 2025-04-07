@@ -337,6 +337,8 @@ Hierarchy:
                             9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
                     bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
                         Id: 5ed58fdc-7e42-46d9-a65e-245d09524440
+                        HandModel: null
+                        Hands: {}
                         States:
                             e536e6fe0c11acf928222a0c3980cfb8:
                                 position: {X: 0.0, Y: 0.0, Z: -11.0}

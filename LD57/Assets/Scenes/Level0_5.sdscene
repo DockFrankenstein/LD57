@@ -201,6 +201,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             883b3ea16068aed98b203d9843488ae9: ref!! cd0f3567-d3dd-4bb5-ab40-04379515635e
+                            ec3efae74f19abe02698bfc800294673: ref!! fd82d491-725a-4f11-a5b0-8ed595b1f254
                     1616e7dc5a1e968928959bd8f627b7f4: !LD57.Camera.CameraTarget,LD57
                         Id: 4891c7ed-215b-47b5-b1f5-ebe318000b8f
                         TargetName: ceiling
@@ -507,6 +508,7 @@ Hierarchy:
                         Canvas: ref!! b5d8556d-85d6-441b-9e40-0ffab2202735
                         Target*: ref!! d7366665-ce8b-4c56-8d91-6826d5f83b23
                         NextLevel*: lv1
+                        EndText*: friend
                     d113abd036420102919b845bd145c888: !LD57.UiSystem.UiCanvas,LD57
                         Id: b5d8556d-85d6-441b-9e40-0ffab2202735
                         EnabledByDefault: false
@@ -551,6 +553,14 @@ Hierarchy:
                             9d3a7555fa464974b66ff95ffea89914*~0: efcf1477-f5a0-4d28-8c0f-99e06bc676e9:Materials/Humanoid/Nil
                     bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
                         Id: d7366665-ce8b-4c56-8d91-6826d5f83b23
+                        HandModel: ref!! 2941881b-9aae-4727-8158-616f9293b213
+                        Hands:
+                            193996d7b36b981848378a8bb638bb39: 0a28cd87-fab5-4c12-826f-bc45f29a8fb4:Materials/Hand/Hand0
+                            347946fe176f67c7c2a911feee0c76dc: 2f7430f2-312d-4a83-b4cd-d19a89bff4d7:Materials/Hand/Hand1
+                            cc09f87636b56170f3ddd7273d5abdb7: 3c17ee66-8980-44a1-80d3-5d8b13170d7d:Materials/Hand/Hand2
+                            e96ddcd40062b5c6658974a0d1f74164: 93d72555-8ff8-4d7a-bd93-2da89d378c1d:Materials/Hand/Hand3
+                            41257a14098f473db0ad65905c8523b2: 21756252-cf21-4e03-a194-8706c768a2e2:Materials/Hand/Hand4
+                            3bcdf3dbf210ce32d0ef50196ad20d40: 5da0f8f0-f8e4-48c9-8c75-2fc99a82c10c:Materials/Hand/Hand5
                         States:
                             fd96f13e13cac7e25c2f538a5e3dc698*:
                                 position: {X: 0.0, Y: 1.882, Z: -14.256}
@@ -668,6 +678,25 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             b410ce6d9b954bbd580e35a2c6879aab: ref!! f3304b49-3fc6-47e0-ba3c-4452b3b81012
+        -   Entity:
+                Id: cf4f4a35-dac6-442d-b6b7-b40bebcc16f3
+                Name: Hands
+                Components:
+                    c45c6739deb06800a9b9d71c214b263b: !TransformComponent
+                        Id: fd82d491-725a-4f11-a5b0-8ed595b1f254
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a61b385e7dde7788777e1a154382fcd5: !ModelComponent
+                        Id: 2941881b-9aae-4727-8158-616f9293b213
+                        Model: 9d615821-6721-4069-b6a2-634a05a3b050:Models/Procedural/Hands
+                        Materials:
+                            9ee1f85375324926953ce7402ee9720e~0: 0a28cd87-fab5-4c12-826f-bc45f29a8fb4:Materials/Hand/Hand0
+            Base:
+                BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
+                BasePartId: a27639fe-9768-4f83-81ae-1968c004e7ca
+                InstanceId: 21892ed8-21be-4885-bb43-0b5fcac2f93c
         -   Entity:
                 Id: cf9695bf-8547-4aa7-a814-0740065fe8b6
                 Name: NPC

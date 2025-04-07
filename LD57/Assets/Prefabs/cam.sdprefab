@@ -23,7 +23,30 @@ Hierarchy:
                             9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
                     bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
                         Id: 106f20ac-dca5-4f6b-8f91-65c21811c6a1
+                        HandModel: ref!! da0ac1a8-d08b-447b-93ce-e4d776e34c7e
+                        Hands:
+                            193996d7b36b981848378a8bb638bb39: 0a28cd87-fab5-4c12-826f-bc45f29a8fb4:Materials/Hand/Hand0
+                            347946fe176f67c7c2a911feee0c76dc: 2f7430f2-312d-4a83-b4cd-d19a89bff4d7:Materials/Hand/Hand1
+                            cc09f87636b56170f3ddd7273d5abdb7: 3c17ee66-8980-44a1-80d3-5d8b13170d7d:Materials/Hand/Hand2
+                            e96ddcd40062b5c6658974a0d1f74164: 93d72555-8ff8-4d7a-bd93-2da89d378c1d:Materials/Hand/Hand3
+                            41257a14098f473db0ad65905c8523b2: 21756252-cf21-4e03-a194-8706c768a2e2:Materials/Hand/Hand4
+                            3bcdf3dbf210ce32d0ef50196ad20d40: 5da0f8f0-f8e4-48c9-8c75-2fc99a82c10c:Materials/Hand/Hand5
                         States: {}
+        -   Entity:
+                Id: a27639fe-9768-4f83-81ae-1968c004e7ca
+                Name: Hands
+                Components:
+                    c45c6739deb06800a9b9d71c214b263b: !TransformComponent
+                        Id: a7641dc0-ca70-4c03-8482-bc6f6793973e
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a61b385e7dde7788777e1a154382fcd5: !ModelComponent
+                        Id: da0ac1a8-d08b-447b-93ce-e4d776e34c7e
+                        Model: 9d615821-6721-4069-b6a2-634a05a3b050:Models/Procedural/Hands
+                        Materials:
+                            9ee1f85375324926953ce7402ee9720e~0: 0a28cd87-fab5-4c12-826f-bc45f29a8fb4:Materials/Hand/Hand0
         -   Entity:
                 Id: d7dd94f9-d7fd-45cd-a286-ce1b549d696c
                 Name: cam
@@ -35,6 +58,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             883b3ea16068aed98b203d9843488ae9: ref!! 8bdbeae8-b6d6-4892-b939-550d27a33dbb
+                            6de8ca8417af6d52ba4dad348213b23a: ref!! a7641dc0-ca70-4c03-8482-bc6f6793973e
                     1616e7dc5a1e968928959bd8f627b7f4: !LD57.Camera.CameraTarget,LD57
                         Id: 75f9dbd8-d503-4f1f-8f9b-fe7a5d49821d
                         TargetName: ceiling
