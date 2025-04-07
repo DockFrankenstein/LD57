@@ -132,6 +132,7 @@ Hierarchy:
                     f678c88ad04795a300006ca41ff3ec55: !LD57.Player.PlayerAnim,LD57
                         Id: 3b454297-492b-46bc-b290-e157ffe677f3
                         sprite: ref!! 8265c3f8-50f5-4864-a822-d28857b9420e
+                        AlwaysAnim: false
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
@@ -505,6 +506,9 @@ Hierarchy:
                             f5490c6606cf9ac57b7dcd0683491cbc*: true
                             d90cdba2cc8ba5931c08bc1466c07478*: false
                         Interactable: true
+                        IndicatorModel: 32b8e63f-5864-4dc6-aacf-bed8b41bdef7:Models/Procedural/Indicator
+                        IndMatOn: 21997260-0e9c-475e-a6e3-ad62da16b99f:Materials/Reel IndicatorOn
+                        IndMatOff: 593b2b1d-7645-4b22-8b91-4afe6ad009d1:Materials/Reel Indicator Off
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
@@ -763,6 +767,9 @@ Hierarchy:
                             ad69575bcfea4bfda2227d49765e989c*: true
                             8bb9508d44295dae5f306218746a7bac*: false
                         Interactable: true
+                        IndicatorModel: 32b8e63f-5864-4dc6-aacf-bed8b41bdef7:Models/Procedural/Indicator
+                        IndMatOn: 21997260-0e9c-475e-a6e3-ad62da16b99f:Materials/Reel IndicatorOn
+                        IndMatOff: 593b2b1d-7645-4b22-8b91-4afe6ad009d1:Materials/Reel Indicator Off
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
@@ -1129,6 +1136,9 @@ Hierarchy:
                             7439a66fda282d73df318031c46ac142*: true
                             ed6d1831b1f8ba9867c8108f6c097bb1*: true
                         Interactable: true
+                        IndicatorModel: 32b8e63f-5864-4dc6-aacf-bed8b41bdef7:Models/Procedural/Indicator
+                        IndMatOn: 21997260-0e9c-475e-a6e3-ad62da16b99f:Materials/Reel IndicatorOn
+                        IndMatOff: 593b2b1d-7645-4b22-8b91-4afe6ad009d1:Materials/Reel Indicator Off
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
@@ -1299,6 +1309,9 @@ Hierarchy:
                             e10185e2c0ebf556a0dff0691fcc2dbd*: false
                             15bfc2c46c89bd5bb3b9e04df8988da9*: false
                         Interactable: true
+                        IndicatorModel: 32b8e63f-5864-4dc6-aacf-bed8b41bdef7:Models/Procedural/Indicator
+                        IndMatOn: 21997260-0e9c-475e-a6e3-ad62da16b99f:Materials/Reel IndicatorOn
+                        IndMatOff: 593b2b1d-7645-4b22-8b91-4afe6ad009d1:Materials/Reel Indicator Off
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e

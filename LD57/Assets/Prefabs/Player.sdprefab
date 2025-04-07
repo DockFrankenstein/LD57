@@ -50,6 +50,7 @@ Hierarchy:
                     f678c88ad04795a300006ca41ff3ec55: !LD57.Player.PlayerAnim,LD57
                         Id: 898fe2bc-53f9-47ae-82e9-4cdd03fef976
                         sprite: ref!! 58487bbd-0589-445f-a823-6560dcab66fe
+                        AlwaysAnim: false
         -   Entity:
                 Id: 78c254f9-f653-46ad-948d-f90aab0e139e
                 Name: Cam Target

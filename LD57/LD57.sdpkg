@@ -14,6 +14,7 @@ AssetFolders:
     -   Path: !dir Assets
     -   Path: !dir Assets
     -   Path: !dir Assets
+    -   Path: !dir Assets
     -   Path: !dir D:/Stride projects/LD57/LD57/Assets
 ResourceFolders:
     - !dir Resources

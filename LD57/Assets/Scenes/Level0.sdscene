@@ -76,6 +76,7 @@ Hierarchy:
                     f678c88ad04795a300006ca41ff3ec55: !LD57.Player.PlayerAnim,LD57
                         Id: 3b506263-efe6-40ed-9df3-7769b6389b7b
                         sprite: ref!! 0e96de93-a857-4e26-b735-8b13750f6c0f
+                        AlwaysAnim: false
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: 4986d447-ec25-46f5-a89d-8a78507a91c0
@@ -681,6 +682,9 @@ Hierarchy:
                         Target*: ref!! 5ed58fdc-7e42-46d9-a65e-245d09524440
                         StateAvaliability: {}
                         Interactable: true
+                        IndicatorModel: 32b8e63f-5864-4dc6-aacf-bed8b41bdef7:Models/Procedural/Indicator
+                        IndMatOn: 21997260-0e9c-475e-a6e3-ad62da16b99f:Materials/Reel IndicatorOn
+                        IndMatOff: 593b2b1d-7645-4b22-8b91-4afe6ad009d1:Materials/Reel Indicator Off
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
