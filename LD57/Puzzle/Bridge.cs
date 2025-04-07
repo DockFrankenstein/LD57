@@ -1,5 +1,4 @@
 ﻿using Stride.BepuPhysics;
-using System.Windows.Documents;
 
 namespace LD57.Puzzle
 {
