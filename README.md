@@ -6,4 +6,4 @@ In order not to go insane, I've created this list of all the collision layers th
 * Layer 2 - toggable invisible walls
 * Layer 3 - movable level geometry
 * Layer 4 - big object collision
-* NPC
+* Layer 5 - NPC

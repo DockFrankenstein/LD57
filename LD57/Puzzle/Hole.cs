@@ -37,7 +37,7 @@ namespace LD57.Puzzle
 
             try
             {
-                var txt = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"Data/{EndText}.txt"));
+                var txt = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"Data/items/{EndText}.txt"));
                 if (txt.Length > 1)
                 {
                     ui.youGot.Text = txt[0];
@@ -57,8 +57,8 @@ namespace LD57.Puzzle
                 t += (float)Game.UpdateTime.WarpElapsed.TotalSeconds;
 
                 ui.background.Color = new Color(0,0,0, (byte)Math.Clamp(255 * (t - 0.3f), 0, 200));
-                ui.youGot.Opacity = Math.Clamp((t-0.3f)*3f, 0f, 1f);
-                ui.description.Opacity = Math.Clamp((t-0.5f)*3f, 0f, 1f);
+                ui.youGot.Opacity = Math.Clamp((t-0.6f)*3f, 0f, 1f);
+                ui.description.Opacity = Math.Clamp((t-0.7f)*3f, 0f, 1f);
 
                 if (Input.IsKeyPressed(Keys.E))
                     LoadNextLevel();
@@ -90,8 +90,7 @@ namespace LD57.Puzzle
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
                     Text = "PRESS [E] TO CONTINUE",
-                    Font = manager.Fonts.CaviarDreams.GetFont(26),
-                    Opacity = 0f,
+                    Font = manager.Fonts.CaviarDreams.GetFont(30),
                 };
 
                 youGot = new Label()
@@ -106,12 +105,13 @@ namespace LD57.Puzzle
                 description = new Label()
                 {
                     Wrap = true,
-                    Font = manager.Fonts.CaviarDreams.GetFont(18),
+                    Font = manager.Fonts.CaviarDreams.GetFont(24),
                     Text = "Lorem ipsum\ndolor sit amet",
                     Margin = new Myra.Graphics2D.Thickness(300, 0),
                     VerticalAlignment = VerticalAlignment.Top,
                     HorizontalAlignment = HorizontalAlignment.Stretch,
                     TextAlign = FontStashSharp.RichText.TextHorizontalAlignment.Center,
+                    Opacity = 0f,
                 };
 
                 SetRow(youGot, 0);
