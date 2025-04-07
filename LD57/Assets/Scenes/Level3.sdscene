@@ -902,6 +902,8 @@ Hierarchy:
                     5b1671be4bbfb3239561ccd3674c8fc3: !LD57.Dialogues.NPC,LD57
                         Id: 48a8709d-ff3d-463e-8540-5ab1fc8d71ea
                         DialogueName*: care
+                        NextLevelName: null
+                        Cameras: {}
                     eb97e2685deac2ccd72a3a36d1ba7df3: !LD57.Interaction.Indicator,LD57
                         Id: bc6e6a5b-51f8-412f-a55b-289d4dbc6377
                         Ind: ref!! 3e2ab08a-4f52-40b2-8dbf-c26fd65128b9

@@ -105,7 +105,7 @@ namespace LD57.Menu
                 selectStack.Widgets.Add(CreateLevel("Level 3 - Switches More", "lv3"));
                 selectStack.Widgets.Add(CreateLevel("Level 4 - Limits", "lv4"));
                 selectStack.Widgets.Add(CreateLevel("Level 5 - Hombre", "lv5"));
-                selectStack.Widgets.Add(CreateLevel("Level 6 - Jeremy", "lv6"));
+                selectStack.Widgets.Add(CreateLevel("End", "end"));
 
                 play.Click += (_, _) =>
                 {

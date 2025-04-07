@@ -5,6 +5,7 @@ namespace LD57
 {
     public class FollowObject : SyncScript, ISimulationUpdate
     {
+        public Vector3 PosOffset { get; set; }
         public Entity Target { get; set; }
 
         public bool FollowPosition { get; set; } = true;
@@ -49,6 +50,8 @@ namespace LD57
 
             Target.Transform.UpdateWorldMatrix();
             Target.Transform.WorldMatrix.Decompose(out _, out Quaternion rot, out Vector3 pos);
+
+            pos += PosOffset;
 
             if (_body != null)
             {

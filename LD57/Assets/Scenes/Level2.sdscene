@@ -1642,6 +1642,8 @@ Hierarchy:
                     5b1671be4bbfb3239561ccd3674c8fc3: !LD57.Dialogues.NPC,LD57
                         Id: cab2ffa6-9a62-4c82-98d4-d18e5afa91f4
                         DialogueName*: barry
+                        NextLevelName: null
+                        Cameras: {}
                     eb97e2685deac2ccd72a3a36d1ba7df3: !LD57.Interaction.Indicator,LD57
                         Id: c544a283-46ae-4bd3-849b-406e57abaec6
                         Ind: ref!! 3a105fe2-25e8-4741-b6bd-d351314cccfe
@@ -1793,6 +1795,8 @@ Hierarchy:
                     5b1671be4bbfb3239561ccd3674c8fc3: !LD57.Dialogues.NPC,LD57
                         Id: 9ed0e1de-ecf7-4430-aef6-3c54f8b42cb8
                         DialogueName*: apology
+                        NextLevelName: null
+                        Cameras: {}
                     eb97e2685deac2ccd72a3a36d1ba7df3: !LD57.Interaction.Indicator,LD57
                         Id: 70d90ff5-9d1e-4f92-a8c5-ea12de659af9
                         Ind: ref!! 15627e72-3c33-4cd8-aaef-dfd126e3b16a

@@ -399,6 +399,8 @@ Hierarchy:
                     d9212809287a504bff5cbe570303a6cb: !LD57.Dialogues.NPC,LD57
                         Id: d2bf348a-86ab-4079-88c3-817661112085
                         DialogueName: intro
+                        NextLevelName: null
+                        Cameras: {}
         -   Folder: null
             Entity:
                 Id: 9afbabd2-24ed-46bb-a018-c3d77e4643d3

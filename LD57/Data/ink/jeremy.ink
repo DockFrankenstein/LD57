@@ -1,5 +1,6 @@
 ﻿VAR speaker = "Jeremy Wattson"
 VAR jeremy = "Jeremy Wattson"
+VAR cam = "1"
 
 You are not {jeremy}.
 
@@ -28,6 +29,7 @@ You aren't me. Neither of us are.
 And you do realize, that we don't care.
 
 ~ speaker = "You"
+~ cam = "2"
 But I'm the one that gets all of the "care" and you just go and...
 Why is it you?
 

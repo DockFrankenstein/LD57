@@ -1,0 +1,7 @@
+!Texture
+Id: 36013735-b9d9-4a66-b495-77897b970cd2
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/wake2.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

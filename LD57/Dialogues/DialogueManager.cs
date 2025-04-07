@@ -15,6 +15,10 @@ namespace LD57.Dialogues
 
         DialogueWidget ui;
 
+        public event Action<Ink.Runtime.Story> OnStartStory;
+        public event Action<Ink.Runtime.Story> OnEndStory;
+        public event Action OnProgressStory;
+
         public override async Task Execute()
         {
             this.RegisterInQ();
@@ -158,18 +162,23 @@ namespace LD57.Dialogues
             ContinueDialogue();
             canvas.UiEnabled = true;
 
+            OnStartStory?.Invoke(ActiveStory);
+
             qDebug.Log($"[Dialogue Manager] Started story '{name}'.", LogColor);
         }
 
         [Command("endink", Description = "Finishes an ink story.")]
         public void EndDialogue()
         {
+            var story = ActiveStory;
             if (ActiveStory == null) return;
             ActiveStory.ResetState();
             ActiveStory = null;
             ActiveStoryName = "";
 
             canvas.UiEnabled = false;
+
+            OnEndStory?.Invoke(story);
 
             qDebug.Log("[Dialogue Manager] Finished a story.", LogColor);
         }
@@ -184,6 +193,8 @@ namespace LD57.Dialogues
             var speaker = ActiveStory.variablesState["speaker"] as string;
             if (!string.IsNullOrWhiteSpace(speaker))
                 ui.speaker.Text = speaker;
+
+            OnProgressStory?.Invoke();
         }
 
         public class DialogueWidget : Grid

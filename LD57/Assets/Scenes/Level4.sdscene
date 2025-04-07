@@ -840,6 +840,8 @@ Hierarchy:
                     5b1671be4bbfb3239561ccd3674c8fc3: !LD57.Dialogues.NPC,LD57
                         Id: 2653a02d-3929-412d-b131-be4182e70d11
                         DialogueName*: barry2
+                        NextLevelName: null
+                        Cameras: {}
                     eb97e2685deac2ccd72a3a36d1ba7df3: !LD57.Interaction.Indicator,LD57
                         Id: 35bc88fa-44da-4acf-8a3b-01869be2e02d
                         Ind: ref!! 623e8648-144d-4bf7-a42d-f0a40f518c2c

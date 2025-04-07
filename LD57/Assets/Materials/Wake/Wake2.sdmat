@@ -1,0 +1,23 @@
+!MaterialAsset
+Id: f884e3d8-d7bf-45d3-8c6b-15131bb2c5fd
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Attributes:
+    Emissive: !MaterialEmissiveMapFeature
+        EmissiveMap: !ComputeTextureColor
+            Texture: 36013735-b9d9-4a66-b495-77897b970cd2:Sprites/wake2
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
+        Intensity: !ComputeFloat
+            Value: 1.0
+        UseAlpha: true
+    Transparency: !MaterialTransparencyCutoffFeature
+        Alpha: !ComputeFloat
+            Value: 0.5
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+    CullMode: None
+Layers: {}

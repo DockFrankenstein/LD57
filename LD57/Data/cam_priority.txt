@@ -2,6 +2,8 @@
 dcam
 
 # Gameplay
+ending2
+ending1
 ceiling
 player
 
