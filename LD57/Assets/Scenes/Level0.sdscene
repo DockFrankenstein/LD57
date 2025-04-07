@@ -551,7 +551,7 @@ Hierarchy:
                         Id: 4014dd4e-a264-4c14-8600-ca2f36e4a63d
                         Model: 70876253-d84e-49a1-bb22-eb4457c10895:Models/Procedural/Cat
                         Materials:
-                            d977111e148250356f883017b093f1f0~0: 0ec74187-a731-4519-bd41-371534413b07:Materials/Cat
+                            d977111e148250356f883017b093f1f0~0: 0ec74187-a731-4519-bd41-371534413b07:Materials/Humanoid/Cat
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: f5ceef73-0ac1-4585-a63d-6c27e2dde9a9

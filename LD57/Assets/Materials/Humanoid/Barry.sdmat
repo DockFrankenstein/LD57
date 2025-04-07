@@ -1,5 +1,5 @@
 !MaterialAsset
-Id: 0ec74187-a731-4519-bd41-371534413b07
+Id: 335d956a-6d7c-4d22-a585-3281ea563f7a
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
 Attributes:
@@ -8,7 +8,7 @@ Attributes:
             Value: 0.1
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
-            Texture: d7b2f7fd-2b0d-476f-8326-d9eabfd910b1:Textures/cat
+            Texture: d5f52934-833b-40c5-9c6d-c34558e51e13:Sprites/barry
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
@@ -18,7 +18,7 @@ Attributes:
     Emissive: !MaterialEmissiveMapFeature
         Enabled: false
         EmissiveMap: !ComputeTextureColor
-            Texture: d7b2f7fd-2b0d-476f-8326-d9eabfd910b1:Textures/cat
+            Texture: d7b2f7fd-2b0d-476f-8326-d9eabfd910b1:Sprites/cat
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}

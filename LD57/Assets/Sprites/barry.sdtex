@@ -1,0 +1,7 @@
+!Texture
+Id: d5f52934-833b-40c5-9c6d-c34558e51e13
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/barry.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

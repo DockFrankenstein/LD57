@@ -52,6 +52,7 @@ Hierarchy:
         - ref!! 6b9adf7a-3527-4616-b04e-bd316e99f064
         - ref!! 44e8028c-2cba-4451-91a0-d755b0edbd77
         - ref!! ff91cc7f-2cf3-4044-b9f3-536ae2405c43
+        - ref!! 7d779ed9-182b-4260-915d-d334bb2c11dd
     Parts:
         -   Folder: Geometry
             Entity:
@@ -261,7 +262,7 @@ Hierarchy:
                         Id: bd24f204-d749-4347-990a-e269523ee58f
                         Model: 70876253-d84e-49a1-bb22-eb4457c10895:Models/Procedural/Cat
                         Materials:
-                            d977111e148250356f883017b093f1f0~0: 0ec74187-a731-4519-bd41-371534413b07:Materials/Cat
+                            d977111e148250356f883017b093f1f0~0: 0ec74187-a731-4519-bd41-371534413b07:Materials/Humanoid/Cat
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: f5ceef73-0ac1-4585-a63d-6c27e2dde9a9
@@ -721,6 +722,46 @@ Hierarchy:
                 BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
                 BasePartId: d7dd94f9-d7fd-45cd-a286-ce1b549d696c
                 InstanceId: 47b62a3b-55ee-4506-84d7-71a912f27726
+        -   Entity:
+                Id: 7d779ed9-182b-4260-915d-d334bb2c11dd
+                Name: NPC
+                Components:
+                    5250472e0305d3193ac431d0c8f135ca: !TransformComponent
+                        Id: a64bf671-4724-4ca2-92bf-199c1dfb2e88
+                        Position*: {X: 7.499999, Y: 0.0, Z: 4.25}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ec27814a846194d1a33c71b54b33a043: ref!! f6896dda-8139-4557-aa28-283d6c66985a
+                    083b6d6a893dd55760081d0bb4e7086a: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: dba729df-f87f-404f-a1ce-e1f08ae9a216
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7a23fdadc580a6c9226d50eb776ac536: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 0.8, Y: 1.0, Z: 0.1}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer5
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    5b1671be4bbfb3239561ccd3674c8fc3: !LD57.Dialogues.NPC,LD57
+                        Id: 2653a02d-3929-412d-b131-be4182e70d11
+                        DialogueName*: barry2
+            Base:
+                BasePartAsset: 3cf909f0-fede-4da6-b5f5-0c94a35bb4a2:Prefabs/NPC
+                BasePartId: 87142ca1-3e60-4108-a624-f76d8096be83
+                InstanceId: d6d1b694-e3d6-4951-8873-440b64a8c4a1
         -   Folder: null
             Entity:
                 Id: 7f7ed86e-d394-4f6b-a491-f14db3794daa
@@ -1316,6 +1357,26 @@ Hierarchy:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
                 BasePartId: 0d014fa9-5199-476b-b5c8-5414a1b8cc9e
                 InstanceId: 9efc0db3-0acb-41e3-b1c2-616312bfd3d8
+        -   Folder: null
+            Entity:
+                Id: bf87a3ad-4ca2-417e-8872-dd2a7c3d1054
+                Name: Model
+                Components:
+                    73f7da10f92a823cb5fa4ad682de0575: !TransformComponent
+                        Id: f6896dda-8139-4557-aa28-283d6c66985a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.945, Y: 1.945, Z: 1.945}
+                        Children: {}
+                    0b04c96d52fd1c3df484ccb7491961ed: !ModelComponent
+                        Id: ac6b9784-ab22-4a46-af9c-6e4bb415124f
+                        Model: 70876253-d84e-49a1-bb22-eb4457c10895:Models/Procedural/Cat
+                        Materials:
+                            3354837d88ee7f6c10290d075a3bb60c*~0: 335d956a-6d7c-4d22-a585-3281ea563f7a:Materials/Humanoid/Barry
+            Base:
+                BasePartAsset: 3cf909f0-fede-4da6-b5f5-0c94a35bb4a2:Prefabs/NPC
+                BasePartId: f282375b-e023-4af3-8a86-7784abe3fddb
+                InstanceId: d6d1b694-e3d6-4951-8873-440b64a8c4a1
         -   Folder: Collisions
             Entity:
                 Id: c23e412b-2a41-4693-a8a4-33e621cd82bf

@@ -11,4 +11,4 @@ Type: !PlaneProceduralModel
     LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
     NumberOfTextureCoordinates: 10
     MaterialInstance:
-        Material: 0ec74187-a731-4519-bd41-371534413b07:Materials/Cat
+        Material: 0ec74187-a731-4519-bd41-371534413b07:Materials/Humanoid/Cat

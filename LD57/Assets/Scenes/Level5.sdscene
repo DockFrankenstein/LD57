@@ -64,6 +64,7 @@ Hierarchy:
         - ref!! e6f0e4b7-7d0c-4570-9ffd-852040399121
         - ref!! 6a2d4c92-8f87-4fc7-bc31-030d03356257
         - ref!! ac210b03-d9f2-4ad7-a6ea-0c8e8610fc39
+        - ref!! 2b956aca-9150-46aa-aaf9-a43cd54ad9bd
     Parts:
         -   Folder: Lights
             Entity:
@@ -351,6 +352,46 @@ Hierarchy:
                 BasePartAsset: 96838afa-4916-418c-82e8-c1ae9994e051:Prefabs/Bridge3
                 BasePartId: 0b617083-2979-472c-b604-c9f13f3a2c2b
                 InstanceId: ad75d527-54b2-45ad-98cf-81b91e5717bf
+        -   Entity:
+                Id: 2b956aca-9150-46aa-aaf9-a43cd54ad9bd
+                Name: NPC
+                Components:
+                    5250472e0305d3193ac431d0c8f135ca: !TransformComponent
+                        Id: d9ce66f7-64ad-4ba8-8387-1085a11c19d4
+                        Position*: {X: 11.249999, Y: 0.0, Z: 3.75}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ec27814a846194d1a33c71b54b33a043: ref!! f4b6f55d-9abf-47a0-88bc-5266ac379aa0
+                    083b6d6a893dd55760081d0bb4e7086a: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 25a604d4-bf1a-4743-914f-b81f5900fb83
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                7a23fdadc580a6c9226d50eb776ac536: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 0.8, Y: 1.0, Z: 0.1}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer5
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                    5b1671be4bbfb3239561ccd3674c8fc3: !LD57.Dialogues.NPC,LD57
+                        Id: 4b222a73-3924-4ee8-a231-4c2da8d6f53f
+                        DialogueName*: listen
+            Base:
+                BasePartAsset: 3cf909f0-fede-4da6-b5f5-0c94a35bb4a2:Prefabs/NPC
+                BasePartId: 87142ca1-3e60-4108-a624-f76d8096be83
+                InstanceId: a8483d67-28f4-4874-b81f-59d5f4c2fc3c
         -   Folder: Lights
             Entity:
                 Id: 2dca7030-ff90-4610-861e-287443a643b1
@@ -656,6 +697,26 @@ Hierarchy:
                                 BiasParameters:
                                     DepthBias: 0.001
                         Intensity: 0.4
+        -   Folder: null
+            Entity:
+                Id: 43cafc54-d318-4e09-ad98-60f64e8e3943
+                Name: Model
+                Components:
+                    73f7da10f92a823cb5fa4ad682de0575: !TransformComponent
+                        Id: f4b6f55d-9abf-47a0-88bc-5266ac379aa0
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.945, Y: 1.945, Z: 1.945}
+                        Children: {}
+                    0b04c96d52fd1c3df484ccb7491961ed: !ModelComponent
+                        Id: fc5ee087-1326-4c42-9dcd-7b9f503c5cca
+                        Model: 70876253-d84e-49a1-bb22-eb4457c10895:Models/Procedural/Cat
+                        Materials:
+                            3354837d88ee7f6c10290d075a3bb60c*~0: bf0dc4d4-bf06-45ad-9174-7fd0edbcf657:Materials/Humanoid/Andrew
+            Base:
+                BasePartAsset: 3cf909f0-fede-4da6-b5f5-0c94a35bb4a2:Prefabs/NPC
+                BasePartId: f282375b-e023-4af3-8a86-7784abe3fddb
+                InstanceId: a8483d67-28f4-4874-b81f-59d5f4c2fc3c
         -   Folder: Collisions
             Entity:
                 Id: 44ae4967-d82d-418f-9bfb-903c54bcf984
@@ -1842,7 +1903,7 @@ Hierarchy:
                         Id: 77f7cdd4-e1bb-485e-b26f-5a5e48cfa9ed
                         Model: 70876253-d84e-49a1-bb22-eb4457c10895:Models/Procedural/Cat
                         Materials:
-                            d977111e148250356f883017b093f1f0~0: 0ec74187-a731-4519-bd41-371534413b07:Materials/Cat
+                            d977111e148250356f883017b093f1f0~0: 0ec74187-a731-4519-bd41-371534413b07:Materials/Humanoid/Cat
             Base:
                 BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
                 BasePartId: f5ceef73-0ac1-4585-a63d-6c27e2dde9a9

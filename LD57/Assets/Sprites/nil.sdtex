@@ -1,0 +1,7 @@
+!Texture
+Id: c0f54581-be35-45cc-92b0-5611f9593bf1
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/nil.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

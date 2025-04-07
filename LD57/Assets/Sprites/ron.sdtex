@@ -1,0 +1,7 @@
+!Texture
+Id: f98272b0-42f9-41ae-8087-6f9f8f066939
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/ron.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
