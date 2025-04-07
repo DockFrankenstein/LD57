@@ -45,4 +45,5 @@ Hierarchy:
                     c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
                         Id: f5929b49-2823-4143-bbae-ae7f1b5f2f48
                         Target: null
+                        StateAvaliability: {}
                         Interactable: true

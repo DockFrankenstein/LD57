@@ -40,6 +40,7 @@ Hierarchy:
         - ref!! e14836e9-e2d3-464a-bc64-68c1c7139c0a
         - ref!! 59d784bf-b295-4eae-85c4-d06f882d2de1
         - ref!! 929ce6e2-0561-439a-b1e4-bf428b1dbf7f
+        - ref!! 2b687f40-2bae-403d-9cbb-c8557ed140fc
     Parts:
         -   Folder: Lights
             Entity:
@@ -206,6 +207,20 @@ Hierarchy:
                 BasePartId: b8ae3b7c-3e9d-4637-bbec-fac3e05d28ae
                 InstanceId: b703270f-66a8-4d59-9808-f59ddf78226e
         -   Entity:
+                Id: 2b687f40-2bae-403d-9cbb-c8557ed140fc
+                Name: Big Object Collisions
+                Components:
+                    17a53d6ad5e0af296b226dc8d979b15f: !TransformComponent
+                        Id: 50c856d6-6ba0-46be-a1c7-83377571a1de
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            d365c45d883a1e9e9201bd0228e72046: ref!! d282a9fa-1656-42ce-826d-8e96409f0ab1
+                            8936ea642ea9727cd3630e1ff8239761: ref!! 643c8b48-dc2a-4c06-aba7-56ad20d9819a
+                            9b3e985e1727fa04286b9bcdff39ad74: ref!! 6668edb4-b5dd-4e0c-a39e-3d63fb35a396
+                            1f96221bd711d2a52e16884b9dc6f6c6: ref!! c320d6e0-e327-481d-b03c-7146c26a334c
+        -   Entity:
                 Id: 322d0305-19e7-47a6-94ac-23746f48d7a8
                 Name: Platform3x3
                 Components:
@@ -318,6 +333,17 @@ Hierarchy:
                 BasePartAsset: fa6a7fe0-1738-4303-8001-32821ebcb8ea:Prefabs/Bridge5
                 BasePartId: 48fffff2-aa51-47e4-98e1-0b7dde1279f0
                 InstanceId: 9ea5f65e-9c63-4fe0-9ed1-4513dfebd036
+        -   Entity:
+                Id: 51093c6b-277b-4fbd-9462-d20bb9a8df71
+                Name: 2
+                Components:
+                    10f7e500c0856f4a4682655b0f9652bc: !TransformComponent
+                        Id: d282a9fa-1656-42ce-826d-8e96409f0ab1
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            951e5ef594b335b0f7ab3fee18cac497: ref!! e7ae13cc-167d-4649-b570-ccb1c9f9d47b
         -   Folder: null
             Entity:
                 Id: 52434ff0-c766-4dee-9762-a10436fca63d
@@ -444,6 +470,38 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f9614b53f8f448cedde7b355ef215f17: ref!! 0dfcc8cf-6690-4214-aa36-00f4b9bd36a0
+        -   Entity:
+                Id: 75e0cdea-2d72-48ae-9fd2-0c5de0ac254c
+                Name: Collision
+                Components:
+                    b5246324463c7995fe679486164e0033: !TransformComponent
+                        Id: e7ae13cc-167d-4649-b570-ccb1c9f9d47b
+                        Position: {X: -1.5000001, Y: 0.0, Z: 1.25}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d5e4f2f6d09504c0148ee253da34adcd: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: f9245a4f-916f-4c46-a7a0-0a1dc04cc27c
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                42eb34c3130fc869370dcba947d08b01: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 3.0, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
         -   Entity:
                 Id: 7a6abcdb-bfbc-4ea7-ad20-7a567517082d
                 Name: cam
@@ -579,6 +637,50 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f9614b53f8f448cedde7b355ef215f17: ref!! 1e1d1195-4751-4eac-9b8c-620e27261ad5
+        -   Entity:
+                Id: 9388a264-1cfd-4bce-9a10-4eb4518c1645
+                Name: Collision
+                Components:
+                    b5246324463c7995fe679486164e0033: !TransformComponent
+                        Id: a469e22d-b85f-4eb3-98b9-aa1b30ec08ac
+                        Position: {X: 2.5, Y: 0.0, Z: 5.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d5e4f2f6d09504c0148ee253da34adcd: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: b25cca4a-05e0-4d20-a74a-77241af0125d
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                42eb34c3130fc869370dcba947d08b01: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 3.0, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+        -   Folder: null
+            Entity:
+                Id: 964ec482-1613-4ed8-9bf4-76b5f4f78514
+                Name: 3
+                Components:
+                    10f7e500c0856f4a4682655b0f9652bc: !TransformComponent
+                        Id: 643c8b48-dc2a-4c06-aba7-56ad20d9819a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            951e5ef594b335b0f7ab3fee18cac497: ref!! 190a8a94-5fbb-49ee-a3db-ad725464fb66
         -   Folder: Collisions
             Entity:
                 Id: 992f1d4c-e884-41a0-aac4-9a8ff10e699d
@@ -643,6 +745,39 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f9614b53f8f448cedde7b355ef215f17: ref!! 65511e2e-16ad-4920-ad6a-8c8ebee257dc
+        -   Folder: null
+            Entity:
+                Id: 9c5695cd-aa86-4100-a447-99f5ef8b7f56
+                Name: Collision
+                Components:
+                    b5246324463c7995fe679486164e0033: !TransformComponent
+                        Id: ab5f9921-d43a-4622-9dc9-d74c63d3c465
+                        Position: {X: 6.5, Y: 0.0, Z: 1.25}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d5e4f2f6d09504c0148ee253da34adcd: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 60fad157-dc52-47ad-8d16-85e282e22c64
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                42eb34c3130fc869370dcba947d08b01: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 3.0, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
         -   Entity:
                 Id: a0434220-bce8-4fc8-a9a7-62e29d5ac4c4
                 Name: The big object
@@ -657,10 +792,35 @@ Hierarchy:
                         Id: 8bd611a6-e0b1-4fa2-9a4c-2e3cf24d3a42
                         Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
                         Materials:
-                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Ryba
+                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
                     bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
                         Id: 4101314d-596d-4c29-a43f-f5afa36a80fe
-                        States: {}
+                        States:
+                            a99a583cfe331e0938858cd9d673950c*:
+                                position: {X: 0.0, Y: 0.0, Z: -20.0}
+                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                collision: null
+                            631a017fbb19a954a7d4f6565957326f*:
+                                position: {X: 0.0, Y: 0.0, Z: -20.0}
+                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                collision: ref!! 51093c6b-277b-4fbd-9462-d20bb9a8df71
+                            1a47ff67f2f2256d0c05faf4806a5650*:
+                                position: {X: 0.0, Y: 0.0, Z: -20.0}
+                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                collision: ref!! 964ec482-1613-4ed8-9bf4-76b5f4f78514
+                            5905fd906ba2c41727358bb1292b1896*:
+                                position: {X: 0.0, Y: 0.0, Z: -20.0}
+                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                collision: ref!! b426f175-f7f1-4c05-90cc-a0d134f0c88f
+                            02d508568655c02c9660b8802f76e75c*:
+                                position: {X: 0.0, Y: 0.0, Z: -20.0}
+                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                collision: ref!! b1ad30bd-4d0e-4eaa-82f9-c7776570b463
             Base:
                 BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
                 BasePartId: 49c43870-e9f2-4396-9a7a-8bcf11aa3900
@@ -679,7 +839,7 @@ Hierarchy:
                         Id: db9d6a8c-79f6-4766-9509-fbda3311fca6
                         Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
                         Materials:
-                            f4219b723faa62d3b4a690fdf9b02569~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Ryba
+                            f4219b723faa62d3b4a690fdf9b02569~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
                     b4c9a8a4c05357216f2bc9903caaf624: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 5f3207d3-5719-42aa-984f-054e951a58bb
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
@@ -786,6 +946,31 @@ Hierarchy:
                 BasePartAsset: 6288bc9d-ef58-4277-b167-a2ab5db14ac2:Prefabs/Platform3x3
                 BasePartId: b8ae3b7c-3e9d-4637-bbec-fac3e05d28ae
                 InstanceId: 4b13b58e-da68-4ca8-97e4-cea6991d588b
+        -   Folder: null
+            Entity:
+                Id: b1ad30bd-4d0e-4eaa-82f9-c7776570b463
+                Name: 5
+                Components:
+                    10f7e500c0856f4a4682655b0f9652bc: !TransformComponent
+                        Id: c320d6e0-e327-481d-b03c-7146c26a334c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            951e5ef594b335b0f7ab3fee18cac497: ref!! bda341eb-9767-47ef-8405-131a0184de27
+        -   Folder: null
+            Entity:
+                Id: b426f175-f7f1-4c05-90cc-a0d134f0c88f
+                Name: 4
+                Components:
+                    10f7e500c0856f4a4682655b0f9652bc: !TransformComponent
+                        Id: 6668edb4-b5dd-4e0c-a39e-3d63fb35a396
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            951e5ef594b335b0f7ab3fee18cac497: ref!! a469e22d-b85f-4eb3-98b9-aa1b30ec08ac
+                            dd59b8ba534c7a58ff83ae0e41e3e730: ref!! ab5f9921-d43a-4622-9dc9-d74c63d3c465
         -   Folder: null
             Entity:
                 Id: b4442c9c-437d-4b07-839d-960d051e902f
@@ -966,6 +1151,38 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             0b3bbd84a1e656a0cd15317a5975e9a6: ref!! a778c0e2-3455-4b5b-8f76-73213ef02d00
+        -   Entity:
+                Id: e7207a3d-2a18-4f4f-a475-160cb2145f12
+                Name: Collision
+                Components:
+                    b5246324463c7995fe679486164e0033: !TransformComponent
+                        Id: bda341eb-9767-47ef-8405-131a0184de27
+                        Position: {X: 6.0, Y: 0.0, Z: 2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d5e4f2f6d09504c0148ee253da34adcd: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: ad62defc-260b-4f2f-bec2-78c73c751b57
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                42eb34c3130fc869370dcba947d08b01: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 10.0, Y: 3.0, Z: 10.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
         -   Folder: Collisions
             Entity:
                 Id: e75f3843-438e-40f1-8c9b-56811664961b
@@ -1042,6 +1259,38 @@ Hierarchy:
                                 BiasParameters:
                                     DepthBias: 0.001
                         Intensity: 140.0
+        -   Entity:
+                Id: ef44f495-f5ef-492b-9f92-190333b952e1
+                Name: Collision
+                Components:
+                    b5246324463c7995fe679486164e0033: !TransformComponent
+                        Id: 190a8a94-5fbb-49ee-a3db-ad725464fb66
+                        Position: {X: 2.5, Y: 0.0, Z: -2.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d5e4f2f6d09504c0148ee253da34adcd: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 06fd3469-f7c6-4338-93d1-0421b6383706
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                42eb34c3130fc869370dcba947d08b01: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 2.0, Y: 3.0, Z: 2.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
         -   Folder: Geometry
             Entity:
                 Id: f39c8c3d-34e7-4e93-a24b-9498a1ffa020

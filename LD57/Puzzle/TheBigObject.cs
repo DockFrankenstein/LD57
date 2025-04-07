@@ -53,6 +53,8 @@ namespace LD57.Puzzle
 
                 LerpState(cur, time * LERP_SPEED);
 
+                DebugText.Print($"Big Object: {Index+1}", new Int2(50, 100));
+
                 await Script.NextFrame();
             }
         }

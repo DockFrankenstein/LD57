@@ -317,7 +317,7 @@ Hierarchy:
                         Id: 10de2ec6-77e5-4a12-bfd4-36cde86d8761
                         Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
                         Materials:
-                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Ryba
+                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
                     bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
                         Id: 5ed58fdc-7e42-46d9-a65e-245d09524440
                         States:
@@ -663,6 +663,7 @@ Hierarchy:
                     c8d735887c656bd1e70f25eeb841f6e0: !LD57.Puzzle.TheBigObjectReel,LD57
                         Id: d401e591-2546-49d3-a9df-33da6cb7d3b1
                         Target*: ref!! 5ed58fdc-7e42-46d9-a65e-245d09524440
+                        StateAvaliability: {}
                         Interactable: true
             Base:
                 BasePartAsset: e13965e9-13bc-4cf6-a940-c4b9aef41b99:Prefabs/Reel
