@@ -92,8 +92,8 @@ namespace LD57.Menu
                 Widgets.Add(buttons);
 
                 buttons.Widgets.Add(play);
-                buttons.Widgets.Add(settings);
-                buttons.Widgets.Add(controls);
+                //buttons.Widgets.Add(settings);
+                //buttons.Widgets.Add(controls);
                 buttons.Widgets.Add(exit);
 
                 selectWindow.Content = selectScroll;

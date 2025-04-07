@@ -9,6 +9,8 @@ namespace LD57.qUtils
 
         public override void Start()
         {
+            Game.Window.AllowUserResizing = true;
+
             Manager = new OptionsManager(new qARKOptionsSerializer(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "settings.qark")));
             var instance = Services.GetService<qInstance>();
             var console = Services.GetService<GameConsole>();
