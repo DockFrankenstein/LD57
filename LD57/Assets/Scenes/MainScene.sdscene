@@ -5,6 +5,7 @@ Tags: []
 ChildrenIds:
     - d8a0e5f4-2109-408f-aaf6-a67412fe7eb2
     - 9b01b6e8-3ddc-4350-9af6-de8d44fc5746
+    - 1cfdb61b-ad86-464d-b1a7-14bcf6ff4da5
     - 8b074673-db3b-4b81-a8cb-e094b4b24c43
     - 910fe4ac-56f4-422a-a748-5b6b5fd4e598
     - 0c967305-713e-4f79-9d2a-8aad1f839cd9
@@ -221,4 +222,9 @@ Hierarchy:
                                 tag: lv5
                                 scenes:
                                     e8f57b043e8e046447710f5880fdedcf: 08f12a20-aa1c-41bb-838a-42a23ce88252:Scenes/Level5
+                                utilityScenes: {}
+                            f97bdd0373dc5dc5d531fd020ea25f20:
+                                tag: lv0_5
+                                scenes:
+                                    f43bcd94a2b241543887bca2e54f6e60: 1cfdb61b-ad86-464d-b1a7-14bcf6ff4da5:Scenes/Level0_5
                                 utilityScenes: {}

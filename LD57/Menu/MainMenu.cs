@@ -1,4 +1,5 @@
-﻿using LD57.UiSystem;
+﻿using LD57.LevelManagement;
+using LD57.UiSystem;
 using Myra.Graphics2D.Brushes;
 using Myra.Graphics2D.UI;
 
@@ -13,8 +14,9 @@ namespace LD57.Menu
         public override void Start()
         {
             widget = new MenuWidget(Services.GetService<UiManager>(), Canvas.Desktop);
-            widget.play.Click += (_, _) => { };
             widget.exit.Click += (_, _) => Environment.Exit(0);
+            widget.LoadLevel += s =>
+                Services.GetService<LevelManager>().LoadLevel(s);
 
             Canvas.Root = widget;
         }
@@ -28,6 +30,8 @@ namespace LD57.Menu
 
             Window selectWindow;
             Window settingsWindow;
+
+            public Action<string> LoadLevel;
 
             public MenuWidget(UiManager manager, Desktop desktop)
             {
@@ -63,6 +67,16 @@ namespace LD57.Menu
                     TitleFont = manager.Fonts.CaviarDreams.GetFont(18),
                 };
 
+                var selectScroll = new ScrollViewer()
+                {
+                    ShowHorizontalScrollBar = false,
+                };
+
+                var selectStack = new VerticalStackPanel()
+                {
+                    Spacing = 4,
+                };
+
                 settingsWindow = new Window()
                 {
                     Width = 400,
@@ -81,6 +95,17 @@ namespace LD57.Menu
                 buttons.Widgets.Add(settings);
                 buttons.Widgets.Add(controls);
                 buttons.Widgets.Add(exit);
+
+                selectWindow.Content = selectScroll;
+                selectScroll.Content = selectStack;
+
+                selectStack.Widgets.Add(CreateLevel("Level 0.5 - Hello", "lv0_5"));
+                selectStack.Widgets.Add(CreateLevel("Level 1 - Introduction", "lv1"));
+                selectStack.Widgets.Add(CreateLevel("Level 2 - Switches", "lv2"));
+                selectStack.Widgets.Add(CreateLevel("Level 3 - Switches More", "lv3"));
+                selectStack.Widgets.Add(CreateLevel("Level 4 - Limits", "lv4"));
+                selectStack.Widgets.Add(CreateLevel("Level 5 - Hombre", "lv5"));
+                selectStack.Widgets.Add(CreateLevel("Level 6 - Jeremy", "lv6"));
 
                 play.Click += (_, _) =>
                 {
@@ -110,6 +135,31 @@ namespace LD57.Menu
                     }
                 };
 
+
+                Button CreateLevel(string text, string levelName)
+                {
+                    var button = new Button()
+                    {
+                        HorizontalAlignment = HorizontalAlignment.Stretch,
+                        Height = 30,
+                        Background = new SolidBrush(new Color(100, 100, 100)),
+                        BorderThickness = new Myra.Graphics2D.Thickness(0, 0),
+                    };
+
+                    var label = new Label()
+                    {
+                        Text = text,
+                        HorizontalAlignment = HorizontalAlignment.Center,
+                        VerticalAlignment = VerticalAlignment.Center,
+                        Font = manager.Fonts.CaviarDreams.GetFont(16),
+                    };
+
+                    button.Content = label;
+                    button.Click += (_, _) =>
+                        LoadLevel?.Invoke(levelName);
+
+                    return button;
+                }
 
                 Button CreateButton(string text)
                 {
