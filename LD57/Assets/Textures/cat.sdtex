@@ -1,0 +1,7 @@
+!Texture
+Id: d7b2f7fd-2b0d-476f-8326-d9eabfd910b1
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/cat.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

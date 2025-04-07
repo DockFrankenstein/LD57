@@ -7,8 +7,13 @@ Attributes:
         GlossinessMap: !ComputeFloat
             Value: 0.1
     Diffuse: !MaterialDiffuseMapFeature
-        DiffuseMap: !ComputeColor
-            Value: {R: 0.14117648, G: 0.14117648, B: 0.14117648, A: 1.0}
+        DiffuseMap: !ComputeTextureColor
+            Texture: 396c96b8-b479-4bb0-afa7-4de218f3be8f:Textures/floor
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat

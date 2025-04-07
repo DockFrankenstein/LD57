@@ -14,12 +14,12 @@ Hierarchy:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: 2bf0af0f-9c1c-463f-a1fc-8e3843c49d99
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     505179e15f47cff2a7235205966781e7: !ModelComponent
                         Id: 5027abc4-b81a-4713-bfca-e095211a797d
-                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Model: 5e00ee9e-f552-44dd-990e-824fb987fe4f:Models/Procedural/Reel
                         Materials: {}
                     21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 199291c8-92ba-480a-927a-94ea6c9b5217
@@ -28,8 +28,8 @@ Hierarchy:
                                 7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                    RotationLocal: {X: 0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                                    Size: {X: 0.8, Y: 1.0, Z: 0.1}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0

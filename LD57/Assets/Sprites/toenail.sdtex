@@ -1,0 +1,7 @@
+!Texture
+Id: 9a16ae78-2eea-424d-9859-f181883d8a11
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/toenail.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

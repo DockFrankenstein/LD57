@@ -1,0 +1,7 @@
+!Texture
+Id: d1fd044c-eb08-4928-94d7-b55eb4404e06
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/happyapple.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

@@ -17,10 +17,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7604153ffe44cbcbc0cba19fd1056fe0: ref!! 945045e0-b62a-4241-b2a2-500f24b68c4d
-                    f0055ce876147c97bf2600d66a371d6f: !ModelComponent
-                        Id: 5fd1b9dd-147f-4de9-acf4-e98f826efae2
-                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
-                        Materials: {}
+                            90344db66fb1638f1100e823b2a645bc: ref!! 443c9686-5da4-4487-aedf-ee22ad37af0f
                     6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 85171cb2-fd10-4946-a3ef-2fd022f40a05
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
@@ -29,7 +26,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Radius: 0.3
+                                    Radius: 0.15
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -64,3 +61,18 @@ Hierarchy:
                         Id: d773646c-2e89-41e6-a358-4371e3905b0d
                         TargetName: player
                         TargetActive: true
+        -   Entity:
+                Id: f5ceef73-0ac1-4585-a63d-6c27e2dde9a9
+                Name: Model
+                Components:
+                    680b4be27217c06437903b62c8fe8d48: !TransformComponent
+                        Id: 443c9686-5da4-4487-aedf-ee22ad37af0f
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.945331, Y: 1.945331, Z: 1.945331}
+                        Children: {}
+                    f0302a07bf1e24842d32509cf15c407d: !ModelComponent
+                        Id: c95c9d17-ca34-428a-b593-13ba9d93e0f9
+                        Model: 70876253-d84e-49a1-bb22-eb4457c10895:Models/Procedural/Cat
+                        Materials:
+                            d977111e148250356f883017b093f1f0~0: 0ec74187-a731-4519-bd41-371534413b07:Materials/Cat

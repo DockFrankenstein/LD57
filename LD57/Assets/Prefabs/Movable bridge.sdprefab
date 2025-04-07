@@ -49,7 +49,6 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            d56eaf21da35d5c63e3278c502a12fe3: ref!! 74161f28-efc3-4df1-90d7-48c125860a2b
                             7f0ac074d21adccae6f10a8f161987c4: ref!! d24ae254-e008-40fd-9604-39646ece5205
                     de15b1d65d15173839ae9fb6eecd9f01: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 3f6d9838-e46b-4e2c-9201-f45cc2a05eb1
@@ -122,27 +121,13 @@ Hierarchy:
                 Components:
                     ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
                         Id: d24ae254-e008-40fd-9604-39646ece5205
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.12, Y: 1.0, Z: 0.12}
+                        Position: {X: 0.0, Y: 0.037854485, Z: -1.4999999}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.08, Y: 1.08, Z: 1.08}
                         Children: {}
                     9f9285e3338657015050ccdb4107f3ea: !ModelComponent
                         Id: b762f7fb-0fcc-41a7-aa48-5d56340bfa45
-                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
-                        Materials: {}
-        -   Entity:
-                Id: b5425da8-be49-4842-afc0-4453087e5a12
-                Name: Ground
-                Components:
-                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
-                        Id: 74161f28-efc3-4df1-90d7-48c125860a2b
-                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.1, Y: 1.0, Z: 0.3}
-                        Children: {}
-                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
-                        Id: 59c6e8a6-0d33-4cbb-b635-e8a85ab2b4b2
-                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Model: 70565e16-3357-4355-9052-8065f8db9dff:Models/Procedural/Movable Bridge
                         Materials: {}
         -   Entity:
                 Id: b96c36d8-d43c-4b37-9b9f-b9b0915778e3

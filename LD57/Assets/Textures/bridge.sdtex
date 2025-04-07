@@ -1,0 +1,10 @@
+!Texture
+Id: 90417e52-ecde-4b11-a626-155f5b855b6e
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/bridge.png
+Width: 2048.0
+Height: 512.0
+IsSizeInPercentage: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

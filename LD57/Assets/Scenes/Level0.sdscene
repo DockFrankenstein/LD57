@@ -43,10 +43,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7604153ffe44cbcbc0cba19fd1056fe0: ref!! 8fae1a63-6ced-4bc7-aa02-25953a1752e6
-                    f0055ce876147c97bf2600d66a371d6f: !ModelComponent
-                        Id: 3ad626fe-e9ab-4610-962d-73627a2a3daa
-                        Model: 84587a9f-8b55-4cf8-9572-7e02dbb2e385:Models/Procedural/Sphere
-                        Materials: {}
+                            cfceb8099d516560064d122c7ec7cdc7: ref!! cdfedf29-a957-4238-bf2e-77d173d6b975
                     6f77a21b05e9d74239bb7e325b37ff11: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 27921723-01c0-4e1d-bd38-9a2240cf41ef
                         Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
@@ -55,7 +52,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Radius: 0.3
+                                    Radius: 0.15
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -161,13 +158,13 @@ Hierarchy:
                 Components:
                     ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
                         Id: 32e31173-a71b-4890-8dd5-e9caf2c56882
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.12, Y: 1.0, Z: 0.12}
+                        Position: {X: 0.0, Y: 0.037854485, Z: -1.4999999}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.08, Y: 1.08, Z: 1.08}
                         Children: {}
                     9f9285e3338657015050ccdb4107f3ea: !ModelComponent
                         Id: 6b25a1e8-73b8-4444-8e8c-743973245c1a
-                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
+                        Model: 70565e16-3357-4355-9052-8065f8db9dff:Models/Procedural/Movable Bridge
                         Materials: {}
             Base:
                 BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
@@ -226,24 +223,6 @@ Hierarchy:
             Base:
                 BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
                 BasePartId: d0485983-6388-4df9-bfc0-00cb06606062
-                InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
-        -   Entity:
-                Id: 7e34ac2b-a929-4efa-8d52-3cc1efbdcbb8
-                Name: Ground
-                Components:
-                    ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
-                        Id: 5a2f849f-3b0f-4374-9aa8-36cf2327d5b2
-                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.1, Y: 1.0, Z: 0.3}
-                        Children: {}
-                    9f9285e3338657015050ccdb4107f3ea: !ModelComponent
-                        Id: 2a7e39b4-7ffb-4469-a2a1-cae91c12269c
-                        Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
-                        Materials: {}
-            Base:
-                BasePartAsset: 335b95f6-42c6-4dba-b177-76e4d44b4c47:Prefabs/Movable bridge
-                BasePartId: b5425da8-be49-4842-afc0-4453087e5a12
                 InstanceId: f2e81411-b0c2-4026-9253-e465b590137e
         -   Entity:
                 Id: 83ca07d1-e26d-472b-bbc1-d2e3373f1049
@@ -502,12 +481,12 @@ Hierarchy:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: ae487c05-2d13-47b2-854e-15c026746274
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation: {X: -0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     505179e15f47cff2a7235205966781e7: !ModelComponent
                         Id: 9afbe1e2-ce7e-4fae-9b1f-b75388e350e3
-                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Model: b1943cb6-9cf4-40f3-8747-b7203d20f07e:Models/Procedural/Button
                         Materials: {}
                     21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: c4b8a7d7-3771-4712-bbbd-ac4332f5e823
@@ -516,8 +495,8 @@ Hierarchy:
                                 7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                    RotationLocal: {X: 0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
+                                    Size: {X: 0.8, Y: 1.0, Z: 0.1}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -539,6 +518,25 @@ Hierarchy:
                 BasePartAsset: 7dfbc479-4baf-463f-b36e-c757d3c9c276:Prefabs/Button
                 BasePartId: 1f05f494-21d4-4185-890b-9c62f1cf5c46
                 InstanceId: 04a4452a-04de-4511-a8fe-349e71f5aa55
+        -   Entity:
+                Id: e5439a84-bbe0-45f7-a9e3-b9b0989697bb
+                Name: Model
+                Components:
+                    680b4be27217c06437903b62c8fe8d48: !TransformComponent
+                        Id: cdfedf29-a957-4238-bf2e-77d173d6b975
+                        Position: {X: 0.0, Y: -0.2, Z: 0.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                        Scale: {X: 1.945331, Y: 1.945331, Z: 1.945331}
+                        Children: {}
+                    f0302a07bf1e24842d32509cf15c407d: !ModelComponent
+                        Id: 4014dd4e-a264-4c14-8600-ca2f36e4a63d
+                        Model: 70876253-d84e-49a1-bb22-eb4457c10895:Models/Procedural/Cat
+                        Materials:
+                            d977111e148250356f883017b093f1f0~0: 0ec74187-a731-4519-bd41-371534413b07:Materials/Cat
+            Base:
+                BasePartAsset: c5ddbbdf-f033-49b9-8266-d4b4a14f81d9:Prefabs/Player
+                BasePartId: f5ceef73-0ac1-4585-a63d-6c27e2dde9a9
+                InstanceId: 1d0f441e-a04c-4ef2-8712-684ac03aa2d0
         -   Entity:
                 Id: ee14189a-ebd7-4e71-82f8-9ac1ff001b0c
                 Name: Ground
@@ -632,12 +630,12 @@ Hierarchy:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: 933ed45d-cc4c-427f-8769-742cced8c980
                         Position*: {X: -3.75, Y: 0.0, Z: 3.4999998}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     505179e15f47cff2a7235205966781e7: !ModelComponent
                         Id: a8ee314b-e43b-4cc2-8754-efe14d3dd1d2
-                        Model: 81090383-dcdf-46ea-83f9-d4dd456bfb97:Models/Procedural/Cube
+                        Model: 5e00ee9e-f552-44dd-990e-824fb987fe4f:Models/Procedural/Reel
                         Materials: {}
                     21b491453b341edee48b7f86d6fbcba0: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: 241908dc-6df3-4ae7-835d-3346e6787cbf
@@ -646,8 +644,8 @@ Hierarchy:
                                 7fda61bb2fb20af9b1ea01529f79238d: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                    RotationLocal: {X: 0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
+                                    Size: {X: 0.8, Y: 1.0, Z: 0.1}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -748,7 +746,6 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
-                            d56eaf21da35d5c63e3278c502a12fe3: ref!! 5a2f849f-3b0f-4374-9aa8-36cf2327d5b2
                             7f0ac074d21adccae6f10a8f161987c4: ref!! 32e31173-a71b-4890-8dd5-e9caf2c56882
                     de15b1d65d15173839ae9fb6eecd9f01: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
                         Id: ac530187-6fb8-4db0-bd70-e4bb70268318

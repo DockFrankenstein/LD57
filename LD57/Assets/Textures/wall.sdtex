@@ -1,0 +1,10 @@
+!Texture
+Id: c6e9376b-a579-4421-8f5e-cc5197dd5fd4
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Textures/wall.png
+Width: 1024.0
+Height: 1024.0
+IsSizeInPercentage: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

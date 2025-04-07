@@ -1,0 +1,7 @@
+!Texture
+Id: d45ea92b-677e-449e-9e06-da48d3e920ca
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/Sprites/reel.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
