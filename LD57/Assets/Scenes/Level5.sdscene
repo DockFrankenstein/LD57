@@ -54,8 +54,10 @@ Hierarchy:
         - ref!! 3543f316-17ef-4f95-951d-c8f1db5ac84c
         - ref!! ba8b2648-b9b0-410b-ba81-8122f2358df6
         - ref!! 05ea1e3c-88e9-4274-88cf-cc5e285dfa27
+        - ref!! dc1251bd-369d-4342-9244-b5cfba5dc087
         - ref!! 2dca7030-ff90-4610-861e-287443a643b1
         - ref!! 9417b436-e008-433e-a269-d92b7ac16360
+        - ref!! 15d054a5-b782-471c-b843-61b8cadb5aed
         - ref!! 3d80a132-8844-4d7e-ac7c-08931a52cf04
         - ref!! ef5bf8e2-64f7-4bab-98df-801adbb960f9
         - ref!! c4295f43-3c11-400e-8eeb-2032ab84309e
@@ -221,6 +223,29 @@ Hierarchy:
                         MaximumRecoveryVelocity: 1000.0
                         CollisionGroup: {}
                         ContactEventHandler: null
+        -   Folder: Lights
+            Entity:
+                Id: 15d054a5-b782-471c-b843-61b8cadb5aed
+                Name: Spot light
+                Components:
+                    a5b3379073d5e99aa8434965b526d198: !TransformComponent
+                        Id: 8e3a93fe-d33a-4b95-8e23-c1bab931ceb5
+                        Position: {X: -1.249999, Y: 6.25, Z: -2.4999995}
+                        Rotation: {X: 0.33883157, Y: -0.29696208, Z: -0.3167966, W: -0.83465356}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e505ee3d03c372ef8daf1544d78b4d0e: !LightComponent
+                        Id: 7ef24e33-6237-43a2-888b-ed9dd0127b34
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.99764705, G: 1.0, B: 0.9529412}
+                            Range: 10.0
+                            AngleOuter: 88.2
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
         -   Folder: null
             Entity:
                 Id: 1ce49098-1c2c-4922-bf16-8766ddcc7a49
@@ -264,7 +289,7 @@ Hierarchy:
                 Components:
                     7129a678941511689ba0046fb7efa614: !TransformComponent
                         Id: 6add3fb4-ef25-4b05-9406-12c8a0a73ec9
-                        Position: {X: 6.500001, Y: 0.0, Z: 0.50000024}
+                        Position: {X: 6.500001, Y: 0.0, Z: -0.49999976}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -276,7 +301,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 3.0, Y: 3.0, Z: 1.0}
+                                    Size: {X: 3.0, Y: 3.0, Z: 3.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -367,42 +392,42 @@ Hierarchy:
                 Components:
                     ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
                         Id: f1d2f8d5-3fdc-45e3-b811-8e447b330a20
-                        Position*: {X: 0.0, Y: 0.0, Z: -35.362}
-                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.7, Y: 0.7, Z: 0.7}
+                        Position*: {X: 0.7499995, Y: -3.054001, Z: -10.0}
+                        Rotation*: {X: 0.70441604, Y: 0.06162843, Z: 0.06162843, W: 0.70441604}
+                        Scale*: {X: 0.7, Y: 0.7, Z: 0.7}
                         Children: {}
                     9f9285e3338657015050ccdb4107f3ea: !ModelComponent
                         Id: 77078d95-49b1-4a67-ae97-2f0616305f03
                         Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
                         Materials:
-                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
+                            9d3a7555fa464974b66ff95ffea89914*~0: a5563c9a-db26-4abf-99f0-6e62557dfda3:Materials/Big Objects/Hombre
                     bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
                         Id: d6f39238-4858-4d43-930e-e66134159c44
                         States:
                             fb2ef9b80df9a62170b5e3c50281aaba*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: -5.7500005, Y: 2.584155, Z: -10.0}
+                                rotation: {X: 45.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.4, Y: 0.4, Z: 0.4}
                                 collision: ref!! a229589a-a9bd-4dc3-ad5a-0cbe959c01f5
                             2b6d2aac911b59b1a43315025fd5cbf0*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: -3.0000005, Y: 1.4095392, Z: -10.0}
+                                rotation: {X: 125.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.45, Y: 0.45, Z: 0.45}
                                 collision: ref!! 93629494-ee30-40a7-808a-921f34b55e4f
                             aff7ff39599876e68703370b01aed7f0*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
+                                position: {X: 1.7499995, Y: -0.46984637, Z: -10.0}
+                                rotation: {X: 235.0, Y: -90.0, Z: -90.0}
                                 scale: {X: 0.5, Y: 0.5, Z: 0.5}
                                 collision: ref!! 5c3205eb-cda1-49cf-ac85-4d0ce680d922
                             1b3586a03d76da74a1d99c82c23df945*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: -1.0000007, Y: -1.8793854, Z: -10.0}
+                                rotation: {X: 360.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.55, Y: 0.55, Z: 0.55}
                                 collision: ref!! 97034d5f-f3af-43f5-a56d-b26930f9f160
                             652eb3d065f73067669f25871b4026a3*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: 0.7499995, Y: -3.054001, Z: -10.0}
+                                rotation: {X: 440.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.7, Y: 0.7, Z: 0.7}
                                 collision: ref!! 09b5db99-dbf6-4848-a5da-3af23ee23e0f
             Base:
                 BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
@@ -786,7 +811,7 @@ Hierarchy:
                 Components:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: 6fbb6d30-2404-4391-8396-e562ecb5418b
-                        Position*: {X: -3.5, Y: 0.0, Z: -6.7499995}
+                        Position*: {X: -3.5, Y: 0.0, Z: -6.4999995}
                         Rotation: {X: -0.25881904, Y: 0.0, Z: 0.0, W: 0.9659258}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -869,7 +894,7 @@ Hierarchy:
                 Components:
                     a5b3379073d5e99aa8434965b526d198: !TransformComponent
                         Id: 1b477c99-696c-485e-ac3c-04ccaf555016
-                        Position: {X: 3.5, Y: 9.948, Z: 3.139}
+                        Position: {X: 8.75, Y: 9.948, Z: 7.389}
                         Rotation: {X: -0.42314243, Y: 0.24929442, Z: 0.122309, W: 0.8624635}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1167,7 +1192,7 @@ Hierarchy:
                 Components:
                     7129a678941511689ba0046fb7efa614: !TransformComponent
                         Id: ff9a75b7-0e2c-4b01-ab79-e0171ca0ee02
-                        Position: {X: 6.5000005, Y: 0.0, Z: 2.5}
+                        Position: {X: 6.5000005, Y: 0.0, Z: 1.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1354,7 +1379,7 @@ Hierarchy:
                 Components:
                     7129a678941511689ba0046fb7efa614: !TransformComponent
                         Id: 5609be71-d8a1-4868-bab2-191809d90934
-                        Position: {X: 4.500001, Y: 0.0, Z: 2.5}
+                        Position: {X: 4.000001, Y: 0.0, Z: 2.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1366,7 +1391,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 3.0, Z: 3.0}
+                                    Size: {X: 4.0, Y: 3.0, Z: 3.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -1850,6 +1875,30 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             f9614b53f8f448cedde7b355ef215f17: ref!! 98b1a30b-198a-4d47-a0ff-cfb298b94f3c
+        -   Folder: Lights
+            Entity:
+                Id: dc1251bd-369d-4342-9244-b5cfba5dc087
+                Name: Spot light
+                Components:
+                    a5b3379073d5e99aa8434965b526d198: !TransformComponent
+                        Id: 12eec270-ddf1-4f71-9fdc-96190f905d0d
+                        Position: {X: 10.75, Y: 5.0, Z: 5.0}
+                        Rotation: {X: -0.46385485, Y: -0.34896362, Z: 0.0023663044, W: 0.8142834}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e505ee3d03c372ef8daf1544d78b4d0e: !LightComponent
+                        Id: e8e7dcd6-3c35-4eb0-bf3a-8d6965eb69b1
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.9978125, G: 0.95625, B: 1.0}
+                            Range: 10.0
+                            AngleOuter: 88.2
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 0.5
         -   Folder: Geometry
             Entity:
                 Id: dc1aca10-f242-42e7-bc82-4d75f9d45290
@@ -1994,7 +2043,7 @@ Hierarchy:
                 Components:
                     7129a678941511689ba0046fb7efa614: !TransformComponent
                         Id: 9d5c110b-6c9e-483c-aad0-d303cae242de
-                        Position: {X: -0.49999976, Y: 0.0, Z: -2.5}
+                        Position: {X: 2.3841858E-07, Y: 0.0, Z: -2.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -2006,7 +2055,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 1.0, Y: 3.0, Z: 3.0}
+                                    Size: {X: 4.0, Y: 3.0, Z: 3.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0

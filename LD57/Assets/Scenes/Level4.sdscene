@@ -388,6 +388,39 @@ Hierarchy:
                 BasePartAsset: fa6a7fe0-1738-4303-8001-32821ebcb8ea:Prefabs/Bridge5
                 BasePartId: 48fffff2-aa51-47e4-98e1-0b7dde1279f0
                 InstanceId: 9ea5f65e-9c63-4fe0-9ed1-4513dfebd036
+        -   Folder: null
+            Entity:
+                Id: 43fdbc43-229e-4090-8dd5-e1f4555403f7
+                Name: Collision
+                Components:
+                    b5246324463c7995fe679486164e0033: !TransformComponent
+                        Id: aee4cace-faa2-41cb-adcd-c66917db4c86
+                        Position: {X: 2.2500005, Y: 0.0, Z: 5.5000005}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d5e4f2f6d09504c0148ee253da34adcd: !Stride.BepuPhysics.BodyComponent,Stride.BepuPhysics
+                        Id: 78881141-a3b2-4f9e-b5d2-b8ecd28e90c8
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                42eb34c3130fc869370dcba947d08b01: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionLayer: Layer4
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                        Kinematic: true
+                        Gravity: false
+                        InterpolationMode: None
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
         -   Folder: Lights
             Entity:
                 Id: 44e8028c-2cba-4451-91a0-d755b0edbd77
@@ -630,7 +663,7 @@ Hierarchy:
                 Components:
                     b5246324463c7995fe679486164e0033: !TransformComponent
                         Id: e7ae13cc-167d-4649-b570-ccb1c9f9d47b
-                        Position: {X: -1.5000001, Y: 0.0, Z: 1.25}
+                        Position: {X: -1.5000001, Y: 0.0, Z: 2.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -642,7 +675,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 2.0, Y: 3.0, Z: 2.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -809,7 +842,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 2.0, Y: 3.0, Z: 2.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -906,7 +939,7 @@ Hierarchy:
                 Components:
                     b5246324463c7995fe679486164e0033: !TransformComponent
                         Id: ab5f9921-d43a-4622-9dc9-d74c63d3c465
-                        Position: {X: 6.5, Y: 0.0, Z: 1.25}
+                        Position: {X: 6.5, Y: 0.0, Z: 2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -918,7 +951,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 2.0, Y: 3.0, Z: 2.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -938,42 +971,42 @@ Hierarchy:
                 Components:
                     ebedf4d9fc67997e8d02ec6217e1a5c5: !TransformComponent
                         Id: 1a8c50c2-6438-4145-bf9d-f5e12a51c56f
-                        Position*: {X: 0.0, Y: 0.0, Z: -24.362}
-                        Rotation: {X: 0.70710677, Y: 0.0, Z: 0.0, W: 0.70710677}
-                        Scale: {X: 0.7, Y: 0.7, Z: 0.7}
+                        Position*: {X: 0.11083412, Y: -0.41358492, Z: -10.0}
+                        Rotation*: {X: 0.270598, Y: -0.65328145, Z: -0.65328145, W: 0.270598}
+                        Scale*: {X: 0.8, Y: 0.8, Z: 0.8}
                         Children: {}
                     9f9285e3338657015050ccdb4107f3ea: !ModelComponent
                         Id: 8bd611a6-e0b1-4fa2-9a4c-2e3cf24d3a42
                         Model: 0503a4c2-f094-45a4-9011-5d2c0925916b:Models/Procedural/Ground
                         Materials:
-                            9d3a7555fa464974b66ff95ffea89914~0: 08c33f63-8473-48d2-827a-d0b32efafa13:Materials/Big Objects/Ryba
+                            9d3a7555fa464974b66ff95ffea89914*~0: e704b902-9da6-4dfa-bf50-cbfe07c22247:Materials/Big Objects/Toenail
                     bedb48e67e397192ed6a1ed03b75085d: !LD57.Puzzle.TheBigObject,LD57
                         Id: 4101314d-596d-4c29-a43f-f5afa36a80fe
                         States:
                             a99a583cfe331e0938858cd9d673950c*:
                                 position: {X: 0.0, Y: 0.0, Z: -20.0}
                                 rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                scale: {X: 0.4, Y: 0.4, Z: 0.4}
                                 collision: null
                             631a017fbb19a954a7d4f6565957326f*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: -2.246, Y: 0.237, Z: -10.0}
+                                rotation: {X: -40.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.4, Y: 0.4, Z: 0.4}
                                 collision: ref!! 51093c6b-277b-4fbd-9462-d20bb9a8df71
                             1a47ff67f2f2256d0c05faf4806a5650*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: 0.161, Y: 2.435, Z: -10.0}
+                                rotation: {X: 55.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.45, Y: 0.45, Z: 0.45}
                                 collision: ref!! 964ec482-1613-4ed8-9bf4-76b5f4f78514
                             5905fd906ba2c41727358bb1292b1896*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: 1.488852, Y: -0.88905, Z: -10.0}
+                                rotation: {X: -3.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.6, Y: 0.6, Z: 0.6}
                                 collision: ref!! b426f175-f7f1-4c05-90cc-a0d134f0c88f
                             02d508568655c02c9660b8802f76e75c*:
-                                position: {X: 0.0, Y: 0.0, Z: -20.0}
-                                rotation: {X: 90.0, Y: -90.0, Z: -90.0}
-                                scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                                position: {X: 0.11083412, Y: -0.41358492, Z: -10.0}
+                                rotation: {X: 40.0, Y: -90.0, Z: -90.0}
+                                scale: {X: 0.8, Y: 0.8, Z: 0.8}
                                 collision: ref!! b1ad30bd-4d0e-4eaa-82f9-c7776570b463
             Base:
                 BasePartAsset: a3572c76-3267-4700-ad1c-78b18937524d:Prefabs/cam
@@ -1054,7 +1087,7 @@ Hierarchy:
                 Components:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: 1c917754-488b-4bb5-ab0d-82cc88bf8f07
-                        Position*: {X: -1.5, Y: 0.0, Z: -3.4999998}
+                        Position*: {X: -1.5, Y: 0.0, Z: -3.2499998}
                         Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1188,6 +1221,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             951e5ef594b335b0f7ab3fee18cac497: ref!! bda341eb-9767-47ef-8405-131a0184de27
+                            4d009425d3aba4d8369256f5a0d19d13: ref!! aee4cace-faa2-41cb-adcd-c66917db4c86
         -   Folder: null
             Entity:
                 Id: b426f175-f7f1-4c05-90cc-a0d134f0c88f
@@ -1208,7 +1242,7 @@ Hierarchy:
                 Components:
                     dae9af92cf3cc905a1d26375f262ab79: !TransformComponent
                         Id: 7f901dd9-f81f-4952-8255-5368f1066eef
-                        Position*: {X: 6.5, Y: 0.0, Z: -3.4999998}
+                        Position*: {X: 6.5, Y: 0.0, Z: -3.2499998}
                         Rotation: {X: -0.34202012, Y: 0.0, Z: 0.0, W: 0.9396926}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1387,7 +1421,7 @@ Hierarchy:
                 Components:
                     b5246324463c7995fe679486164e0033: !TransformComponent
                         Id: bda341eb-9767-47ef-8405-131a0184de27
-                        Position: {X: 6.0, Y: 0.0, Z: 2.0}
+                        Position: {X: 1.5000005, Y: 0.0, Z: -2.4999995}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1399,7 +1433,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 10.0, Y: 3.0, Z: 10.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0
@@ -1471,7 +1505,7 @@ Hierarchy:
                 Components:
                     b5246324463c7995fe679486164e0033: !TransformComponent
                         Id: 190a8a94-5fbb-49ee-a3db-ad725464fb66
-                        Position: {X: 2.5, Y: 0.0, Z: -2.5}
+                        Position: {X: 2.75, Y: 0.0, Z: -2.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1483,7 +1517,7 @@ Hierarchy:
                                     Mass: 1.0
                                     PositionLocal: {X: 0.0, Y: 1.5, Z: 0.0}
                                     RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                                    Size: {X: 2.0, Y: 3.0, Z: 2.0}
+                                    Size: {X: 1.0, Y: 3.0, Z: 1.0}
                         SpringFrequency: 30.0
                         SpringDampingRatio: 3.0
                         FrictionCoefficient: 1.0

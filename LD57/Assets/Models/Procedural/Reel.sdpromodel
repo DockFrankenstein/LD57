@@ -8,7 +8,7 @@ Type: !PlaneProceduralModel
     Normal: UpZ
     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
     UvScale: {X: 1.0, Y: 1.0}
-    LocalOffset: {X: 0.0, Y: 0.5, Z: 0.0}
+    LocalOffset: {X: 0.0, Y: 0.6, Z: 0.0}
     NumberOfTextureCoordinates: 10
     MaterialInstance:
         Material: 2801d9b9-c545-4fd4-b4a0-5f0ad6a97fe2:Materials/Reel
