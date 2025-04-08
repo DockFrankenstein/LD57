@@ -5,8 +5,10 @@ using Myra.Graphics2D.UI;
 
 namespace LD57.Menu
 {
-    public class MainMenu : StartupScript
+    public class MainMenu : SyncScript
     {
+        public string Title { get; set; } = "Where is Jeremy Wattson?";
+        public bool Togglable { get; set; } = false;
         public UiCanvas Canvas { get; set; }
 
         MenuWidget widget;
@@ -14,6 +16,7 @@ namespace LD57.Menu
         public override void Start()
         {
             widget = new MenuWidget(Services.GetService<UiManager>(), Canvas.Desktop);
+            widget.title.Text = Title;
             widget.exit.Click += (_, _) => Environment.Exit(0);
             widget.LoadLevel += s =>
                 Services.GetService<LevelManager>().LoadLevel(s);
@@ -21,15 +24,26 @@ namespace LD57.Menu
             Canvas.Root = widget;
         }
 
+        public override void Update()
+        {
+            if (Togglable)
+            {
+                if (Input.IsKeyPressed(Keys.Escape))
+                    Canvas.UiEnabled = !Canvas.UiEnabled;
+            }
+        }
+
         public class MenuWidget : Grid
         {
+            public Label title;
+
             public Button play;
             public Button settings;
             public Button controls;
             public Button exit;
 
             Window selectWindow;
-            Window settingsWindow;
+            Window controlsWindow;
 
             public Action<string> LoadLevel;
 
@@ -39,7 +53,7 @@ namespace LD57.Menu
                 RowsProportions.Add(new Proportion(ProportionType.Fill));
                 RowsProportions.Add(new Proportion(ProportionType.Pixels, 100));
 
-                var title = new Label()
+                title = new Label()
                 {
                     Text = "Where is Jeremy Wattson?",
                     VerticalAlignment = VerticalAlignment.Center,
@@ -77,12 +91,26 @@ namespace LD57.Menu
                     Spacing = 4,
                 };
 
-                settingsWindow = new Window()
+                controlsWindow = new Window()
                 {
                     Width = 400,
-                    Height = 600,
-                    Title = "Settings",
+                    Height = 170,
+                    Title = "Controls",
                     TitleFont = manager.Fonts.CaviarDreams.GetFont(18),
+                };
+
+                controlsWindow.Content = new Label()
+                {
+                    TextAlign = FontStashSharp.RichText.TextHorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                    Padding = new Myra.Graphics2D.Thickness(50, 0),
+                    Font = manager.Fonts.CaviarDreams.GetFont(24),
+                    Text = @"WASD - Movement
+E - Interact//Reel forwards
+Q - Interact//Reel backwards
+F11 - Toggle fullscreen
+`//~ - Debug console",
                 };
 
                 SetRow(title, 0);
@@ -93,7 +121,7 @@ namespace LD57.Menu
 
                 buttons.Widgets.Add(play);
                 //buttons.Widgets.Add(settings);
-                //buttons.Widgets.Add(controls);
+                buttons.Widgets.Add(controls);
                 buttons.Widgets.Add(exit);
 
                 selectWindow.Content = selectScroll;
@@ -121,16 +149,16 @@ namespace LD57.Menu
                     }
                 };
 
-                settings.Click += (_, _) =>
+                controls.Click += (_, _) =>
                 {
-                    switch (settingsWindow.IsPlaced)
+                    switch (controlsWindow.IsPlaced)
                     {
                         case true:
-                            settingsWindow.Close();
+                            controlsWindow.Close();
                             break;
                         case false:
-                            settingsWindow.Show(desktop);
-                            settingsWindow.CenterOnDesktop();
+                            controlsWindow.Show(desktop);
+                            controlsWindow.CenterOnDesktop();
                             break;
                     }
                 };

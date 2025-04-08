@@ -34,6 +34,7 @@ Hierarchy:
         - ref!! 4939237e-f238-4ed4-86d1-c64fb4a0ec26
         - ref!! 45398b47-a6f0-4420-a365-6b292f06433b
         - ref!! cf9695bf-8547-4aa7-a814-0740065fe8b6
+        - ref!! 6e867629-cdba-43c9-9066-403111e8ff47
     Parts:
         -   Folder: Geometry
             Entity:
@@ -463,6 +464,30 @@ Hierarchy:
                 BasePartAsset: 3cf909f0-fede-4da6-b5f5-0c94a35bb4a2:Prefabs/NPC
                 BasePartId: f282375b-e023-4af3-8a86-7784abe3fddb
                 InstanceId: ad5a90ba-47cf-457e-95c2-569d5bd6ee9b
+        -   Entity:
+                Id: 6e867629-cdba-43c9-9066-403111e8ff47
+                Name: Pause  Menu
+                Components:
+                    4d6fc92b39e19b9513375a9058c0733c: !TransformComponent
+                        Id: 4ae5e334-cc51-4ff0-907f-c0c484edb8b6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f998b5ea7a2342b67be569e9b5a40bee: !LD57.UiSystem.UiCanvas,LD57
+                        Id: 48e4b4ec-888a-41ea-8781-b1a853985fbd
+                        EnabledByDefault: false
+                        UiName: pause_menu
+                        TakeInputFocus: true
+                    9ea7c0958d1d2c92ffd05c00a2008d7a: !LD57.Menu.MainMenu,LD57
+                        Id: ea256577-f95d-4c10-b562-3890ef2e2f4e
+                        Title: Pause Menu
+                        Togglable: true
+                        Canvas: ref!! 48e4b4ec-888a-41ea-8781-b1a853985fbd
+            Base:
+                BasePartAsset: 2eb3a476-9b97-498f-becf-32b17ad089a0:Prefabs/Pause  Menu
+                BasePartId: 870be516-b36e-4081-bda2-95585d09fce3
+                InstanceId: fe2932ef-d976-4487-861e-e1747388fa43
         -   Entity:
                 Id: 701df1c8-1827-413b-a4c9-931791b492f5
                 Name: Hole

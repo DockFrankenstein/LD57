@@ -19,7 +19,10 @@ namespace LD57.qUtils
                 version = version,
                 engine = "Stride",
                 engineVersion = FileVersionInfo.GetVersionInfo("Stride.dll").FileVersion,
-            });
+            })
+            {
+                useNetworkDiscovery = false,
+            };
 
             Services.AddService(Instance);
 

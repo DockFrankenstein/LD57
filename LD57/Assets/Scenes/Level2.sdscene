@@ -61,6 +61,7 @@ Hierarchy:
         - ref!! 61b1b82b-40ed-4a94-97fa-b6890bdb3733
         - ref!! b7cc0a95-6c10-4631-a518-233f84370784
         - ref!! 9c6a295e-6152-45d7-83cb-e1b600233c8f
+        - ref!! 6cf62936-fd4f-4470-b565-d44e150aa8fa
     Parts:
         -   Folder: Collisions
             Entity:
@@ -872,6 +873,30 @@ Hierarchy:
                                 BiasParameters:
                                     DepthBias: 0.001
                         Intensity: 7.0
+        -   Entity:
+                Id: 6cf62936-fd4f-4470-b565-d44e150aa8fa
+                Name: Pause  Menu
+                Components:
+                    4d6fc92b39e19b9513375a9058c0733c: !TransformComponent
+                        Id: 78f0aa2f-3b8f-4486-bd33-5259d3146239
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f998b5ea7a2342b67be569e9b5a40bee: !LD57.UiSystem.UiCanvas,LD57
+                        Id: d7e6402d-7a76-4b51-87ca-3cf3bf5d766d
+                        EnabledByDefault: false
+                        UiName: pause_menu
+                        TakeInputFocus: true
+                    9ea7c0958d1d2c92ffd05c00a2008d7a: !LD57.Menu.MainMenu,LD57
+                        Id: 3755da8f-35d5-466a-8731-7fe888075507
+                        Title: Pause Menu
+                        Togglable: true
+                        Canvas: ref!! d7e6402d-7a76-4b51-87ca-3cf3bf5d766d
+            Base:
+                BasePartAsset: 2eb3a476-9b97-498f-becf-32b17ad089a0:Prefabs/Pause  Menu
+                BasePartId: 870be516-b36e-4081-bda2-95585d09fce3
+                InstanceId: bec19716-cc01-448d-8e68-784d54c8ec09
         -   Entity:
                 Id: 6dc037e2-229a-4128-98e3-11b44679d021
                 Name: Right

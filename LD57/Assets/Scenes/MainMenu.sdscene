@@ -40,4 +40,6 @@ Hierarchy:
                         TakeInputFocus: false
                     6f3716ccf4088510897b252207c311e5: !LD57.Menu.MainMenu,LD57
                         Id: e9239333-8486-459d-adf8-6434030a6017
+                        Title: Where is Jeremy Wattson?
+                        Togglable: false
                         Canvas: ref!! 328635ed-1b6a-42e3-832e-b6110636aad6

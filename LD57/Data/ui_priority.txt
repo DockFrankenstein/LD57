@@ -3,6 +3,7 @@ console
 
 # Menus
 main_menu
+pause_menu
 dialogue
 
 # Gameplay
