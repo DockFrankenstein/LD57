@@ -3,7 +3,7 @@ VAR jeremy = "Jeremy Wattson"
 
 Have you seen {jeremy}?
 No matter.
-Reel in an object using the crank and pick it up from the hole.
+Reel in an object using the crank with [Q] and [E] and pick it up from the hole.
 
 ~ speaker = "You"
 Why?

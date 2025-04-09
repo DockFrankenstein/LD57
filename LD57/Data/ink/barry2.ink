@@ -7,6 +7,6 @@ Hello.
 Hi.
 
 ~ speaker = "You"
-(This interaction has sparked you immense joy in you.)
+(This interaction has sparked immense joy in you.)
 
 -> END

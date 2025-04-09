@@ -49,13 +49,13 @@ I like you for that.
 ~ speaker = "???"
 Thank you.
 
-~ speaker = "Player"
+~ speaker = "You"
 Fuck you.
 
 ~ speaker = "???"
 Thank you.
 
-~ speaker = "Player"
+~ speaker = "You"
 Thank you.
 ...
 
