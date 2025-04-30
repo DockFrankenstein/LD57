@@ -12,7 +12,7 @@
 
         public override void Cancel()
         {
-            Services.GetService<CameraController>().Targets.Unregister(this);
+            Services?.GetService<CameraController>()?.Targets.Unregister(this);
         }
     }
 }
